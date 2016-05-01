@@ -10,10 +10,10 @@ import UIKit
 
 
 class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
-
+   
    // VIPER
    var viperPresenter: ChatPresenter!
-
+   
    //UI
    @IBOutlet weak var navItem: UINavigationItem!
    @IBOutlet weak var tableView: UITableView!
@@ -26,17 +26,17 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
    
    @IBOutlet weak var constraintViewCommentBottom: NSLayoutConstraint!
    
-    lazy var messages = [CDEMessage]()
-
+   lazy var messages = [CDEMessage]()
+   
    // MARK: - View livecycle
-    override func viewDidLoad() {
+   override func viewDidLoad() {
       self.navItem.title = tr(.ChatTitleMain("//ojo"))
       
       self.viperPresenter = ChatPresenter().dynamicType.init(view: self)
-
+      
       self.viewComment.backgroundColor = Colors.defaultviewCommentColor
-    }
-
+   }
+   
    override func viewWillAppear(animated: Bool) {
       super.viewWillAppear(animated)
       NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ChatViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
@@ -52,14 +52,14 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
    @IBAction func btnlogOutAction(sender: AnyObject) {
       self.viperPresenter.btnlogOutAction(sender)
    }
-
+   
    @IBAction func btnSendAction(sender: AnyObject) {
       self.txtComment.resignFirstResponder()
       if let comment = self.txtComment.text where !comment.isEmpty {
          self.viperPresenter.btnSendAction(comment)
       }
    }
-
+   
    // MARK: - Keyboard Events
    func keyboardWillShow(sender: NSNotification) {
       if let userInfo = sender.userInfo {
@@ -85,20 +85,20 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
       self.btnSendAction(self.btnSend)
       return false
    }
-   
+
    // MARK: - UITableViewDataSource
-    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 150
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.messages.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let message = self.messages[indexPath.row]
-        let cell = tableView.dequeueReusableCellWithIdentifier("ChatBubble") as! ChatBubble
-        cell.configure(message)
-        return cell
-    }
+   func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+      return 150
+   }
+   
+   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+      return self.messages.count
+   }
+   
+   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+      let message = self.messages[indexPath.row]
+      let cell = tableView.dequeueReusableCellWithIdentifier("ChatBubble") as! ChatBubble
+      cell.configure(message)
+      return cell
+   }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
-
+   
    // VIPER
    var viperPresenter: LoginPresenter!
    
@@ -18,22 +18,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
    @IBOutlet weak var btnLogin: UIButton!
    //UI
    
+   // MARK: - View livecycle
    override func viewDidLoad() {
       super.viewDidLoad()
-
+      
       self.viperPresenter = LoginPresenter().dynamicType.init(view: self)
       
       self.btnLogin.layer.cornerRadius = 5
       
    }
-
+   
    // MARK: - UI Actions
    @IBAction func btnLoginAction(sender: AnyObject) {
       if let username = self.txtUserName.text {
          self.viperPresenter.btnLoginAction(sender, username: username)
       }
    }
-
+   
    func focusInUserName() {
       self.txtUserName.becomeFirstResponder()
    }
