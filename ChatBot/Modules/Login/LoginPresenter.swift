@@ -36,24 +36,21 @@ class LoginPresenter: NSObject {
          if (self.viperInteractor.doLoginWithUsername(username: username)) {
             self.viperRouter.showChat(sender)
          } else {
-            // we can't login
+            // we can't login - show alert
             let alertView = SCLAlertView()
             alertView.showCloseButton = false
             alertView.addButton(tr(.Done)) {
                self.viperView.focusInUserName()
             }
-            
             alertView.showError(tr(.ErrMsgUserInvalidLoginTitle), subTitle: tr(.ErrMsgUserInvalidLoginMsg))
          }
       } else {
-         // username not valid
+         // username not valid - show alert
          let alertView = SCLAlertView()
          alertView.showCloseButton = false
-         
          alertView.addButton(tr(.Done)) {
             self.viperView.focusInUserName()
          }
-         
          alertView.showError(tr(.ErrMsgUserNotValidTitle), subTitle: tr(.ErrMsgUserNotValidMsg))
       }
    }
