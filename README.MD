@@ -51,6 +51,19 @@ I am splitting this in two storyboards (Login and Chat), so this would help in a
 * SCLAlertView
 * OHHTTPStubs
 
+## Network logger
+
+Logs into the console the network requests and responses. It's instantiated in AppDelegate.swift, here:
+
+    PR2Networking.sharedInstance.logLevel = PR2NetworkingLogLevel.PR2NetworkingLogLevelInfo
+
+logLevel can be:
+
+* PR2NetworkingLogLevelOff - log disabled
+* PR2NetworkingLogLevelDebug - logs full requests and responses
+* PR2NetworkingLogLevelInfo - log with short info
+* PR2NetworkingLogLevelError - logs only when errors
+
 ## SwiftLint
 
 A tool for enforcing good code style.
@@ -58,6 +71,14 @@ A tool for enforcing good code style.
 Install: brew install swiftlint
 
 If you don't want to use or install it, just remove Run Script Phase we have in the ChatBot target
+
+## SwiftGen (https://github.com/AliSoftware/SwiftGen)
+
+It is used for generating strings enums, so we can avoid the risk of using an non-existing string
+
+Its generated doing this in the console and in the project root folder
+
+swiftgen strings ./ChatBot/Resources/Strings/Localizable.strings --output ./ChatBot/Application/Strings.swift
 
 ## Issues with data
 

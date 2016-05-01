@@ -13,7 +13,7 @@
     <a title="ChatBot  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">ChatBot Docs</a> (43% documented)</p>
+        <p><a href="index.html">ChatBot Docs</a> (33% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -33,7 +33,7 @@
                 <a href="Classes/AppDelegate.html">AppDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/CDEChat.html">CDEChat</a>
+                <a href="Classes/CDEMessage.html">CDEMessage</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/CDEUser.html">CDEUser</a>
@@ -42,7 +42,25 @@
                 <a href="Classes/ChatBubble.html">ChatBubble</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes.html#/s:C7ChatBot14ChatInteractor">ChatInteractor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ChatPresenter.html">ChatPresenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ChatRouter.html">ChatRouter</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/ChatViewController.html">ChatViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/LoginInteractor.html">LoginInteractor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/LoginPresenter.html">LoginPresenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/LoginRouter.html">LoginRouter</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/LoginViewController.html">LoginViewController</a>
@@ -59,11 +77,17 @@
               <li class="nav-group-task">
                 <a href="Classes/PR2Networking.html">PR2Networking</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/RootRouter.html">RootRouter</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="Enums.html">Enums</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/L10n.html">L10n</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Enums/PR2NetworkingLogLevel.html">PR2NetworkingLogLevel</a>
               </li>
@@ -87,6 +111,28 @@
               <li class="nav-group-task">
                 <a href="Extensions/UIImageView.html">UIImageView</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIViewController.html">UIViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F7ChatBot2trFOS_4L10nSS">tr(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/StoryboardSceneType.html">StoryboardSceneType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols.html#/s:P7ChatBot19StoryboardSegueType">StoryboardSegueType</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -104,6 +150,12 @@
               <li class="nav-group-task">
                 <a href="Structs/PR2NetworkingNotifications.html">PR2NetworkingNotifications</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Structs/StoryboardScene.html">StoryboardScene</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:V7ChatBot15StoryboardSegue">StoryboardSegue</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -118,6 +170,7 @@
 <li>Developed in SWIFT 2.3</li>
 <li>iOS 9.0 compatible</li>
 <li>CocoaPods</li>
+<li>using VIPER architecture</li>
 <li>Network requests in the background</li>
 <li>Network requests recursively repeated if temporary error (increasing delay till 30 second)</li>
 <li>Network requests applied Apple recommendations (see <q>Network requests failures</q> below)</li>
@@ -133,24 +186,65 @@
 <li>waiting indicators in status bar / webview</li>
 <li>showing slow internet connectivity</li>
 <li>HeaderDoc HTML based documentation. Generated using jazzy. in docs/swift_output/index.html</li>
-<li><p>using SwiftLint to enforce Swift style and conventions</p></li>
+<li>using SwiftLint to enforce Swift style and conventions</li>
+<li><p>using SwiftGen to generate string enums</p></li>
 <li><p><strong>PR2Studio classes</strong>. I applied some of my own classes I use to develop in Swift.</p></li>
-<li><p><strong>No Storyboards</strong>. I much prefer to use NIBs than storyboards, storyboards are really a problem in team development (because git conflicts) and with NIBs you have more flexibility to enable different behaviors. But cause the sample provide has Storyboards, I will use them.</p></li>
+<li><p><strong>VIPER</strong></p></li>
+</ul>
+
+<p>This is the first project I do with VIPER, so maybe some things does not follow at full VIPER architecture. Anyhow I understand VIPER as a guideline or concepts to understand, but not to follow at full.</p>
+
+<p>Reference material:</p>
+
+<p>(Base doc) Architecting iOS Apps with VIPER
+<a href="https://www.objc.io/issues/13-architecture/viper">https://www.objc.io/issues/13-architecture/viper</a></p>
+
+<p>(I follow this variant) Brigade’s Experience Using an MVC Alternative
+<a href="https://medium.com/brigade-engineering/brigades-experience-using-an-mvc-alternative-36ef1601a41f#.ik6unq2bl">https://medium.com/brigade-engineering/brigades-experience-using-an-mvc-alternative-36ef1601a41f#.ik6unq2bl</a></p>
+
+<ul>
+<li><strong>Storyboards</strong>. I much prefer to use NIBs than storyboards, storyboards are really a problem in team development (because git conflicts) and with NIBs you have more flexibility to enable different behaviors. But cause the sample provide has Storyboards, I will use them.</li>
+</ul>
+
+<p>I am splitting this in two storyboards (Login and Chat), so this would help in avoiding git merge conflicts and each one will be a VIPER module</p>
+
+<ul>
 <li><p><strong>Trying to apply SOLID principles</strong>. Specially the Single Responsability. Classes must be lightewigth and perform only one task inside his abstraction layer. So it&rsquo;s better to have more classes that one big bloated class</p></li>
 <li><p>Using as few external libraries as possible:</p></li>
 <li><p>Alamofire</p></li>
 <li><p>AlamofireImage</p></li>
 <li><p>SwiftyJSON</p></li>
+<li><p>SCLAlertView</p></li>
 <li><p>OHHTTPStubs</p></li>
+</ul>
+<a href='#network_logger' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='network_logger'>Network logger</h2>
+
+<p>Logs into the console the network requests and responses. It&rsquo;s instantiated in AppDelegate.swift, here:</p>
+<pre class="highlight plaintext"><code>PR2Networking.sharedInstance.logLevel = PR2NetworkingLogLevel.PR2NetworkingLogLevelInfo
+</code></pre>
+
+<p>logLevel can be:</p>
+
+<ul>
+<li>PR2NetworkingLogLevelOff - log disabled</li>
+<li>PR2NetworkingLogLevelDebug - logs full requests and responses</li>
+<li>PR2NetworkingLogLevelInfo - log with short info</li>
+<li>PR2NetworkingLogLevelError - logs only when errors</li>
 </ul>
 <a href='#swiftlint' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='swiftlint'>SwiftLint</h2>
 
 <p>A tool for enforcing good code style.</p>
 
-<p>Install:
-brew install swiftlint</p>
+<p>Install: brew install swiftlint</p>
 
 <p>If you don&rsquo;t want to use or install it, just remove Run Script Phase we have in the ChatBot target</p>
+<a href='#swiftgen_a_href_https_github_com_alisoftware_swiftgen_https_github_com_alisoftware_swiftgen_a' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='swiftgen_a_href_https_github_com_alisoftware_swiftgen_https_github_com_alisoftware_swiftgen_a'>SwiftGen (<a href="https://github.com/AliSoftware/SwiftGen">https://github.com/AliSoftware/SwiftGen</a>)</h2>
+
+<p>It is used for generating strings enums, so we can avoid the risk of using an non-existing string</p>
+
+<p>Its generated doing this in the console and in the project root folder</p>
+
+<p>swiftgen strings ./ChatBot/Resources/Strings/Localizable.strings &ndash;output ./ChatBot/Application/Strings.swift</p>
 <a href='#issues_with_data' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='issues_with_data'>Issues with data</h2>
 
 <p>JSON response has no date for every message, so I will put the date when we retrieve the data</p>
@@ -203,6 +297,7 @@ CDEChat</p>
 <a href='#todo_out_of_time' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='todo_out_of_time'>TODO (out of time)</h2>
 
 <ul>
+<li><p>diverse orientations</p></li>
 <li><p>cache. implement alternative cache system</p></li>
 <li><p>complete HeaderDoc documentation.</p></li>
 <li><p>create secondary target for slow connectivity tests using OHHTTPStubs</p></li>
@@ -211,7 +306,7 @@ CDEChat</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://pr2studio.com" target="_blank" rel="external">PabloRoca</a>. All rights reserved. (Last updated: 2016-04-30)</p>
+          <p>&copy; 2016 <a class="link" href="https://pr2studio.com" target="_blank" rel="external">PabloRoca</a>. All rights reserved. (Last updated: 2016-05-01)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
