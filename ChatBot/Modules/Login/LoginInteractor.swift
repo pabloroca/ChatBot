@@ -24,4 +24,10 @@ class LoginInteractor: NSObject {
       }
       return true
    }
+   
+   func doLoginWithUsername(username username: String) -> Bool {
+   //ojo pte
+      return true
+   }
+   
 }

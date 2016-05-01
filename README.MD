@@ -112,6 +112,8 @@ So we conclude with this (and it is applied in the exercise):
 
 ## TODO (out of time)
 
+* diverse orientations
+
 * cache. implement alternative cache system
 
 * complete HeaderDoc documentation.

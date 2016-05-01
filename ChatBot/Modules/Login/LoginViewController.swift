@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
    override func viewDidLoad() {
       super.viewDidLoad()
 
-      self.viperPresenter = LoginPresenter()
+      self.viperPresenter = LoginPresenter().dynamicType.init(view: self)
    }
 
    // MARK: - UI Actions
@@ -29,4 +29,7 @@ class LoginViewController: UIViewController {
       }
    }
 
+   func focusInUserName() {
+      self.txtUserName.becomeFirstResponder()
+   }
 }
