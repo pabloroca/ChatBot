@@ -27,7 +27,8 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
    @IBOutlet weak var constraintViewCommentBottom: NSLayoutConstraint!
    
     lazy var messages = [CDEMessage]()
-   
+
+   // MARK: - View livecycle
     override func viewDidLoad() {
       self.navItem.title = tr(.ChatTitleMain("//ojo"))
       
@@ -36,22 +37,53 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
       self.viewComment.backgroundColor = Colors.defaultviewCommentColor
     }
 
+   override func viewWillAppear(animated: Bool) {
+      super.viewWillAppear(animated)
+      NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ChatViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+      NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ChatViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+   }
+   
+   override func viewWillDisappear(animated: Bool) {
+      super.viewWillDisappear(animated)
+      NSNotificationCenter.defaultCenter().removeObserver(self)
+   }
+   
    // MARK: - UI Actions
    @IBAction func btnlogOutAction(sender: AnyObject) {
       self.viperPresenter.btnlogOutAction(sender)
    }
 
    @IBAction func btnSendAction(sender: AnyObject) {
-      if let comment = self.txtComment.text {
+      self.txtComment.resignFirstResponder()
+      if let comment = self.txtComment.text where !comment.isEmpty {
          self.viperPresenter.btnSendAction(comment)
       }
    }
+
+   // MARK: - Keyboard Events
+   func keyboardWillShow(sender: NSNotification) {
+      if let userInfo = sender.userInfo {
+         if let keyboardHeight = userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size.height {
+            constraintViewCommentBottom.constant += keyboardHeight
+            UIView.animateWithDuration(0.25, animations: { () -> Void in
+               self.view.layoutIfNeeded()
+            })
+         }
+      }
+   }
+   
+   func keyboardWillHide(sender: NSNotification) {
+      constraintViewCommentBottom.constant = 0.0
+      UIView.animateWithDuration(0.25, animations: { () -> Void in
+         self.view.layoutIfNeeded()
+      })
+   }
    
    // MARK: - UITextFieldDelegate
-
-   func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-      
-      return true
+   func textFieldShouldReturn(textField: UITextField) -> Bool {
+      textField.resignFirstResponder()
+      self.btnSendAction(self.btnSend)
+      return false
    }
    
    // MARK: - UITableViewDataSource
