@@ -7,14 +7,13 @@
 //
 
 import Foundation
-import UIKit
 import SCLAlertView
 
 class LoginPresenter: NSObject {
    
-   var viperView: LoginViewController?
-   var viperRouter: LoginRouter?
-   var viperInteractor: LoginInteractor?
+   var viperView: LoginViewController!
+   var viperRouter: LoginRouter!
+   var viperInteractor: LoginInteractor!
    
    override init() {
       super.init()
@@ -30,16 +29,28 @@ class LoginPresenter: NSObject {
    // MARK: - UI Actions
    
    func btnLoginAction(sender: AnyObject, username: String) {
-      if self.viperInteractor!.isUsernameValid(username.lowercaseString) {
-         if (self.viperInteractor!.doLoginWithUsername(username: username)) {
-            self.viperRouter?.showChat(sender)
+      // is username valid?
+      if self.viperInteractor.isUsernameValid(username.lowercaseString) {
+         // login
+         if (self.viperInteractor.doLoginWithUsername(username: username)) {
+            self.viperRouter.showChat(sender)
          } else {
-            SCLAlertView().showError(NSLocalizedString("ErrMsgUserInvalidLoginTitle", comment: ""), subTitle: NSLocalizedString("ErrMsgUserInvalidLoginMsg", comment: ""))
-            self.viperView?.focusInUserName()
+            // we can't login
+            let alertView = SCLAlertView()
+            alertView.showCloseButton = false
+            alertView.addButton(NSLocalizedString("Done", comment: "")) {
+               self.viperView.focusInUserName()
+            }
+            alertView.showError(NSLocalizedString("ErrMsgUserInvalidLoginTitle", comment: ""), subTitle: NSLocalizedString("ErrMsgUserInvalidLoginMsg", comment: ""))
          }
       } else {
-         SCLAlertView().showError(NSLocalizedString("ErrMsgUserNotValidTitle", comment: ""), subTitle: NSLocalizedString("ErrMsgUserNotValidMsg", comment: ""))
-         self.viperView?.focusInUserName()
+         // username not valid
+         let alertView = SCLAlertView()
+         alertView.showCloseButton = false
+         alertView.addButton(NSLocalizedString("Done", comment: "")) {
+            self.viperView.focusInUserName()
+         }
+         alertView.showError(NSLocalizedString("ErrMsgUserNotValidTitle", comment: ""), subTitle: NSLocalizedString("ErrMsgUserNotValidMsg", comment: ""))
       }
    }
 

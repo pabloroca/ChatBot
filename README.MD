@@ -47,6 +47,7 @@ I am splitting this in two storyboards (Login and Chat), so this would help in a
 * Alamofire
 * AlamofireImage
 * SwiftyJSON
+* SCLAlertView
 * OHHTTPStubs
 
 ## SwiftLint

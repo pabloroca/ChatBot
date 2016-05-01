@@ -10,7 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-   var viperPresenter: LoginPresenter?
+   var viperPresenter: LoginPresenter!
    
    //UI
    @IBOutlet weak var txtUserName: UITextField!
@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
    // MARK: - UI Actions
    @IBAction func btnLoginAction(sender: AnyObject) {
       if let username = self.txtUserName.text {
-         self.viperPresenter?.btnLoginAction(sender, username: username)
+         self.viperPresenter.btnLoginAction(sender, username: username)
       }
    }
 

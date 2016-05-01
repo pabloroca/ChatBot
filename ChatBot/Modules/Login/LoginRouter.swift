@@ -11,7 +11,7 @@ import UIKit
 
 class LoginRouter: NSObject {
 
-   var viperPresenter: LoginPresenter?
+   var viperPresenter: LoginPresenter!
    
    override init() {
       super.init()
