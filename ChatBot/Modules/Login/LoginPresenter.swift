@@ -39,19 +39,22 @@ class LoginPresenter: NSObject {
             // we can't login
             let alertView = SCLAlertView()
             alertView.showCloseButton = false
-            alertView.addButton(NSLocalizedString("Done", comment: "")) {
+            alertView.addButton(tr(.Done)) {
                self.viperView.focusInUserName()
             }
-            alertView.showError(NSLocalizedString("ErrMsgUserInvalidLoginTitle", comment: ""), subTitle: NSLocalizedString("ErrMsgUserInvalidLoginMsg", comment: ""))
+            
+            alertView.showError(tr(.ErrMsgUserInvalidLoginTitle), subTitle: tr(.ErrMsgUserInvalidLoginMsg))
          }
       } else {
          // username not valid
          let alertView = SCLAlertView()
          alertView.showCloseButton = false
-         alertView.addButton(NSLocalizedString("Done", comment: "")) {
+         
+         alertView.addButton(tr(.Done)) {
             self.viperView.focusInUserName()
          }
-         alertView.showError(NSLocalizedString("ErrMsgUserNotValidTitle", comment: ""), subTitle: NSLocalizedString("ErrMsgUserNotValidMsg", comment: ""))
+         
+         alertView.showError(tr(.ErrMsgUserNotValidTitle), subTitle: tr(.ErrMsgUserNotValidMsg))
       }
    }
 

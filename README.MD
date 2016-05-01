@@ -21,6 +21,7 @@
 * showing slow internet connectivity
 * HeaderDoc HTML based documentation. Generated using jazzy. in docs/swift_output/index.html
 * using SwiftLint to enforce Swift style and conventions
+* using SwiftGen to generate string enums
 
 - **PR2Studio classes**. I applied some of my own classes I use to develop in Swift.
 

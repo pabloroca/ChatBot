@@ -22,7 +22,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     lazy var messages = [CDEMessage]()
    
     override func viewDidLoad() {
-      self.navItem.title = NSLocalizedString("TitleMain", comment: "")
+      self.navItem.title = tr(.ChatTitleMain("//ojo"))
       
       self.viperPresenter = ChatPresenter().dynamicType.init(view: self)
 

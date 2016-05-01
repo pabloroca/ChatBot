@@ -31,6 +31,13 @@
 "ErrMsgNodataItemsMsg"   = "No data, pull tp refresh to get data";
 
 // Navigation
-"TitleMain"       = "Chat - ";
 "TitleBackButton" = "Back";
 
+//////////////////////
+
+// Login screen
+"LoginTypeYourName"        = "Type your name";
+"LoginUsernamePlaceHolder" = "First Name & Last Name";
+
+// Chat screen
+"ChatTitleMain"       = "Chat - [%@]";
