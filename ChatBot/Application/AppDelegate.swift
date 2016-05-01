@@ -15,9 +15,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    let dataModel: String = "ChatBot"
 
     var window: UIWindow?
-
+    var rootRouter: RootRouter?
+   
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+      
+      self.rootRouter = RootRouter()
+      
+      if window == nil {
+         window = UIWindow(frame: UIScreen.mainScreen().bounds)
+      }
+      
+      let isUserConnected = false
+      
+      if isUserConnected == false {
+         self.rootRouter!.showLogin()
+      } else {
+         self.rootRouter!.showChat()
+      }
+      
         return true
     }
 

@@ -23,7 +23,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
    // MARK - UI Actions
-   @IBAction func logOutAction(sender: AnyObject) {
+   @IBAction func btnlogOutAction(sender: AnyObject) {
+      let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+      appDelegate.rootRouter?.showLogin(animated: true)
    }
 
    //MARK - UITableViewDataSource

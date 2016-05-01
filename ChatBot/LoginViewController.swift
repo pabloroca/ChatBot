@@ -15,7 +15,9 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    @IBAction func showChat(sender: AnyObject) {
+    @IBAction func btnLoginAction(sender: AnyObject) {
+      let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+      appDelegate.rootRouter?.showChat(animated:true)
     }
 
 }

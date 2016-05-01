@@ -23,7 +23,9 @@
 
 - **PR2Studio classes**. I applied some of my own classes I use to develop in Swift.
 
-- **No Storyboards**. I much prefer to use NIBs than storyboards, storyboards are really a problem in team development (because git conflicts) and with NIBs you have more flexibility to enable different behaviors. But cause the sample provide has Storyboards, I will use them.
+- **Storyboards**. I much prefer to use NIBs than storyboards, storyboards are really a problem in team development (because git conflicts) and with NIBs you have more flexibility to enable different behaviors. But cause the sample provide has Storyboards, I will use them.
+
+I am splitting this in two storyboards (Login and Chat), so this would help in avoiding git merge conflicts.
 
 - **Trying to apply SOLID principles**. Specially the Single Responsability. Classes must be lightewigth and perform only one task inside his abstraction layer. So it's better to have more classes that one big bloated class
 
@@ -38,8 +40,7 @@
 
 A tool for enforcing good code style.
 
-Install:
-brew install swiftlint
+Install: brew install swiftlint
 
 If you don't want to use or install it, just remove Run Script Phase we have in the ChatBot target
 

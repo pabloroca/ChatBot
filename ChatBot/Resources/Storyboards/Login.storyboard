@@ -41,7 +41,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <state key="normal" title="LOGIN"/>
                                 <connections>
-                                    <action selector="showChat:" destination="MYF-3I-Hw7" eventType="touchUpInside" id="mru-Fu-3bu"/>
+                                    <action selector="btnLoginAction:" destination="MYF-3I-Hw7" eventType="touchUpInside" id="QRr-gG-o1A"/>
                                 </connections>
                             </button>
                         </subviews>
