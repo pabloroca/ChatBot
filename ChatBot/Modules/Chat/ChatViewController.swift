@@ -41,6 +41,11 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
       self.viperPresenter.btnlogOutAction(sender)
    }
 
+   @IBAction func btnSendAction(sender: AnyObject) {
+      if let comment = self.txtComment.text {
+         self.viperPresenter.btnSendAction(comment)
+      }
+   }
    // MARK: - UITableViewDataSource
     func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 150

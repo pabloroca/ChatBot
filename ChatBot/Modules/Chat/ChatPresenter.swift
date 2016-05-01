@@ -27,8 +27,12 @@ class ChatPresenter: NSObject {
    }
    
    // MARK: - UI Actions
+   
    func btnlogOutAction(sender: AnyObject) {
       self.viperRouter?.showLogin(sender)
    }
 
+   func btnSendAction(comment: String) {
+      self.viperInteractor.sendComment(comment)
+   }
 }

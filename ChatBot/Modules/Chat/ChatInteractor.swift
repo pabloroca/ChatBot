@@ -10,4 +10,7 @@ import Foundation
 
 class ChatInteractor: NSObject {
    
+   func sendComment(comment: String) {
+      //ojo pte
+   }
 }
