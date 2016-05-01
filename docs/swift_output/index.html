@@ -13,7 +13,7 @@
     <a title="ChatBot  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">ChatBot Docs</a> (33% documented)</p>
+        <p><a href="index.html">ChatBot Docs</a> (35% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -42,7 +42,7 @@
                 <a href="Classes/ChatBubble.html">ChatBubble</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes.html#/s:C7ChatBot14ChatInteractor">ChatInteractor</a>
+                <a href="Classes/ChatInteractor.html">ChatInteractor</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ChatPresenter.html">ChatPresenter</a>
@@ -111,9 +111,6 @@
               <li class="nav-group-task">
                 <a href="Extensions/UIImageView.html">UIImageView</a>
               </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UIViewController.html">UIViewController</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -121,17 +118,6 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Functions.html#/s:F7ChatBot2trFOS_4L10nSS">tr(_:)</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Protocols.html">Protocols</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Protocols/StoryboardSceneType.html">StoryboardSceneType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols.html#/s:P7ChatBot19StoryboardSegueType">StoryboardSegueType</a>
               </li>
             </ul>
           </li>
@@ -149,12 +135,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="Structs/PR2NetworkingNotifications.html">PR2NetworkingNotifications</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/StoryboardScene.html">StoryboardScene</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs.html#/s:V7ChatBot15StoryboardSegue">StoryboardSegue</a>
               </li>
             </ul>
           </li>
@@ -187,10 +167,28 @@
 <li>showing slow internet connectivity</li>
 <li>HeaderDoc HTML based documentation. Generated using jazzy. in docs/swift_output/index.html</li>
 <li>using SwiftLint to enforce Swift style and conventions</li>
-<li><p>using SwiftGen to generate string enums</p></li>
-<li><p><strong>PR2Studio classes</strong>. I applied some of my own classes I use to develop in Swift.</p></li>
-<li><p><strong>VIPER</strong></p></li>
+<li>using SwiftGen to generate string enums</li>
+<li>Maximized Xcode Warnings (XcodeWarnings.xcconfig) (<a href="http://qualitycoding.org/xcode-warnings">http://qualitycoding.org/xcode-warnings</a>)</li>
+<li><p>Using as few external libraries as possible:</p></li>
+<li><p>Alamofire</p></li>
+<li><p>AlamofireImage</p></li>
+<li><p>SwiftyJSON</p></li>
+<li><p>SCLAlertView</p></li>
+<li><p>OHHTTPStubs</p></li>
 </ul>
+<a href='#pr2studio_classes' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='pr2studio_classes'>PR2Studio classes</h2>
+
+<p>I applied some of my own classes I use to develop in Swift.</p>
+<a href='#storyboards' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='storyboards'>Storyboards</h2>
+
+<p>I much prefer to use NIBs than storyboards, storyboards are really a problem in team 
+development (because git conflicts) and with NIBs you have more flexibility to enable different behaviors. But cause the sample provide has Storyboards, I will use them.</p>
+
+<p>I am splitting this in two storyboards (Login and Chat), so this would help in avoiding git merge conflicts and each one will be a VIPER module</p>
+<a href='#solid_principles' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='solid_principles'>SOLID principles</h2>
+
+<p>Trying to apply SOLID principles and Clean Code, specially the Single Responsability. Classes must be lightewigth and perform only one task inside his abstraction layer. So it&rsquo;s better to have more classes that one big bloated class</p>
+<a href='#viper' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='viper'>VIPER</h2>
 
 <p>This is the first project I do with VIPER, so maybe some things does not follow at full VIPER architecture. Anyhow I understand VIPER as a guideline or concepts to understand, but not to follow at full.</p>
 
@@ -201,22 +199,6 @@
 
 <p>(I follow this variant) Brigade’s Experience Using an MVC Alternative
 <a href="https://medium.com/brigade-engineering/brigades-experience-using-an-mvc-alternative-36ef1601a41f#.ik6unq2bl">https://medium.com/brigade-engineering/brigades-experience-using-an-mvc-alternative-36ef1601a41f#.ik6unq2bl</a></p>
-
-<ul>
-<li><strong>Storyboards</strong>. I much prefer to use NIBs than storyboards, storyboards are really a problem in team development (because git conflicts) and with NIBs you have more flexibility to enable different behaviors. But cause the sample provide has Storyboards, I will use them.</li>
-</ul>
-
-<p>I am splitting this in two storyboards (Login and Chat), so this would help in avoiding git merge conflicts and each one will be a VIPER module</p>
-
-<ul>
-<li><p><strong>Trying to apply SOLID principles</strong>. Specially the Single Responsability. Classes must be lightewigth and perform only one task inside his abstraction layer. So it&rsquo;s better to have more classes that one big bloated class</p></li>
-<li><p>Using as few external libraries as possible:</p></li>
-<li><p>Alamofire</p></li>
-<li><p>AlamofireImage</p></li>
-<li><p>SwiftyJSON</p></li>
-<li><p>SCLAlertView</p></li>
-<li><p>OHHTTPStubs</p></li>
-</ul>
 <a href='#network_logger' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='network_logger'>Network logger</h2>
 
 <p>Logs into the console the network requests and responses. It&rsquo;s instantiated in AppDelegate.swift, here:</p>
@@ -233,30 +215,25 @@
 </ul>
 <a href='#swiftlint' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='swiftlint'>SwiftLint</h2>
 
+<p><a href="https://github.com/realm/SwiftLint">https://github.com/realm/SwiftLint</a></p>
+
 <p>A tool for enforcing good code style.</p>
 
 <p>Install: brew install swiftlint</p>
 
 <p>If you don&rsquo;t want to use or install it, just remove Run Script Phase we have in the ChatBot target</p>
-<a href='#swiftgen_a_href_https_github_com_alisoftware_swiftgen_https_github_com_alisoftware_swiftgen_a' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='swiftgen_a_href_https_github_com_alisoftware_swiftgen_https_github_com_alisoftware_swiftgen_a'>SwiftGen (<a href="https://github.com/AliSoftware/SwiftGen">https://github.com/AliSoftware/SwiftGen</a>)</h2>
+<a href='#swiftgen' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='swiftgen'>SwiftGen</h2>
+
+<p><a href="https://github.com/AliSoftware/SwiftGen">https://github.com/AliSoftware/SwiftGen</a></p>
 
 <p>It is used for generating strings enums, so we can avoid the risk of using an non-existing string</p>
 
 <p>Its generated doing this in the console and in the project root folder</p>
+<pre class="highlight plaintext"><code>swiftgen strings ./ChatBot/Resources/Strings/Localizable.strings --output ./ChatBot/Application/Strings.swift
+</code></pre>
+<a href='#jazzy_doc_generation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='jazzy_doc_generation'>jazzy (Doc generation)</h2>
 
-<p>swiftgen strings ./ChatBot/Resources/Strings/Localizable.strings &ndash;output ./ChatBot/Application/Strings.swift</p>
-<a href='#issues_with_data' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='issues_with_data'>Issues with data</h2>
-
-<p>JSON response has no date for every message, so I will put the date when we retrieve the data</p>
-<a href='#database' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='database'>Database</h2>
-
-<p>I have created this CoreData entities (sqlite tables):</p>
-
-<p>CDEUser
-CDEChat</p>
-
-<p>They have relationships between then also defined delete rules for them.</p>
-<a href='#doc_generation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='doc_generation'>Doc generation</h2>
+<p><a href="https://github.com/realm/jazzy">https://github.com/realm/jazzy</a></p>
 <pre class="highlight plaintext"><code>jazzy \
   --clean \
   --author PabloRoca \
@@ -267,6 +244,19 @@ CDEChat</p>
   --output docs/swift_output \
   --min-acl internal 
 </code></pre>
+<a href='#issues_with_data' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='issues_with_data'>Issues with data</h2>
+
+<p>JSON response has no date for every message, so I will put the date when we retrieve the data</p>
+<a href='#database' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='database'>Database</h2>
+
+<p>I have created this CoreData entities (sqlite tables):</p>
+
+<ul>
+<li>CDEUser</li>
+<li>CDEMessage</li>
+</ul>
+
+<p>They have relationships between then also defined delete rules for them.</p>
 <a href='#network_using_https' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='network_using_https'>Network using HTTPS</h2>
 
 <p>Main reasons for using HTTPS is for now, a bit (just a bit more security in network comms) and better speed. See article by Scott Helme why to use HTTPS (<a href="https://scotthelme.co.uk/still-think-you-dont-need-https/">https://scotthelme.co.uk/still-think-you-dont-need-https/</a>)</p>
@@ -306,7 +296,7 @@ CDEChat</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://pr2studio.com" target="_blank" rel="external">PabloRoca</a>. All rights reserved. (Last updated: 2016-05-01)</p>
+          <p>&copy; 2016 <a class="link" href="https://pr2studio.com" target="_blank" rel="external">PabloRoca</a>. All rights reserved. (Last updated: 2016-05-02)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

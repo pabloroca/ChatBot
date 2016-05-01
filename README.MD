@@ -22,10 +22,32 @@
 * HeaderDoc HTML based documentation. Generated using jazzy. in docs/swift_output/index.html
 * using SwiftLint to enforce Swift style and conventions
 * using SwiftGen to generate string enums
+* Maximized Xcode Warnings (XcodeWarnings.xcconfig) (http://qualitycoding.org/xcode-warnings)
+* Using as few external libraries as possible:
 
-- **PR2Studio classes**. I applied some of my own classes I use to develop in Swift.
+* Alamofire
+* AlamofireImage
+* SwiftyJSON
+* SCLAlertView
+* OHHTTPStubs
 
-- **VIPER**
+## PR2Studio classes
+
+I applied some of my own classes I use to develop in Swift.
+
+## Storyboards
+
+I much prefer to use NIBs than storyboards, storyboards are really a problem in team 
+development (because git conflicts) and with NIBs you have more flexibility to enable different behaviors. But cause the sample provide has Storyboards, I will use them.
+
+I am splitting this in two storyboards (Login and Chat), so this would help in avoiding git merge conflicts and each one will be a VIPER module
+
+## SOLID principles
+
+Trying to apply SOLID principles and Clean Code, specially the Single Responsability. Classes must be lightewigth and perform only one task inside his abstraction layer. So it's better to have more classes that one big bloated class
+
+
+## VIPER
 
 This is the first project I do with VIPER, so maybe some things does not follow at full VIPER architecture. Anyhow I understand VIPER as a guideline or concepts to understand, but not to follow at full.
 
@@ -36,20 +58,6 @@ https://www.objc.io/issues/13-architecture/viper
 
 (I follow this variant) Brigade’s Experience Using an MVC Alternative
 https://medium.com/brigade-engineering/brigades-experience-using-an-mvc-alternative-36ef1601a41f#.ik6unq2bl
-
-- **Storyboards**. I much prefer to use NIBs than storyboards, storyboards are really a problem in team development (because git conflicts) and with NIBs you have more flexibility to enable different behaviors. But cause the sample provide has Storyboards, I will use them.
-
-I am splitting this in two storyboards (Login and Chat), so this would help in avoiding git merge conflicts and each one will be a VIPER module
-
-- **Trying to apply SOLID principles**. Specially the Single Responsability. Classes must be lightewigth and perform only one task inside his abstraction layer. So it's better to have more classes that one big bloated class
-
-- Using as few external libraries as possible:
-
-* Alamofire
-* AlamofireImage
-* SwiftyJSON
-* SCLAlertView
-* OHHTTPStubs
 
 ## Network logger
 
@@ -65,6 +73,7 @@ logLevel can be:
 * PR2NetworkingLogLevelError - logs only when errors
 
 ## SwiftLint
+https://github.com/realm/SwiftLint
 
 A tool for enforcing good code style.
 
@@ -72,28 +81,17 @@ Install: brew install swiftlint
 
 If you don't want to use or install it, just remove Run Script Phase we have in the ChatBot target
 
-## SwiftGen (https://github.com/AliSoftware/SwiftGen)
+## SwiftGen
+https://github.com/AliSoftware/SwiftGen
 
 It is used for generating strings enums, so we can avoid the risk of using an non-existing string
 
 Its generated doing this in the console and in the project root folder
 
-swiftgen strings ./ChatBot/Resources/Strings/Localizable.strings --output ./ChatBot/Application/Strings.swift
+    swiftgen strings ./ChatBot/Resources/Strings/Localizable.strings --output ./ChatBot/Application/Strings.swift
 
-## Issues with data
-
-JSON response has no date for every message, so I will put the date when we retrieve the data
-
-## Database
-
-I have created this CoreData entities (sqlite tables):
-
-CDEUser
-CDEChat
-
-They have relationships between then also defined delete rules for them.
-
-## Doc generation
+## jazzy (Doc generation)
+https://github.com/realm/jazzy
 
     jazzy \
       --clean \
@@ -105,7 +103,21 @@ They have relationships between then also defined delete rules for them.
       --output docs/swift_output \
       --min-acl internal 
   
-  
+
+
+## Issues with data
+
+JSON response has no date for every message, so I will put the date when we retrieve the data
+
+## Database
+
+I have created this CoreData entities (sqlite tables):
+
+* CDEUser
+* CDEMessage
+
+They have relationships between then also defined delete rules for them.
+
 ## Network using HTTPS
 
 Main reasons for using HTTPS is for now, a bit (just a bit more security in network comms) and better speed. See article by Scott Helme why to use HTTPS (https://scotthelme.co.uk/still-think-you-dont-need-https/)
