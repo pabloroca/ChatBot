@@ -35,4 +35,6 @@ class ChatPresenter: NSObject {
    func btnSendAction(comment: String) {
       self.viperInteractor.sendComment(comment)
    }
+   
+   
 }

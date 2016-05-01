@@ -34,7 +34,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="send"/>
                                         <connections>
-                                            <outlet property="delegate" destination="Y4o-yt-zyc" id="n8j-gZ-Ige"/>
+                                            <outlet property="delegate" destination="Y4o-yt-zyc" id="Tve-bj-2Oe"/>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzp-vn-DNb">
@@ -82,7 +82,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="btnSend" destination="Xzp-vn-DNb" id="uru-FO-VYH"/>
-                        <outlet property="constraintViewCommentBottom" destination="nPg-PV-1oG" id="spF-pg-rFw"/>
+                        <outlet property="constraintViewCommentBottom" destination="nPg-PV-1oG" id="gAf-7B-hNZ"/>
                         <outlet property="navItem" destination="ewV-Ds-2f1" id="Mbz-6n-rbM"/>
                         <outlet property="tableView" destination="M3I-BK-h7H" id="BLZ-F8-Ibp"/>
                         <outlet property="txtComment" destination="P4q-wc-J7B" id="o8I-rT-Rzr"/>
