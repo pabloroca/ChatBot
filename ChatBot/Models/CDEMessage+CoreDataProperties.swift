@@ -1,8 +1,8 @@
 //
-//  CDEChat+CoreDataProperties.swift
+//  CDEMessage+CoreDataProperties.swift
 //  
 //
-//  Created by Pablo Roca Rozas on 30/4/16.
+//  Created by Pablo Roca Rozas on 1/5/16.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -12,13 +12,13 @@
 import Foundation
 import CoreData
 
-extension CDEChat {
+extension CDEMessage {
 
-    @NSManaged var username: String?
     @NSManaged var content: String?
-    @NSManaged var userImageUrl: String?
     @NSManaged var time: String?
     @NSManaged var ts: NSNumber?
-    @NSManaged var chatUser: NSSet?
+    @NSManaged var userImageUrl: String?
+    @NSManaged var username: String?
+    @NSManaged var messageUser: NSSet?
 
 }

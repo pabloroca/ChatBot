@@ -39,7 +39,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="background" destination="6fc-CV-zV1" id="dni-bd-nhN"/>
-                <outlet property="bubbleContent" destination="SoN-91-nTX" id="Sxy-jz-nCX"/>
+                <outlet property="bubbleContent" destination="SoN-91-nTX" id="6eD-Dr-c8Q"/>
                 <outlet property="userImage" destination="nat-XT-9g6" id="4V9-oE-al9"/>
                 <outlet property="userName" destination="cPm-fs-6pl" id="hpb-pn-M2P"/>
             </connections>

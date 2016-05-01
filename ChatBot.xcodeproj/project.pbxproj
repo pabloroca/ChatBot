@@ -16,12 +16,12 @@
 		6D3D29AA1CD5412A00E2AE9B /* PR2Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D29A51CD5412A00E2AE9B /* PR2Dates.swift */; };
 		6D3D29AB1CD5412A00E2AE9B /* PR2Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D29A61CD5412A00E2AE9B /* PR2Networking.swift */; };
 		6D3D29AC1CD5412A00E2AE9B /* PRExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D29A71CD5412A00E2AE9B /* PRExtensions.swift */; };
-		6D3D29B11CD542F500E2AE9B /* CDEChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D29AD1CD542F500E2AE9B /* CDEChat.swift */; };
-		6D3D29B21CD542F500E2AE9B /* CDEChat+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D29AE1CD542F500E2AE9B /* CDEChat+CoreDataProperties.swift */; };
 		6D3D29B31CD542F500E2AE9B /* CDEUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D29AF1CD542F500E2AE9B /* CDEUser.swift */; };
 		6D3D29B41CD542F500E2AE9B /* CDEUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D29B01CD542F500E2AE9B /* CDEUser+CoreDataProperties.swift */; };
 		6D3D29BA1CD543C100E2AE9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D3D29B71CD543C100E2AE9B /* Assets.xcassets */; };
 		6D3D29BB1CD543C100E2AE9B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D3D29B91CD543C100E2AE9B /* Localizable.strings */; };
+		6D587AAF1CD608AE0015F33B /* CDEMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587AAD1CD608AE0015F33B /* CDEMessage.swift */; };
+		6D587AB01CD608AE0015F33B /* CDEMessage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587AAE1CD608AE0015F33B /* CDEMessage+CoreDataProperties.swift */; };
 		6D5B7CD21CD5462600D48330 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5B7CD01CD5462600D48330 /* LaunchScreen.storyboard */; };
 		6D5B7CD31CD5462600D48330 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5B7CD11CD5462600D48330 /* Main.storyboard */; };
 		94182B5E1CC9139800194DF7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94182B5D1CC9139800194DF7 /* LoginViewController.swift */; };
@@ -62,12 +62,12 @@
 		6D3D29A51CD5412A00E2AE9B /* PR2Dates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PR2Dates.swift; sourceTree = "<group>"; };
 		6D3D29A61CD5412A00E2AE9B /* PR2Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PR2Networking.swift; sourceTree = "<group>"; };
 		6D3D29A71CD5412A00E2AE9B /* PRExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRExtensions.swift; sourceTree = "<group>"; };
-		6D3D29AD1CD542F500E2AE9B /* CDEChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDEChat.swift; sourceTree = "<group>"; };
-		6D3D29AE1CD542F500E2AE9B /* CDEChat+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDEChat+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6D3D29AF1CD542F500E2AE9B /* CDEUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDEUser.swift; sourceTree = "<group>"; };
 		6D3D29B01CD542F500E2AE9B /* CDEUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDEUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6D3D29B71CD543C100E2AE9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D3D29B91CD543C100E2AE9B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		6D587AAD1CD608AE0015F33B /* CDEMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDEMessage.swift; sourceTree = "<group>"; };
+		6D587AAE1CD608AE0015F33B /* CDEMessage+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDEMessage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6D5B7CD01CD5462600D48330 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D5B7CD11CD5462600D48330 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		87703944C2C8E8C11CA7A116 /* Pods-ChatBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatBot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatBot/Pods-ChatBot.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,8 +144,8 @@
 		6D17C9C51CD5409F00544A96 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6D3D29AD1CD542F500E2AE9B /* CDEChat.swift */,
-				6D3D29AE1CD542F500E2AE9B /* CDEChat+CoreDataProperties.swift */,
+				6D587AAD1CD608AE0015F33B /* CDEMessage.swift */,
+				6D587AAE1CD608AE0015F33B /* CDEMessage+CoreDataProperties.swift */,
 				6D3D29AF1CD542F500E2AE9B /* CDEUser.swift */,
 				6D3D29B01CD542F500E2AE9B /* CDEUser+CoreDataProperties.swift */,
 				6D17C9C61CD540BF00544A96 /* ChatBot.xcdatamodeld */,
@@ -454,20 +454,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D3D29B11CD542F500E2AE9B /* CDEChat.swift in Sources */,
 				6D3D29AA1CD5412A00E2AE9B /* PR2Dates.swift in Sources */,
 				6D3D29AC1CD5412A00E2AE9B /* PRExtensions.swift in Sources */,
+				6D587AB01CD608AE0015F33B /* CDEMessage+CoreDataProperties.swift in Sources */,
 				6D3D29B31CD542F500E2AE9B /* CDEUser.swift in Sources */,
 				6D3D29A91CD5412A00E2AE9B /* PR2CoreDataStack.swift in Sources */,
 				6D17C9C11CD53FA600544A96 /* AppDelegate.swift in Sources */,
 				6D3D29B41CD542F500E2AE9B /* CDEUser+CoreDataProperties.swift in Sources */,
 				6D17C9C81CD540BF00544A96 /* ChatBot.xcdatamodeld in Sources */,
-				6D3D29B21CD542F500E2AE9B /* CDEChat+CoreDataProperties.swift in Sources */,
 				94182B5E1CC9139800194DF7 /* LoginViewController.swift in Sources */,
 				94182B8A1CC9371A00194DF7 /* ChatViewController.swift in Sources */,
 				6D17C9C21CD53FA600544A96 /* Colors.swift in Sources */,
 				94E23D4E1CCA355800BAC252 /* Message.swift in Sources */,
 				6D17C9C31CD53FA600544A96 /* EndPoints.swift in Sources */,
+				6D587AAF1CD608AE0015F33B /* CDEMessage.swift in Sources */,
 				94E23D4C1CCA260700BAC252 /* ChatBubble.swift in Sources */,
 				6D3D29AB1CD5412A00E2AE9B /* PR2Networking.swift in Sources */,
 				6D3D29A81CD5412A00E2AE9B /* PR2Common.swift in Sources */,

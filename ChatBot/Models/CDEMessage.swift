@@ -1,8 +1,8 @@
 //
-//  CDEChat.swift
+//  CDEMessage.swift
 //  
 //
-//  Created by Pablo Roca Rozas on 30/4/16.
+//  Created by Pablo Roca Rozas on 1/5/16.
 //
 //
 
@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 
-class CDEChat: NSManagedObject {
+class CDEMessage: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
 

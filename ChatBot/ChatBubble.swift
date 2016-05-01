@@ -12,14 +12,13 @@ import UIKit
 
 class ChatBubble: UITableViewCell {
 
+    //UI
     @IBOutlet weak var bubbleContent: UILabel!
-    
     @IBOutlet weak var userName: UILabel!
-    
     @IBOutlet weak var background: UIView!
-    
     @IBOutlet weak var userImage: UIImageView!
-    
+    //UI
+   
     override func awakeFromNib() {
         self.userImage.layer.masksToBounds = true
         self.userImage.layer.borderWidth = 1
@@ -31,9 +30,9 @@ class ChatBubble: UITableViewCell {
 
     }
     
-    
-    func updateChatBubble(message: Message) {
-    
-        
+    func updateChatBubble(message: CDEMessage) {
+      self.bubbleContent.text = message.content
+      self.userName.text = message.username
+      
     }
 }
