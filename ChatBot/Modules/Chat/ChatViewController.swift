@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
 
    // VIPER
    var viperPresenter: ChatPresenter!
@@ -24,7 +24,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
    //UI
    
    
-   @IBOutlet weak var constraintViewCommenetBottom: NSLayoutConstraint!
+   @IBOutlet weak var constraintViewCommentBottom: NSLayoutConstraint!
    
     lazy var messages = [CDEMessage]()
    
@@ -46,6 +46,14 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
          self.viperPresenter.btnSendAction(comment)
       }
    }
+   
+   // MARK: - UITextFieldDelegate
+
+   func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+      
+      return true
+   }
+   
    // MARK: - UITableViewDataSource
     func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 150

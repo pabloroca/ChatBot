@@ -82,7 +82,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="btnSend" destination="Xzp-vn-DNb" id="uru-FO-VYH"/>
-                        <outlet property="constraintViewCommenetBottom" destination="nPg-PV-1oG" id="Bsu-ro-fmD"/>
+                        <outlet property="constraintViewCommentBottom" destination="nPg-PV-1oG" id="spF-pg-rFw"/>
                         <outlet property="navItem" destination="ewV-Ds-2f1" id="Mbz-6n-rbM"/>
                         <outlet property="tableView" destination="M3I-BK-h7H" id="BLZ-F8-Ibp"/>
                         <outlet property="txtComment" destination="P4q-wc-J7B" id="o8I-rT-Rzr"/>
