@@ -38,6 +38,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
       self.txtUserName.becomeFirstResponder()
    }
    
+   // MARK: - UITextFieldDelegate
    func textFieldShouldReturn(textField: UITextField) -> Bool {
       textField.resignFirstResponder()
       self.btnLoginAction(self.btnLogin)
