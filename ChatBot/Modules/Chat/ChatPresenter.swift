@@ -10,10 +10,20 @@ import Foundation
 
 class ChatPresenter: NSObject {
 
-   var viperRouter: ChatRouter?
-
+   // VIPER
+   var viperView: ChatViewController!
+   var viperRouter: ChatRouter!
+   var viperInteractor: ChatInteractor!
+   
    override init() {
-      self.viperRouter = ChatRouter()
+      super.init()
+   }
+   
+   convenience required init(view: ChatViewController) {
+      self.init()
+      self.viperRouter     = ChatRouter().dynamicType.init(presenter:self)
+      self.viperInteractor = ChatInteractor()
+      self.viperView       = view
    }
    
    // MARK: - UI Actions

@@ -11,6 +11,9 @@ import UIKit
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+   // VIPER
+   var viperPresenter: ChatPresenter!
+
    //UI
    @IBOutlet weak var navItem: UINavigationItem!
    @IBOutlet weak var tableView: UITableView!
@@ -18,17 +21,16 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
    
     lazy var messages = [CDEMessage]()
    
-    var viperPresenter: ChatPresenter?
-
     override func viewDidLoad() {
       self.navItem.title = NSLocalizedString("TitleMain", comment: "")
       
-      self.viperPresenter = ChatPresenter()
+      self.viperPresenter = ChatPresenter().dynamicType.init(view: self)
+
     }
 
    // MARK: - UI Actions
    @IBAction func btnlogOutAction(sender: AnyObject) {
-      self.viperPresenter?.btnlogOutAction(sender)
+      self.viperPresenter.btnlogOutAction(sender)
    }
 
    // MARK: - UITableViewDataSource

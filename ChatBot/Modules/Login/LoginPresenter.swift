@@ -11,6 +11,7 @@ import SCLAlertView
 
 class LoginPresenter: NSObject {
    
+   // VIPER
    var viperView: LoginViewController!
    var viperRouter: LoginRouter!
    var viperInteractor: LoginInteractor!

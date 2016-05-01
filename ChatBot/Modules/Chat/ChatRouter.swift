@@ -10,6 +10,18 @@ import Foundation
 import UIKit
 
 class ChatRouter: NSObject {
+
+   // VIPER
+   var viperPresenter: ChatPresenter!
+   
+   override init() {
+      super.init()
+   }
+   
+   convenience required init(presenter: ChatPresenter) {
+      self.init()
+      self.viperPresenter       = presenter
+   }
    
    func showLogin(sender: AnyObject) {
       let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
