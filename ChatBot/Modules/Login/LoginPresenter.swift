@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SCLAlertView
 
 class LoginPresenter: NSObject {
    
@@ -27,16 +28,17 @@ class LoginPresenter: NSObject {
    }
    
    // MARK: - UI Actions
+   
    func btnLoginAction(sender: AnyObject, username: String) {
       if self.viperInteractor!.isUsernameValid(username.lowercaseString) {
          if (self.viperInteractor!.doLoginWithUsername(username: username)) {
             self.viperRouter?.showChat(sender)
          } else {
-            self.viperRouter?.showAlertInvalidLogin()
+            SCLAlertView().showError(NSLocalizedString("ErrMsgUserInvalidLoginTitle", comment: ""), subTitle: NSLocalizedString("ErrMsgUserInvalidLoginMsg", comment: ""))
             self.viperView?.focusInUserName()
          }
       } else {
-         self.viperRouter?.showAlertUserNotValid()
+         SCLAlertView().showError(NSLocalizedString("ErrMsgUserNotValidTitle", comment: ""), subTitle: NSLocalizedString("ErrMsgUserNotValidMsg", comment: ""))
          self.viperView?.focusInUserName()
       }
    }

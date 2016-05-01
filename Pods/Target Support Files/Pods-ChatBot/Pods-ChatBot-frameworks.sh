@@ -86,10 +86,12 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-ChatBot/Alamofire.framework"
   install_framework "Pods-ChatBot/AlamofireImage.framework"
+  install_framework "Pods-ChatBot/SCLAlertView.framework"
   install_framework "Pods-ChatBot/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-ChatBot/Alamofire.framework"
   install_framework "Pods-ChatBot/AlamofireImage.framework"
+  install_framework "Pods-ChatBot/SCLAlertView.framework"
   install_framework "Pods-ChatBot/SwiftyJSON.framework"
 fi

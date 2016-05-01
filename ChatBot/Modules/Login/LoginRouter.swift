@@ -27,12 +27,4 @@ class LoginRouter: NSObject {
       appDelegate.rootRouter?.showChat(animated:true)
    }
 
-   func showAlertUserNotValid() {
-      PR2Common().simpleAlert(NSLocalizedString("ErrMsgUserNotValidTitle", comment: ""), message: NSLocalizedString("ErrMsgUserNotValidMsg", comment: ""))
-   }
-
-   func showAlertInvalidLogin() {
-      PR2Common().simpleAlert(NSLocalizedString("ErrMsgUserInvalidLoginTitle", comment: ""), message: NSLocalizedString("ErrMsgUserInvalidLoginMsg", comment: ""))
-   }
-
 }
