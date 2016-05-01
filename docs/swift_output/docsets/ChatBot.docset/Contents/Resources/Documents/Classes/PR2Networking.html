@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PR2Networking Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/PR2Networking" class="dashAnchor"></a>
+    <a title="PR2Networking Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">ChatBot Docs</a> (43% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">ChatBot Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        PR2Networking Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CDEChat.html">CDEChat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CDEUser.html">CDEUser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChatBubble.html">ChatBubble</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChatViewController.html">ChatViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginViewController.html">LoginViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Message.html">Message</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PR2Common.html">PR2Common</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PR2CoreDataStack.html">PR2CoreDataStack</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PR2Networking.html">PR2Networking</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/PR2NetworkingLogLevel.html">PR2NetworkingLogLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSDate.html">NSDate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImageView.html">UIImageView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Colors.html">Colors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/EndPoints.html">EndPoints</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PR2HTTPCode.html">PR2HTTPCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PR2NetworkingNotifications.html">PR2NetworkingNotifications</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>PR2Networking</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">PR2Networking</span></code></pre>
+
+                </div>
+              </div>
+            <p>Main network request class (wrapper of Alamofire request)</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC7ChatBot13PR2Networking14sharedInstanceS0_"></a>
+                    <a name="//apple_ref/swift/Variable/sharedInstance" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC7ChatBot13PR2Networking14sharedInstanceS0_">sharedInstance</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>it converts itself as a singleton</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">sharedInstance</span> <span class="o">=</span> <span class="kt">PR2Networking</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7ChatBot13PR2Networking8logLevelOS_21PR2NetworkingLogLevel"></a>
+                    <a name="//apple_ref/swift/Property/logLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7ChatBot13PR2Networking8logLevelOS_21PR2NetworkingLogLevel">logLevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Networking log levels</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">logLevel</span><span class="p">:</span> <span class="kt">PR2NetworkingLogLevel</span> <span class="o">=</span> <span class="o">.</span><span class="kt">PR2NetworkingLogLevelOff</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7ChatBot13PR2Networking10retryDelaySd"></a>
+                    <a name="//apple_ref/swift/Property/retryDelay" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7ChatBot13PR2Networking10retryDelaySd">retryDelay</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>initial retry delay</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">retryDelay</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">1.0</span>  <span class="c1">// in seconds</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7ChatBot13PR2Networking27secondsToShowSlowConnectionSd"></a>
+                    <a name="//apple_ref/swift/Property/secondsToShowSlowConnection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7ChatBot13PR2Networking27secondsToShowSlowConnectionSd">secondsToShowSlowConnection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>seconds to trigger slow internet notification</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">secondsToShowSlowConnection</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">3</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7ChatBot13PR2Networking12timerRequestCSo7NSTimer"></a>
+                    <a name="//apple_ref/swift/Property/timerRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7ChatBot13PR2Networking12timerRequestCSo7NSTimer">timerRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>timer for slow internet</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">timerRequest</span> <span class="o">=</span> <span class="kt">NSTimer</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7ChatBot13PR2Networking7managerERR"></a>
+                    <a name="//apple_ref/swift/Property/manager" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7ChatBot13PR2Networking7managerERR">manager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>alamofire manager</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">Manager</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7ChatBot13PR2Networking19managerReachabilityERR"></a>
+                    <a name="//apple_ref/swift/Property/managerReachability" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7ChatBot13PR2Networking19managerReachabilityERR">managerReachability</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>alamofire reachability</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">managerReachability</span><span class="p">:</span> <span class="kt">NetworkReachabilityManager</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/request%20methods"></a>
+                <a name="//apple_ref/swift/Section/request methods" class="dashAnchor"></a>
+                <a href="#/request%20methods">
+                  <h3 class="section-name">request methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7ChatBot13PR2Networking7requestERR"></a>
+                    <a name="//apple_ref/swift/Method/request(_:method:urlString:parameters:encoding:headers:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7ChatBot13PR2Networking7requestERR">request(_:method:urlString:parameters:encoding:headers:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>request: Recursive Request till delay &gt; 30 seconds
+ - parameter delay:      Acumulated delay
+ - parameter method:     The HTTP method.
+ - parameter urlString:  The URL string.
+ - parameter parameters: The parameters. nil by default.
+ - parameter encoding:   The parameter encoding. .URL by default.
+ - parameter headers:    The HTTP headers. nil by default.
+ - parameter completionHandler:    Completion handler.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span>
+        <span class="nv">delay</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span>
+        <span class="nv">method</span><span class="p">:</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">Method</span><span class="p">,</span>
+        <span class="nv">urlString</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">encoding</span><span class="p">:</span> <span class="kt">ParameterEncoding</span> <span class="o">=</span> <span class="o">.</span><span class="kt">URL</span><span class="p">,</span>
+        <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(</span><span class="nv">success</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="kt">Response</span><span class="o">&lt;</span><span class="kt">AnyObject</span><span class="p">,</span> <span class="kt">NSError</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">statuscode</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>delay</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Acumulated delay</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>method</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HTTP method.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>urlString</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL string.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The parameters. nil by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>encoding</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The parameter encoding. .URL by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>headers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HTTP headers. nil by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion handler.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Timer%20(slow%20internet)%20method"></a>
+                <a name="//apple_ref/swift/Section/Timer (slow internet) method" class="dashAnchor"></a>
+                <a href="#/Timer%20(slow%20internet)%20method">
+                  <h3 class="section-name">Timer (slow internet) method</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7ChatBot13PR2Networking19timerRequestReachedFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/timerRequestReached()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7ChatBot13PR2Networking19timerRequestReachedFT_T_">timerRequestReached()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Slow internet reached</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">dynamic</span> <span class="kd">func</span> <span class="nf">timerRequestReached</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/misc%20functions"></a>
+                <a name="//apple_ref/swift/Section/misc functions" class="dashAnchor"></a>
+                <a href="#/misc%20functions">
+                  <h3 class="section-name">misc functions</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7ChatBot13PR2Networking9userAgentFT_SS"></a>
+                    <a name="//apple_ref/swift/Method/userAgent()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7ChatBot13PR2Networking9userAgentFT_SS">userAgent()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>userAgent: Generates user agent from Info.plist
+example: SkyPablo:1.0.1/IOS:9.2/x86_64
+- returns: String</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">userAgent</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>String</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://pr2studio.com" target="_blank" rel="external">PabloRoca</a>. All rights reserved. (Last updated: 2016-04-30)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

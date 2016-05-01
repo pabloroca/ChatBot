@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ChatBot  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="ChatBot  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">ChatBot Docs</a> (43% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">ChatBot Reference</a>
+        <img id="carat" src="img/carat.png" />
+        ChatBot  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CDEChat.html">CDEChat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CDEUser.html">CDEUser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ChatBubble.html">ChatBubble</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ChatViewController.html">ChatViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/LoginViewController.html">LoginViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Message.html">Message</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PR2Common.html">PR2Common</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PR2CoreDataStack.html">PR2CoreDataStack</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PR2Networking.html">PR2Networking</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/PR2NetworkingLogLevel.html">PR2NetworkingLogLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSDate.html">NSDate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIImageView.html">UIImageView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/Colors.html">Colors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/EndPoints.html">EndPoints</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/PR2HTTPCode.html">PR2HTTPCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/PR2NetworkingNotifications.html">PR2NetworkingNotifications</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <a href='#main_specs' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='main_specs'>Main specs:</h2>
+
+<ul>
+<li>Developed in SWIFT 2.3</li>
+<li>iOS 9.0 compatible</li>
+<li>CocoaPods</li>
+<li>Network requests in the background</li>
+<li>Network requests recursively repeated if temporary error (increasing delay till 30 second)</li>
+<li>Network requests applied Apple recommendations (see <q>Network requests failures</q> below)</li>
+<li>Network Log network requests/responses to console with different logs levels</li>
+<li>Network using HTTPS (see below)</li>
+<li>Image downloading in the background</li>
+<li>Unit tests</li>
+<li>plist with NSAppTransportSecurity</li>
+<li>plist with UIRequiresPersistentWiFi (like Apple&rsquo;s mail app)</li>
+<li>Unit tests for Network requests (stubbed with OHHTTPStubs and not stubbed)</li>
+<li>Pull to refresh</li>
+<li>AutoLayout</li>
+<li>waiting indicators in status bar / webview</li>
+<li>showing slow internet connectivity</li>
+<li>HeaderDoc HTML based documentation. Generated using jazzy. in docs/swift_output/index.html</li>
+<li><p>using SwiftLint to enforce Swift style and conventions</p></li>
+<li><p><strong>PR2Studio classes</strong>. I applied some of my own classes I use to develop in Swift.</p></li>
+<li><p><strong>No Storyboards</strong>. I much prefer to use NIBs than storyboards, storyboards are really a problem in team development (because git conflicts) and with NIBs you have more flexibility to enable different behaviors. But cause the sample provide has Storyboards, I will use them.</p></li>
+<li><p><strong>Trying to apply SOLID principles</strong>. Specially the Single Responsability. Classes must be lightewigth and perform only one task inside his abstraction layer. So it&rsquo;s better to have more classes that one big bloated class</p></li>
+<li><p>Using as few external libraries as possible:</p></li>
+<li><p>Alamofire</p></li>
+<li><p>AlamofireImage</p></li>
+<li><p>SwiftyJSON</p></li>
+<li><p>OHHTTPStubs</p></li>
+</ul>
+<a href='#swiftlint' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='swiftlint'>SwiftLint</h2>
+
+<p>A tool for enforcing good code style.</p>
+
+<p>Install:
+brew install swiftlint</p>
+
+<p>If you don&rsquo;t want to use or install it, just remove Run Script Phase we have in the ChatBot target</p>
+<a href='#issues_with_data' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='issues_with_data'>Issues with data</h2>
+
+<p>JSON response has no date for every message, so I will put the date when we retrieve the data</p>
+<a href='#database' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='database'>Database</h2>
+
+<p>I have created this CoreData entities (sqlite tables):</p>
+
+<p>CDEUser
+CDEChat</p>
+
+<p>They have relationships between then also defined delete rules for them.</p>
+<a href='#doc_generation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='doc_generation'>Doc generation</h2>
+<pre class="highlight plaintext"><code>jazzy \
+  --clean \
+  --author PabloRoca \
+  --author_url https://pr2studio.com \
+  --module-version 1.00 \
+  --xcodebuild-arguments -scheme,ChatBotDoc \
+  --module ChatBot \
+  --output docs/swift_output \
+  --min-acl internal 
+</code></pre>
+<a href='#network_using_https' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='network_using_https'>Network using HTTPS</h2>
+
+<p>Main reasons for using HTTPS is for now, a bit (just a bit more security in network comms) and better speed. See article by Scott Helme why to use HTTPS (<a href="https://scotthelme.co.uk/still-think-you-dont-need-https/">https://scotthelme.co.uk/still-think-you-dont-need-https/</a>)</p>
+
+<p>The server is not properly configured for HTTPS (Qualys SSL Test grade B, key exchange using weak Diffie-Hellman (DH), no CSP, no Strict Transport Security (HSTS), Public Key Pins not configured and other security flaws).</p>
+
+<p>If HPKP were configured, I would use SSL Public Key Pinning inestead certificate pinning. I would be using TrustKit (<a href="https://github.com/datatheorem/TrustKit">https://github.com/datatheorem/TrustKit</a>) for it. With TrustKit it&rsquo;s easy to enable and avoid a man in the middle attack.</p>
+<a href='#network_requests_failures' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='network_requests_failures'>Network requests failures</h2>
+
+<p>This is not a trivial issue, some debate ongoing and as per this docs</p>
+
+<p>Networking Overview
+<a href="https://developer.apple.com/library/ios/documentation/NetworkingInternetWeb/Conceptual/NetworkingOverview/WhyNetworkingIsHard/WhyNetworkingIsHard.html#//apple_ref/doc/uid/TP40010220-CH13-SW8">https://developer.apple.com/library/ios/documentation/NetworkingInternetWeb/Conceptual/NetworkingOverview/WhyNetworkingIsHard/WhyNetworkingIsHard.html#//apple_ref/doc/uid/TP40010220-CH13-SW8</a></p>
+
+<p>WWDC 2012 Session 706, <q>Networking Best Practices</q>
+<a href="https://developer.apple.com/videos/play/wwdc2012-706/">https://developer.apple.com/videos/play/wwdc2012-706/</a></p>
+
+<p>Almofire documentation
+<a href="https://github.com/Alamofire/Alamofire">https://github.com/Alamofire/Alamofire</a></p>
+
+<p>So we conclude with this (and it is applied in the exercise):</p>
+
+<ul>
+<li>Don&rsquo;t use Rechability to determine if a network request should be sent. You should always send the request.</li>
+<li>Analize Reachability if failures. When Reachability is restored, use the event to retry failed network requests. (Even though the network requests may still fail, this is a good moment to retry them.)</li>
+<li>Don&rsquo;t timeout, let the system to do it. There is no good timeout value</li>
+</ul>
+<a href='#todo_out_of_time' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='todo_out_of_time'>TODO (out of time)</h2>
+
+<ul>
+<li><p>cache. implement alternative cache system</p></li>
+<li><p>complete HeaderDoc documentation.</p></li>
+<li><p>create secondary target for slow connectivity tests using OHHTTPStubs</p></li>
+</ul>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://pr2studio.com" target="_blank" rel="external">PabloRoca</a>. All rights reserved. (Last updated: 2016-04-30)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

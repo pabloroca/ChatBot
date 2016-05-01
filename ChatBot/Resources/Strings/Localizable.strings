@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+
+  Created by Pablo Roca Rozas on 30/4/16.
+  Copyright © 2016 PR2Studio. All rights reserved.
+*/
+
+"Error" = "Error";
+"OK" = "OK";
+
+// Error messages
+
+// Loading items list
+"ErrMsgLoadChatTitle" = "Could not load chat";
+"ErrMsgLoadChatMsg"   = "Retry in some minutes by pulling the list to refresh";
+
+"ErrMsgSlowInternet"   = "Slow internet connectivity, be patient ...";
+
+// No Data
+"ErrMsgNodataItemsTitle" = "No data to show";
+"ErrMsgNodataItemsMsg"   = "No data, pull tp refresh to get data";
+
+// Navigation
+"TitleMain"       = "Chat";
+"TitleBackButton" = "Back";
+

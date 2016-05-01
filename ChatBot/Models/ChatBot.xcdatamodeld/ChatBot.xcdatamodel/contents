@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
+    <entity name="CDEChat" representedClassName=".CDEChat" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ts" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="userImage_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="chatUser" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDEUser" inverseName="userChat" inverseEntity="CDEUser" syncable="YES"/>
+    </entity>
+    <entity name="CDEUser" representedClassName=".CDEUser" syncable="YES">
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="userChat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDEChat" inverseName="chatUser" inverseEntity="CDEChat" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CDEUser" positionX="171" positionY="-55" width="128" height="73"/>
+        <element name="CDEChat" positionX="-63" positionY="-214" width="128" height="133"/>
+    </elements>
+</model>

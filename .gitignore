@@ -1,0 +1,51 @@
+# Xcode
+
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+## Other
+*.moved-aside
+*.xcuserstate
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+
+
+####
+# Finder
+.DS_Store
+
+# Ruby
+*.irb-history
+
+# Code coverage
+*.gcno
+*.gcda
+coverage.xml
+
+# Tests in CI
+clangScanBuildReports
+test-reports
+
+# Crashlytics
+*.app.dSYM.zip
+
+# Rubymine
+.idea/
+
+# not sure
+profile
+*.xcarchive
