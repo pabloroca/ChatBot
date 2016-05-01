@@ -7,11 +7,14 @@
 //
 
 import Foundation
-import CoreData
 
+class CDEMessage: NSObject {
 
-class CDEMessage: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
-
+   @NSManaged var content: String?
+   @NSManaged var messageUser: NSSet?
+   @NSManaged var time: String?
+   @NSManaged var ts: NSNumber?
+   @NSManaged var userImageUrl: String?
+   @NSManaged var username: String?
+   
 }

@@ -7,11 +7,10 @@
 //
 
 import Foundation
-import CoreData
 
+class CDEUser: NSObject {
 
-class CDEUser: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
-
+   @NSManaged var username: String?
+   @NSManaged var userChat: CDEMessage?
+   
 }
