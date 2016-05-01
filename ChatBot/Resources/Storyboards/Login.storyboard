@@ -24,20 +24,34 @@
                                     <constraint firstAttribute="height" constant="128" id="lLn-f7-Qeb"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type your name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOj-Bw-FcC">
-                                <rect key="frame" x="71" y="351" width="187" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type your name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOj-Bw-FcC">
+                                <rect key="frame" x="117" y="319" width="96" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="eUt-oH-qx1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name &amp; Last Name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fLk-VW-fwN">
-                                <rect key="frame" x="71" y="386" width="187" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name &amp; Last Name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fLk-VW-fwN">
+                                <rect key="frame" x="76" y="354" width="180" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cn3-FH-2Fv"/>
+                                    <constraint firstAttribute="width" constant="180" id="zob-06-TAk"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="MYF-3I-Hw7" id="ARS-1r-e1h"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3D-uH-XXE">
-                                <rect key="frame" x="71" y="432" width="187" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3D-uH-XXE">
+                                <rect key="frame" x="76" y="400" width="180" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="6T7-wm-z5Y"/>
+                                    <constraint firstAttribute="height" constant="30" id="lP1-be-WJt"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <state key="normal" title="LOGIN"/>
                                 <connections>
@@ -47,12 +61,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Z3D-uH-XXE" firstAttribute="top" secondItem="fLk-VW-fwN" secondAttribute="top" constant="46" id="6v4-jA-ip7"/>
                             <constraint firstItem="jbo-NW-e5o" firstAttribute="top" secondItem="2aX-be-dYy" secondAttribute="bottom" constant="139" id="KQG-Nh-p6M"/>
+                            <constraint firstItem="Z3D-uH-XXE" firstAttribute="centerX" secondItem="Cvr-Ro-CZx" secondAttribute="centerX" constant="6" id="RR6-j0-xwE"/>
+                            <constraint firstItem="fOj-Bw-FcC" firstAttribute="centerX" secondItem="Cvr-Ro-CZx" secondAttribute="centerX" constant="4.5" id="V0S-0B-cSd"/>
+                            <constraint firstItem="fLk-VW-fwN" firstAttribute="centerX" secondItem="Cvr-Ro-CZx" secondAttribute="centerX" constant="6" id="aTG-jC-oPd"/>
+                            <constraint firstItem="fOj-Bw-FcC" firstAttribute="top" secondItem="jbo-NW-e5o" secondAttribute="top" constant="160" id="cVT-qG-kiH"/>
                             <constraint firstItem="jbo-NW-e5o" firstAttribute="centerX" secondItem="Cvr-Ro-CZx" secondAttribute="centerX" id="fZG-wu-6ke"/>
+                            <constraint firstItem="fLk-VW-fwN" firstAttribute="top" secondItem="fOj-Bw-FcC" secondAttribute="top" constant="35" id="fad-EW-hFT"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="btnLogin" destination="Z3D-uH-XXE" id="81v-0I-O4F"/>
                         <outlet property="txtUserName" destination="fLk-VW-fwN" id="g7E-oY-Gbn"/>
                     </connections>
                 </viewController>

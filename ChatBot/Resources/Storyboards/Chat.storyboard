@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Chat-->
@@ -18,19 +19,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="M3I-BK-h7H">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y4o-yt-zyc" id="Ifs-Do-W4l"/>
                                     <outlet property="delegate" destination="Y4o-yt-zyc" id="3MB-DL-fpH"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Udz-Yv-hAf">
+                                <rect key="frame" x="-4" y="524" width="328" height="44"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type something" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P4q-wc-J7B">
+                                        <rect key="frame" x="15" y="8" width="227" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzp-vn-DNb">
+                                        <rect key="frame" x="259" y="8" width="40" height="30"/>
+                                        <state key="normal" title="SEND">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="aMh-p1-LFn"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Udz-Yv-hAf" secondAttribute="trailing" constant="-20" id="3Si-JK-3Dz"/>
+                            <constraint firstItem="Udz-Yv-hAf" firstAttribute="leading" secondItem="CeH-2I-gEO" secondAttribute="leadingMargin" constant="-20" id="6SL-dY-m6d"/>
+                            <constraint firstItem="M3I-BK-h7H" firstAttribute="bottom" secondItem="Udz-Yv-hAf" secondAttribute="bottom" constant="-44" id="ADE-AN-q2g"/>
                             <constraint firstItem="M3I-BK-h7H" firstAttribute="leading" secondItem="CeH-2I-gEO" secondAttribute="leading" id="BHa-AV-hPz"/>
                             <constraint firstItem="M3I-BK-h7H" firstAttribute="top" secondItem="CeH-2I-gEO" secondAttribute="top" id="F6m-30-zBJ"/>
-                            <constraint firstItem="FEO-n8-jkv" firstAttribute="top" secondItem="M3I-BK-h7H" secondAttribute="bottom" id="fDJ-SS-JjW"/>
+                            <constraint firstItem="FEO-n8-jkv" firstAttribute="top" secondItem="Udz-Yv-hAf" secondAttribute="bottom" id="nPg-PV-1oG"/>
                             <constraint firstAttribute="trailing" secondItem="M3I-BK-h7H" secondAttribute="trailing" id="vJQ-nP-7Xv"/>
                         </constraints>
                     </view>
@@ -43,8 +67,12 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="btnSend" destination="Xzp-vn-DNb" id="uru-FO-VYH"/>
+                        <outlet property="constraintViewCommenetBottom" destination="nPg-PV-1oG" id="Bsu-ro-fmD"/>
                         <outlet property="navItem" destination="ewV-Ds-2f1" id="Mbz-6n-rbM"/>
                         <outlet property="tableView" destination="M3I-BK-h7H" id="BLZ-F8-Ibp"/>
+                        <outlet property="txtComment" destination="P4q-wc-J7B" id="o8I-rT-Rzr"/>
+                        <outlet property="viewComment" destination="Udz-Yv-hAf" id="5oq-Wk-X0c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bK-0H-G3l" userLabel="First Responder" sceneMemberID="firstResponder"/>

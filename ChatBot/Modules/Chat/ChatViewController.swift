@@ -17,7 +17,14 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
    //UI
    @IBOutlet weak var navItem: UINavigationItem!
    @IBOutlet weak var tableView: UITableView!
+   
+   @IBOutlet weak var viewComment: UIView!
+   @IBOutlet weak var txtComment: UITextField!
+   @IBOutlet weak var btnSend: UIButton!
    //UI
+   
+   
+   @IBOutlet weak var constraintViewCommenetBottom: NSLayoutConstraint!
    
     lazy var messages = [CDEMessage]()
    
@@ -26,6 +33,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
       
       self.viperPresenter = ChatPresenter().dynamicType.init(view: self)
 
+      self.viewComment.backgroundColor = Colors.defaultviewCommentColor
     }
 
    // MARK: - UI Actions
@@ -45,7 +53,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let message = self.messages[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier("ChatBubble") as! ChatBubble
-        cell.updateChatBubble(message)
+        cell.configure(message)
         return cell
     }
 }

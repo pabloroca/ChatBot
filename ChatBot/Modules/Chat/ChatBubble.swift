@@ -30,7 +30,7 @@ class ChatBubble: UITableViewCell {
 
     }
     
-    func updateChatBubble(message: CDEMessage) {
+    func configure(message: CDEMessage) {
       self.bubbleContent.text = message.content
       self.userName.text = message.username
       
