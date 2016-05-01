@@ -25,14 +25,20 @@
 		6D587AB21CD61F900015F33B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D587AB11CD61F900015F33B /* Login.storyboard */; };
 		6D587AB41CD62B820015F33B /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587AB31CD62B820015F33B /* Storyboards.swift */; };
 		6D587AB61CD62BFA0015F33B /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587AB51CD62BFA0015F33B /* RootRouter.swift */; };
+		6D587ABB1CD6377F0015F33B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587ABA1CD6377F0015F33B /* ChatViewController.swift */; };
+		6D587ABD1CD6378E0015F33B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587ABC1CD6378E0015F33B /* LoginViewController.swift */; };
+		6D587AC01CD637E40015F33B /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587ABE1CD637E40015F33B /* ChatBubble.swift */; };
+		6D587AC11CD637E40015F33B /* ChatBubble.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D587ABF1CD637E40015F33B /* ChatBubble.xib */; };
+		6D587AC31CD638360015F33B /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587AC21CD638360015F33B /* LoginInteractor.swift */; };
+		6D587AC51CD638470015F33B /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587AC41CD638470015F33B /* LoginPresenter.swift */; };
+		6D587AC71CD638780015F33B /* ChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587AC61CD638780015F33B /* ChatPresenter.swift */; };
+		6D587AC91CD638880015F33B /* ChatInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587AC81CD638880015F33B /* ChatInteractor.swift */; };
+		6D587ACB1CD63F0A0015F33B /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587ACA1CD63F0A0015F33B /* LoginRouter.swift */; };
+		6D587ACD1CD6407D0015F33B /* ChatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587ACC1CD6407D0015F33B /* ChatRouter.swift */; };
 		6D5B7CD21CD5462600D48330 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5B7CD01CD5462600D48330 /* LaunchScreen.storyboard */; };
 		6D5B7CD31CD5462600D48330 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5B7CD11CD5462600D48330 /* Chat.storyboard */; };
-		94182B5E1CC9139800194DF7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94182B5D1CC9139800194DF7 /* LoginViewController.swift */; };
 		94182B711CC9139800194DF7 /* ChatBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94182B701CC9139800194DF7 /* ChatBotTests.swift */; };
 		94182B7C1CC9139800194DF7 /* ChatBotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94182B7B1CC9139800194DF7 /* ChatBotUITests.swift */; };
-		94182B8A1CC9371A00194DF7 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94182B891CC9371A00194DF7 /* ChatViewController.swift */; };
-		94E23D4A1CCA20CA00BAC252 /* ChatBubble.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94E23D491CCA20CA00BAC252 /* ChatBubble.xib */; };
-		94E23D4C1CCA260700BAC252 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E23D4B1CCA260700BAC252 /* ChatBubble.swift */; };
 		94E23D4E1CCA355800BAC252 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E23D4D1CCA355800BAC252 /* Message.swift */; };
 		9FECABEB476CAD5D80249E20 /* Pods_ChatBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE1BAE1B8294E9E9DB24E6B /* Pods_ChatBot.framework */; };
 /* End PBXBuildFile section */
@@ -74,20 +80,26 @@
 		6D587AB11CD61F900015F33B /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		6D587AB31CD62B820015F33B /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		6D587AB51CD62BFA0015F33B /* RootRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		6D587ABA1CD6377F0015F33B /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		6D587ABC1CD6378E0015F33B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6D587ABE1CD637E40015F33B /* ChatBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		6D587ABF1CD637E40015F33B /* ChatBubble.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatBubble.xib; sourceTree = "<group>"; };
+		6D587AC21CD638360015F33B /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		6D587AC41CD638470015F33B /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		6D587AC61CD638780015F33B /* ChatPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
+		6D587AC81CD638880015F33B /* ChatInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatInteractor.swift; sourceTree = "<group>"; };
+		6D587ACA1CD63F0A0015F33B /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		6D587ACC1CD6407D0015F33B /* ChatRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRouter.swift; sourceTree = "<group>"; };
 		6D5B7CD01CD5462600D48330 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D5B7CD11CD5462600D48330 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		87703944C2C8E8C11CA7A116 /* Pods-ChatBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatBot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatBot/Pods-ChatBot.debug.xcconfig"; sourceTree = "<group>"; };
 		94182B581CC9139700194DF7 /* ChatBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		94182B5D1CC9139800194DF7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		94182B6C1CC9139800194DF7 /* ChatBotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatBotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94182B701CC9139800194DF7 /* ChatBotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotTests.swift; sourceTree = "<group>"; };
 		94182B721CC9139800194DF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94182B771CC9139800194DF7 /* ChatBotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatBotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94182B7B1CC9139800194DF7 /* ChatBotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotUITests.swift; sourceTree = "<group>"; };
 		94182B7D1CC9139800194DF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94182B891CC9371A00194DF7 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		94E23D491CCA20CA00BAC252 /* ChatBubble.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatBubble.xib; sourceTree = "<group>"; };
-		94E23D4B1CCA260700BAC252 /* ChatBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		94E23D4D1CCA355800BAC252 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		9BE1BAE1B8294E9E9DB24E6B /* Pods_ChatBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A407A9E301E3973F2879541C /* Pods-ChatBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatBot/Pods-ChatBot.release.xcconfig"; sourceTree = "<group>"; };
@@ -199,6 +211,39 @@
 			path = Strings;
 			sourceTree = "<group>";
 		};
+		6D587AB71CD637320015F33B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6D587AB81CD637320015F33B /* Chat */,
+				6D587AB91CD637320015F33B /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		6D587AB81CD637320015F33B /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				6D587ABA1CD6377F0015F33B /* ChatViewController.swift */,
+				6D587AC61CD638780015F33B /* ChatPresenter.swift */,
+				6D587AC81CD638880015F33B /* ChatInteractor.swift */,
+				6D587ACC1CD6407D0015F33B /* ChatRouter.swift */,
+				6D587ABE1CD637E40015F33B /* ChatBubble.swift */,
+				6D587ABF1CD637E40015F33B /* ChatBubble.xib */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		6D587AB91CD637320015F33B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6D587ABC1CD6378E0015F33B /* LoginViewController.swift */,
+				6D587AC41CD638470015F33B /* LoginPresenter.swift */,
+				6D587AC21CD638360015F33B /* LoginInteractor.swift */,
+				6D587ACA1CD63F0A0015F33B /* LoginRouter.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		6D5B7CCF1CD5462600D48330 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,12 +281,9 @@
 			children = (
 				6D17C9BC1CD53FA600544A96 /* Application */,
 				6D17C9C51CD5409F00544A96 /* Models */,
+				6D587AB71CD637320015F33B /* Modules */,
 				6D3D29A21CD5412A00E2AE9B /* PR2Studio */,
 				6D3D29B51CD543C100E2AE9B /* Resources */,
-				94182B891CC9371A00194DF7 /* ChatViewController.swift */,
-				94182B5D1CC9139800194DF7 /* LoginViewController.swift */,
-				94E23D491CCA20CA00BAC252 /* ChatBubble.xib */,
-				94E23D4B1CCA260700BAC252 /* ChatBubble.swift */,
 				94E23D4D1CCA355800BAC252 /* Message.swift */,
 			);
 			path = ChatBot;
@@ -374,10 +416,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D3D29BB1CD543C100E2AE9B /* Localizable.strings in Resources */,
+				6D587AC11CD637E40015F33B /* ChatBubble.xib in Resources */,
 				6D5B7CD31CD5462600D48330 /* Chat.storyboard in Resources */,
 				6D587AB21CD61F900015F33B /* Login.storyboard in Resources */,
 				6D5B7CD21CD5462600D48330 /* LaunchScreen.storyboard in Resources */,
-				94E23D4A1CCA20CA00BAC252 /* ChatBubble.xib in Resources */,
 				6D3D29BA1CD543C100E2AE9B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,21 +510,27 @@
 				6D3D29AC1CD5412A00E2AE9B /* PRExtensions.swift in Sources */,
 				6D587AB61CD62BFA0015F33B /* RootRouter.swift in Sources */,
 				6D587AB01CD608AE0015F33B /* CDEMessage+CoreDataProperties.swift in Sources */,
+				6D587ABD1CD6378E0015F33B /* LoginViewController.swift in Sources */,
 				6D3D29B31CD542F500E2AE9B /* CDEUser.swift in Sources */,
 				6D3D29A91CD5412A00E2AE9B /* PR2CoreDataStack.swift in Sources */,
 				6D17C9C11CD53FA600544A96 /* AppDelegate.swift in Sources */,
+				6D587AC31CD638360015F33B /* LoginInteractor.swift in Sources */,
+				6D587AC91CD638880015F33B /* ChatInteractor.swift in Sources */,
+				6D587AC51CD638470015F33B /* LoginPresenter.swift in Sources */,
 				6D587AB41CD62B820015F33B /* Storyboards.swift in Sources */,
+				6D587AC01CD637E40015F33B /* ChatBubble.swift in Sources */,
 				6D3D29B41CD542F500E2AE9B /* CDEUser+CoreDataProperties.swift in Sources */,
+				6D587ACB1CD63F0A0015F33B /* LoginRouter.swift in Sources */,
 				6D17C9C81CD540BF00544A96 /* ChatBot.xcdatamodeld in Sources */,
-				94182B5E1CC9139800194DF7 /* LoginViewController.swift in Sources */,
-				94182B8A1CC9371A00194DF7 /* ChatViewController.swift in Sources */,
 				6D17C9C21CD53FA600544A96 /* Colors.swift in Sources */,
 				94E23D4E1CCA355800BAC252 /* Message.swift in Sources */,
 				6D17C9C31CD53FA600544A96 /* EndPoints.swift in Sources */,
 				6D587AAF1CD608AE0015F33B /* CDEMessage.swift in Sources */,
-				94E23D4C1CCA260700BAC252 /* ChatBubble.swift in Sources */,
+				6D587AC71CD638780015F33B /* ChatPresenter.swift in Sources */,
 				6D3D29AB1CD5412A00E2AE9B /* PR2Networking.swift in Sources */,
+				6D587ABB1CD6377F0015F33B /* ChatViewController.swift in Sources */,
 				6D3D29A81CD5412A00E2AE9B /* PR2Common.swift in Sources */,
+				6D587ACD1CD6407D0015F33B /* ChatRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

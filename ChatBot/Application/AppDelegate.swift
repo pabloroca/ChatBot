@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    let dataModel: String = "ChatBot"
 
     var window: UIWindow?
+   
+    /// VIPER root Router/Wireframe
     var rootRouter: RootRouter?
    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {

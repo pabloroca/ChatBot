@@ -52,6 +52,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="txtUserName" destination="fLk-VW-fwN" id="g7E-oY-Gbn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnQ-OT-4zW" sceneMemberID="firstResponder"/>
             </objects>

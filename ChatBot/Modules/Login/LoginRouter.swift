@@ -1,0 +1,23 @@
+//
+//  LoginRouter.swift
+//  ChatBot
+//
+//  Created by Pablo Roca Rozas on 1/5/16.
+//  Copyright © 2016 Schibsted. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+class LoginRouter: NSObject {
+   
+   func showChat(sender: AnyObject) {
+      let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+      appDelegate.rootRouter?.showChat(animated:true)
+   }
+
+   func showAlertUserNotValid() {
+      PR2Common().simpleAlert("titulo", message: "message")
+   }
+   
+}

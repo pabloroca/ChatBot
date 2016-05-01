@@ -17,18 +17,21 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
    //UI
    
     lazy var messages = [CDEMessage]()
-    
+   
+    var viperPresenter: ChatPresenter?
+
     override func viewDidLoad() {
-           self.navItem.title = NSLocalizedString("TitleMain", comment: "")
+      self.navItem.title = NSLocalizedString("TitleMain", comment: "")
+      
+      self.viperPresenter = ChatPresenter()
     }
 
-   // MARK - UI Actions
+   // MARK: - UI Actions
    @IBAction func btnlogOutAction(sender: AnyObject) {
-      let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-      appDelegate.rootRouter?.showLogin(animated: true)
+      self.viperPresenter?.btnlogOutAction(sender)
    }
 
-   //MARK - UITableViewDataSource
+   // MARK: - UITableViewDataSource
     func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 150
     }

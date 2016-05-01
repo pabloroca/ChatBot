@@ -4,6 +4,7 @@
 * Developed in SWIFT 2.3
 * iOS 9.0 compatible
 * CocoaPods
+* using VIPER architecture
 * Network requests in the background
 * Network requests recursively repeated if temporary error (increasing delay till 30 second)
 * Network requests applied Apple recommendations (see "Network requests failures" below)
@@ -23,9 +24,21 @@
 
 - **PR2Studio classes**. I applied some of my own classes I use to develop in Swift.
 
+- **VIPER**
+
+This is the first project I do with VIPER, so maybe some things does not follow at full VIPER architecture. Anyhow I understand VIPER as a guideline or concepts to understand, but not to follow at full.
+
+Reference material:
+
+(Base doc) Architecting iOS Apps with VIPER
+https://www.objc.io/issues/13-architecture/viper
+
+(I follow this variant) Brigade’s Experience Using an MVC Alternative
+https://medium.com/brigade-engineering/brigades-experience-using-an-mvc-alternative-36ef1601a41f#.ik6unq2bl
+
 - **Storyboards**. I much prefer to use NIBs than storyboards, storyboards are really a problem in team development (because git conflicts) and with NIBs you have more flexibility to enable different behaviors. But cause the sample provide has Storyboards, I will use them.
 
-I am splitting this in two storyboards (Login and Chat), so this would help in avoiding git merge conflicts.
+I am splitting this in two storyboards (Login and Chat), so this would help in avoiding git merge conflicts and each one will be a VIPER module
 
 - **Trying to apply SOLID principles**. Specially the Single Responsability. Classes must be lightewigth and perform only one task inside his abstraction layer. So it's better to have more classes that one big bloated class
 
