@@ -16,7 +16,6 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func showChat(sender: AnyObject) {
-        self.performSegueWithIdentifier("gotoChat", sender: nil)
     }
 
 }

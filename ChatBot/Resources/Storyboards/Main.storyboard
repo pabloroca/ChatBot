@@ -41,7 +41,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <state key="normal" title="LOGIN"/>
                                 <connections>
-                                    <action selector="showChat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TwX-aM-bMt"/>
+                                    <segue destination="YpM-Fu-TwQ" kind="show" identifier="gotoChat" id="fvC-yL-xbp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -52,15 +52,12 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <segue destination="Y4o-yt-zyc" kind="show" identifier="gotoChat" id="ChE-pS-tLZ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="489" y="185"/>
         </scene>
-        <!--Chat View Controller-->
+        <!--Chat-->
         <scene sceneID="aj7-fW-1St">
             <objects>
                 <viewController id="Y4o-yt-zyc" customClass="ChatViewController" customModule="ChatBot" sceneMemberID="viewController">
@@ -89,17 +86,43 @@
                             <constraint firstAttribute="trailing" secondItem="M3I-BK-h7H" secondAttribute="trailing" id="vJQ-nP-7Xv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Chat" id="ewV-Ds-2f1">
+                        <barButtonItem key="rightBarButtonItem" image="logout" id="kwg-nT-sPQ">
+                            <connections>
+                                <action selector="logOutAction:" destination="Y4o-yt-zyc" id="4bi-EA-TFN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="navItem" destination="ewV-Ds-2f1" id="Mbz-6n-rbM"/>
                         <outlet property="tableView" destination="M3I-BK-h7H" id="BLZ-F8-Ibp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bK-0H-G3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1172" y="185"/>
+            <point key="canvasLocation" x="1310" y="185"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hdd-E9-QPQ">
+            <objects>
+                <navigationController id="YpM-Fu-TwQ" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Rj-pl-Bqt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y4o-yt-zyc" kind="relationship" relationship="rootViewController" id="Oea-QD-6Id"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RmQ-8y-sI6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895" y="185"/>
         </scene>
     </scenes>
     <resources>
+        <image name="logout" width="30" height="30"/>
         <image name="sch-background" width="2000" height="1333"/>
     </resources>
 </document>

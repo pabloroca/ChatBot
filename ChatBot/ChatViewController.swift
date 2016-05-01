@@ -11,16 +11,22 @@ import UIKit
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    
-    @IBOutlet weak var tableView: UITableView!
-    
-    var messages = [CDEMessage]()
+   //UI
+   @IBOutlet weak var navItem: UINavigationItem!
+   @IBOutlet weak var tableView: UITableView!
+   //UI
+   
+    lazy var messages = [CDEMessage]()
     
     override func viewDidLoad() {
-           
+           self.navItem.title = NSLocalizedString("TitleMain", comment: "")
     }
 
-    //MARK - UITableViewDataSource
+   // MARK - UI Actions
+   @IBAction func logOutAction(sender: AnyObject) {
+   }
+
+   //MARK - UITableViewDataSource
     func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 150
     }
@@ -35,5 +41,4 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.updateChatBubble(message)
         return cell
     }
-
 }

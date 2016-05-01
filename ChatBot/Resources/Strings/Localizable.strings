@@ -21,6 +21,6 @@
 "ErrMsgNodataItemsMsg"   = "No data, pull tp refresh to get data";
 
 // Navigation
-"TitleMain"       = "Chat";
+"TitleMain"       = "Chat - ";
 "TitleBackButton" = "Back";
 
