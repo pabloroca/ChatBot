@@ -21,10 +21,10 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
    @IBOutlet weak var viewComment: UIView!
    @IBOutlet weak var txtComment: UITextField!
    @IBOutlet weak var btnSend: UIButton!
+
+   @IBOutlet weak var constraintViewCommentBottom: NSLayoutConstraint!
    //UI
    
-   
-   @IBOutlet weak var constraintViewCommentBottom: NSLayoutConstraint!
    
    lazy var messages = [CDEMessage]()
    
