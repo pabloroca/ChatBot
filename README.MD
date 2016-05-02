@@ -33,6 +33,15 @@
 * SCLAlertView
 * OHHTTPStubs
 
+## SwiftLint
+https://github.com/realm/SwiftLint
+
+A tool for enforcing good code style.
+
+Install: brew install swiftlint
+
+If you don't want to use or install it, just remove Run Script Phase we have in the ChatBot target
+
 ## PR2Studio classes
 
 I applied some of my own classes I use to develop in Swift.
@@ -79,15 +88,6 @@ logLevel can be:
 * PR2NetworkingLogLevelDebug - logs full requests and responses
 * PR2NetworkingLogLevelInfo - log with short info
 * PR2NetworkingLogLevelError - logs only when errors
-
-## SwiftLint
-https://github.com/realm/SwiftLint
-
-A tool for enforcing good code style.
-
-Install: brew install swiftlint
-
-If you don't want to use or install it, just remove Run Script Phase we have in the ChatBot target
 
 ## SwiftGen
 https://github.com/AliSoftware/SwiftGen

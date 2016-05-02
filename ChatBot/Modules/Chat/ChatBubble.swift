@@ -49,6 +49,7 @@ class ChatBubble: UITableViewCell {
       } else {
          self.viewCell.backgroundColor = Colors.viewCellChat
          self.bubbleContent.textColor = Colors.viewCellText
+         self.bubbleContent.textAlignment = NSTextAlignment.Left
          self.userImage.hidden = false
          self.userName.textColor = Colors.viewCellText
          self.userName.textAlignment = NSTextAlignment.Left
