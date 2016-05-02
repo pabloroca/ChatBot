@@ -25,15 +25,20 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
    @IBOutlet weak var constraintViewCommentBottom: NSLayoutConstraint!
    //UI
    
-   
-   lazy var messages = [CDEMessage]()
+   lazy var messages = [EntityMessage]()
+   private let reuseIdentifier = "ChatBubble"
+
+   var username: String = ""
    
    // MARK: - View livecycle
    override func viewDidLoad() {
       super.viewDidLoad()
       self.viperPresenter = ChatPresenter().dynamicType.init(view: self)
 
-      self.viewComment.backgroundColor = Colors.defaultviewCommentColor
+      self.viewComment.backgroundColor = Colors.viewCommentColor
+      // Register cell classes
+      tableView.registerNib(UINib(nibName: "ChatBubble", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
+      self.reloadData()
    }
    
    override func viewWillAppear(animated: Bool) {
@@ -47,12 +52,17 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
       NSNotificationCenter.defaultCenter().removeObserver(self)
    }
    
+   // MARK: - Sets by Presenter
    func setTittle(title: String) {
       self.navItem.title = tr(.ChatTitleMain(title))
    }
    
    func settxtComment(message: String) {
       self.txtComment.text = message
+   }
+   
+   func setusername(username: String) {
+      self.username = username
    }
    
    // MARK: - UI Actions
@@ -93,6 +103,18 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
       return false
    }
 
+   // MARK: - Custom methods
+   func reloadData() {
+      self.viperPresenter.readMessages { (messages) in
+         if (messages?.isEmpty == false) {
+            self.messages = messages!
+            self.tableView.reloadData()
+         } else {
+            
+         }
+      }
+   }
+   
    // MARK: - UITableViewDataSource
    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
       return 150
@@ -104,8 +126,9 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
    
    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       let message = self.messages[indexPath.row]
-      let cell = tableView.dequeueReusableCellWithIdentifier("ChatBubble") as! ChatBubble
-      cell.configure(message)
+      let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ChatBubble
+
+      cell.configure(message, username: self.username)
       return cell
    }
 }
