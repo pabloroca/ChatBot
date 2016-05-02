@@ -14,9 +14,15 @@ end
 
 target 'ChatBotTests' do
 
+pod 'OHHTTPStubs'
+pod 'OHHTTPStubs/Swift'
+
 end
 
 target 'ChatBotUITests' do
+
+pod 'OHHTTPStubs'
+pod 'OHHTTPStubs/Swift'
 
 end
 

@@ -2,12 +2,29 @@ PODS:
   - Alamofire (3.3.1)
   - AlamofireImage (2.4.0):
     - Alamofire (~> 3.3)
+  - OHHTTPStubs (5.0.0):
+    - OHHTTPStubs/Default (= 5.0.0)
+  - OHHTTPStubs/Core (5.0.0)
+  - OHHTTPStubs/Default (5.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (5.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (5.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (5.0.0)
+  - OHHTTPStubs/Swift (5.0.0):
+    - OHHTTPStubs/Core
   - SCLAlertView (0.5.5)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
   - AlamofireImage (~> 2.0)
+  - OHHTTPStubs
+  - OHHTTPStubs/Swift
   - SCLAlertView
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
@@ -23,6 +40,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
   AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
+  OHHTTPStubs: a5d2e9eea07869d42ec03338325f398bc520e159
   SCLAlertView: 393f6753ac73c2ede54e9a42cc220a48cc7ee3cf
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 

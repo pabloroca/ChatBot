@@ -1,817 +1,2334 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		6D17C9C11CD53FA600544A96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D17C9BD1CD53FA600544A96 /* AppDelegate.swift */; };
-		6D17C9C21CD53FA600544A96 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D17C9BE1CD53FA600544A96 /* Colors.swift */; };
-		6D17C9C31CD53FA600544A96 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D17C9BF1CD53FA600544A96 /* EndPoints.swift */; };
-		6D17C9C81CD540BF00544A96 /* ChatBot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D17C9C61CD540BF00544A96 /* ChatBot.xcdatamodeld */; };
-		6D3D29A81CD5412A00E2AE9B /* PR2Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D29A31CD5412A00E2AE9B /* PR2Common.swift */; };
-		6D3D29A91CD5412A00E2AE9B /* PR2CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D29A41CD5412A00E2AE9B /* PR2CoreDataStack.swift */; };
-		6D3D29AA1CD5412A00E2AE9B /* PR2Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D29A51CD5412A00E2AE9B /* PR2Dates.swift */; };
-		6D3D29AB1CD5412A00E2AE9B /* PR2Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D29A61CD5412A00E2AE9B /* PR2Networking.swift */; };
-		6D3D29AC1CD5412A00E2AE9B /* PRExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D29A71CD5412A00E2AE9B /* PRExtensions.swift */; };
-		6D3D29BA1CD543C100E2AE9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D3D29B71CD543C100E2AE9B /* Assets.xcassets */; };
-		6D3D29BB1CD543C100E2AE9B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D3D29B91CD543C100E2AE9B /* Localizable.strings */; };
-		6D4F15F41CD66D2300836450 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4F15F31CD66D2300836450 /* Strings.swift */; };
-		6D51DB7A1CD7677100830D80 /* CDEMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D51DB761CD7677100830D80 /* CDEMessage.swift */; };
-		6D51DB7B1CD7677100830D80 /* CDEMessage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D51DB771CD7677100830D80 /* CDEMessage+CoreDataProperties.swift */; };
-		6D51DB7C1CD7677100830D80 /* CDEUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D51DB781CD7677100830D80 /* CDEUser.swift */; };
-		6D51DB7D1CD7677100830D80 /* CDEUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D51DB791CD7677100830D80 /* CDEUser+CoreDataProperties.swift */; };
-		6D51DB871CD76C9000830D80 /* MessagesLocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D51DB851CD76C9000830D80 /* MessagesLocalManager.swift */; };
-		6D51DB881CD76C9000830D80 /* UsersLocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D51DB861CD76C9000830D80 /* UsersLocalManager.swift */; };
-		6D587AB21CD61F900015F33B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D587AB11CD61F900015F33B /* Login.storyboard */; };
-		6D587AB61CD62BFA0015F33B /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587AB51CD62BFA0015F33B /* RootRouter.swift */; };
-		6D587ABB1CD6377F0015F33B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587ABA1CD6377F0015F33B /* ChatViewController.swift */; };
-		6D587ABD1CD6378E0015F33B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587ABC1CD6378E0015F33B /* LoginViewController.swift */; };
-		6D587AC01CD637E40015F33B /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587ABE1CD637E40015F33B /* ChatBubble.swift */; };
-		6D587AC11CD637E40015F33B /* ChatBubble.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D587ABF1CD637E40015F33B /* ChatBubble.xib */; };
-		6D587AC31CD638360015F33B /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587AC21CD638360015F33B /* LoginInteractor.swift */; };
-		6D587AC51CD638470015F33B /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587AC41CD638470015F33B /* LoginPresenter.swift */; };
-		6D587AC71CD638780015F33B /* ChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587AC61CD638780015F33B /* ChatPresenter.swift */; };
-		6D587AC91CD638880015F33B /* ChatInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587AC81CD638880015F33B /* ChatInteractor.swift */; };
-		6D587ACB1CD63F0A0015F33B /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587ACA1CD63F0A0015F33B /* LoginRouter.swift */; };
-		6D587ACD1CD6407D0015F33B /* ChatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587ACC1CD6407D0015F33B /* ChatRouter.swift */; };
-		6D5B7CD21CD5462600D48330 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5B7CD01CD5462600D48330 /* LaunchScreen.storyboard */; };
-		6D5B7CD31CD5462600D48330 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5B7CD11CD5462600D48330 /* Chat.storyboard */; };
-		6D6692E51CD811C50020B226 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6692E41CD811C50020B226 /* Notifications.swift */; };
-		6D9D80851CD7728400954A76 /* CDECache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D80831CD7728400954A76 /* CDECache.swift */; };
-		6D9D80861CD7728400954A76 /* CDECache+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D80841CD7728400954A76 /* CDECache+CoreDataProperties.swift */; };
-		6D9D80881CD772F200954A76 /* CacheLocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D80871CD772F200954A76 /* CacheLocalManager.swift */; };
-		6D9D808A1CD776FF00954A76 /* EntityMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D80891CD776FF00954A76 /* EntityMessage.swift */; };
-		6D9D808C1CD780A800954A76 /* EntityUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D808B1CD780A800954A76 /* EntityUser.swift */; };
-		6D9D808E1CD79F4B00954A76 /* ChatNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D808D1CD79F4B00954A76 /* ChatNetworkManager.swift */; };
-		6D9D80901CD7A69600954A76 /* EntityCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D808F1CD7A69600954A76 /* EntityCache.swift */; };
-		6D9D80921CD7A95400954A76 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D80911CD7A95400954A76 /* Constants.swift */; };
-		94182B711CC9139800194DF7 /* ChatBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94182B701CC9139800194DF7 /* ChatBotTests.swift */; };
-		94182B7C1CC9139800194DF7 /* ChatBotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94182B7B1CC9139800194DF7 /* ChatBotUITests.swift */; };
-		94E23D4E1CCA355800BAC252 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E23D4D1CCA355800BAC252 /* Message.swift */; };
-		9FECABEB476CAD5D80249E20 /* Pods_ChatBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE1BAE1B8294E9E9DB24E6B /* Pods_ChatBot.framework */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		94182B6D1CC9139800194DF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 94182B501CC9139700194DF7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 94182B571CC9139700194DF7;
-			remoteInfo = ChatBot;
-		};
-		94182B781CC9139800194DF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 94182B501CC9139700194DF7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 94182B571CC9139700194DF7;
-			remoteInfo = ChatBot;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		6D17C9BD1CD53FA600544A96 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6D17C9BE1CD53FA600544A96 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		6D17C9BF1CD53FA600544A96 /* EndPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
-		6D17C9C01CD53FA600544A96 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6D17C9C71CD540BF00544A96 /* ChatBot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChatBot.xcdatamodel; sourceTree = "<group>"; };
-		6D3D29A31CD5412A00E2AE9B /* PR2Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PR2Common.swift; sourceTree = "<group>"; };
-		6D3D29A41CD5412A00E2AE9B /* PR2CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PR2CoreDataStack.swift; sourceTree = "<group>"; };
-		6D3D29A51CD5412A00E2AE9B /* PR2Dates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PR2Dates.swift; sourceTree = "<group>"; };
-		6D3D29A61CD5412A00E2AE9B /* PR2Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PR2Networking.swift; sourceTree = "<group>"; };
-		6D3D29A71CD5412A00E2AE9B /* PRExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRExtensions.swift; sourceTree = "<group>"; };
-		6D3D29B71CD543C100E2AE9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6D3D29B91CD543C100E2AE9B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		6D4F15F31CD66D2300836450 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
-		6D4F15F51CD6BC1300836450 /* XcodeWarnings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = XcodeWarnings.xcconfig; sourceTree = SOURCE_ROOT; };
-		6D51DB761CD7677100830D80 /* CDEMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDEMessage.swift; sourceTree = "<group>"; };
-		6D51DB771CD7677100830D80 /* CDEMessage+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDEMessage+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6D51DB781CD7677100830D80 /* CDEUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDEUser.swift; sourceTree = "<group>"; };
-		6D51DB791CD7677100830D80 /* CDEUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDEUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6D51DB851CD76C9000830D80 /* MessagesLocalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesLocalManager.swift; sourceTree = "<group>"; };
-		6D51DB861CD76C9000830D80 /* UsersLocalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersLocalManager.swift; sourceTree = "<group>"; };
-		6D587AB11CD61F900015F33B /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		6D587AB51CD62BFA0015F33B /* RootRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
-		6D587ABA1CD6377F0015F33B /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		6D587ABC1CD6378E0015F33B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		6D587ABE1CD637E40015F33B /* ChatBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
-		6D587ABF1CD637E40015F33B /* ChatBubble.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatBubble.xib; sourceTree = "<group>"; };
-		6D587AC21CD638360015F33B /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
-		6D587AC41CD638470015F33B /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
-		6D587AC61CD638780015F33B /* ChatPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
-		6D587AC81CD638880015F33B /* ChatInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatInteractor.swift; sourceTree = "<group>"; };
-		6D587ACA1CD63F0A0015F33B /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
-		6D587ACC1CD6407D0015F33B /* ChatRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRouter.swift; sourceTree = "<group>"; };
-		6D5B7CD01CD5462600D48330 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6D5B7CD11CD5462600D48330 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
-		6D6692E41CD811C50020B226 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
-		6D9D80831CD7728400954A76 /* CDECache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDECache.swift; sourceTree = "<group>"; };
-		6D9D80841CD7728400954A76 /* CDECache+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDECache+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6D9D80871CD772F200954A76 /* CacheLocalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheLocalManager.swift; sourceTree = "<group>"; };
-		6D9D80891CD776FF00954A76 /* EntityMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityMessage.swift; sourceTree = "<group>"; };
-		6D9D808B1CD780A800954A76 /* EntityUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityUser.swift; sourceTree = "<group>"; };
-		6D9D808D1CD79F4B00954A76 /* ChatNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatNetworkManager.swift; sourceTree = "<group>"; };
-		6D9D808F1CD7A69600954A76 /* EntityCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityCache.swift; sourceTree = "<group>"; };
-		6D9D80911CD7A95400954A76 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		87703944C2C8E8C11CA7A116 /* Pods-ChatBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatBot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatBot/Pods-ChatBot.debug.xcconfig"; sourceTree = "<group>"; };
-		94182B581CC9139700194DF7 /* ChatBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		94182B6C1CC9139800194DF7 /* ChatBotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatBotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94182B701CC9139800194DF7 /* ChatBotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotTests.swift; sourceTree = "<group>"; };
-		94182B721CC9139800194DF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94182B771CC9139800194DF7 /* ChatBotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatBotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94182B7B1CC9139800194DF7 /* ChatBotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotUITests.swift; sourceTree = "<group>"; };
-		94182B7D1CC9139800194DF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94E23D4D1CCA355800BAC252 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		9BE1BAE1B8294E9E9DB24E6B /* Pods_ChatBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A407A9E301E3973F2879541C /* Pods-ChatBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatBot/Pods-ChatBot.release.xcconfig"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		94182B551CC9139700194DF7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9FECABEB476CAD5D80249E20 /* Pods_ChatBot.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94182B691CC9139800194DF7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94182B741CC9139800194DF7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		0149E35A417CB945A68312D2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9BE1BAE1B8294E9E9DB24E6B /* Pods_ChatBot.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		064B6AFE26EEF36EC22BCF7F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				87703944C2C8E8C11CA7A116 /* Pods-ChatBot.debug.xcconfig */,
-				A407A9E301E3973F2879541C /* Pods-ChatBot.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		6D17C9BC1CD53FA600544A96 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				6D17C9BD1CD53FA600544A96 /* AppDelegate.swift */,
-				6D17C9BE1CD53FA600544A96 /* Colors.swift */,
-				6D9D80911CD7A95400954A76 /* Constants.swift */,
-				6D17C9BF1CD53FA600544A96 /* EndPoints.swift */,
-				6D17C9C01CD53FA600544A96 /* Info.plist */,
-				6D6692E41CD811C50020B226 /* Notifications.swift */,
-				6D587AB51CD62BFA0015F33B /* RootRouter.swift */,
-				6D4F15F31CD66D2300836450 /* Strings.swift */,
-			);
-			path = Application;
-			sourceTree = "<group>";
-		};
-		6D17C9C51CD5409F00544A96 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				6D9D808F1CD7A69600954A76 /* EntityCache.swift */,
-				6D9D80891CD776FF00954A76 /* EntityMessage.swift */,
-				6D9D808B1CD780A800954A76 /* EntityUser.swift */,
-				6D9D80831CD7728400954A76 /* CDECache.swift */,
-				6D9D80841CD7728400954A76 /* CDECache+CoreDataProperties.swift */,
-				6D51DB761CD7677100830D80 /* CDEMessage.swift */,
-				6D51DB771CD7677100830D80 /* CDEMessage+CoreDataProperties.swift */,
-				6D51DB781CD7677100830D80 /* CDEUser.swift */,
-				6D51DB791CD7677100830D80 /* CDEUser+CoreDataProperties.swift */,
-				6D17C9C61CD540BF00544A96 /* ChatBot.xcdatamodeld */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		6D3D29A21CD5412A00E2AE9B /* PR2Studio */ = {
-			isa = PBXGroup;
-			children = (
-				6D3D29A31CD5412A00E2AE9B /* PR2Common.swift */,
-				6D3D29A41CD5412A00E2AE9B /* PR2CoreDataStack.swift */,
-				6D3D29A51CD5412A00E2AE9B /* PR2Dates.swift */,
-				6D3D29A61CD5412A00E2AE9B /* PR2Networking.swift */,
-				6D3D29A71CD5412A00E2AE9B /* PRExtensions.swift */,
-			);
-			path = PR2Studio;
-			sourceTree = "<group>";
-		};
-		6D3D29B51CD543C100E2AE9B /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				6D4F15F51CD6BC1300836450 /* XcodeWarnings.xcconfig */,
-				6D3D29B61CD543C100E2AE9B /* Images */,
-				6D5B7CCF1CD5462600D48330 /* Storyboards */,
-				6D3D29B81CD543C100E2AE9B /* Strings */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		6D3D29B61CD543C100E2AE9B /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				6D3D29B71CD543C100E2AE9B /* Assets.xcassets */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
-		6D3D29B81CD543C100E2AE9B /* Strings */ = {
-			isa = PBXGroup;
-			children = (
-				6D3D29B91CD543C100E2AE9B /* Localizable.strings */,
-			);
-			path = Strings;
-			sourceTree = "<group>";
-		};
-		6D430A091CD6C6180037C4CB /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				6D51DB831CD76C9000830D80 /* Network */,
-				6D51DB841CD76C9000830D80 /* Local */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
-		6D51DB831CD76C9000830D80 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				6D9D808D1CD79F4B00954A76 /* ChatNetworkManager.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		6D51DB841CD76C9000830D80 /* Local */ = {
-			isa = PBXGroup;
-			children = (
-				6D9D80871CD772F200954A76 /* CacheLocalManager.swift */,
-				6D51DB851CD76C9000830D80 /* MessagesLocalManager.swift */,
-				6D51DB861CD76C9000830D80 /* UsersLocalManager.swift */,
-			);
-			path = Local;
-			sourceTree = "<group>";
-		};
-		6D587AB71CD637320015F33B /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				6D587AB81CD637320015F33B /* Chat */,
-				6D587AB91CD637320015F33B /* Login */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		6D587AB81CD637320015F33B /* Chat */ = {
-			isa = PBXGroup;
-			children = (
-				6D587ABA1CD6377F0015F33B /* ChatViewController.swift */,
-				6D587AC61CD638780015F33B /* ChatPresenter.swift */,
-				6D587AC81CD638880015F33B /* ChatInteractor.swift */,
-				6D587ACC1CD6407D0015F33B /* ChatRouter.swift */,
-				6D587ABE1CD637E40015F33B /* ChatBubble.swift */,
-				6D587ABF1CD637E40015F33B /* ChatBubble.xib */,
-			);
-			path = Chat;
-			sourceTree = "<group>";
-		};
-		6D587AB91CD637320015F33B /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				6D587ABC1CD6378E0015F33B /* LoginViewController.swift */,
-				6D587AC41CD638470015F33B /* LoginPresenter.swift */,
-				6D587AC21CD638360015F33B /* LoginInteractor.swift */,
-				6D587ACA1CD63F0A0015F33B /* LoginRouter.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		6D5B7CCF1CD5462600D48330 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				6D5B7CD01CD5462600D48330 /* LaunchScreen.storyboard */,
-				6D5B7CD11CD5462600D48330 /* Chat.storyboard */,
-				6D587AB11CD61F900015F33B /* Login.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		94182B4F1CC9139700194DF7 = {
-			isa = PBXGroup;
-			children = (
-				94182B5A1CC9139800194DF7 /* ChatBot */,
-				94182B6F1CC9139800194DF7 /* ChatBotTests */,
-				94182B7A1CC9139800194DF7 /* ChatBotUITests */,
-				94182B591CC9139700194DF7 /* Products */,
-				064B6AFE26EEF36EC22BCF7F /* Pods */,
-				0149E35A417CB945A68312D2 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		94182B591CC9139700194DF7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				94182B581CC9139700194DF7 /* ChatBot.app */,
-				94182B6C1CC9139800194DF7 /* ChatBotTests.xctest */,
-				94182B771CC9139800194DF7 /* ChatBotUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		94182B5A1CC9139800194DF7 /* ChatBot */ = {
-			isa = PBXGroup;
-			children = (
-				6D17C9BC1CD53FA600544A96 /* Application */,
-				6D430A091CD6C6180037C4CB /* Managers */,
-				6D17C9C51CD5409F00544A96 /* Models */,
-				6D587AB71CD637320015F33B /* Modules */,
-				6D3D29A21CD5412A00E2AE9B /* PR2Studio */,
-				6D3D29B51CD543C100E2AE9B /* Resources */,
-				94E23D4D1CCA355800BAC252 /* Message.swift */,
-			);
-			path = ChatBot;
-			sourceTree = "<group>";
-		};
-		94182B6F1CC9139800194DF7 /* ChatBotTests */ = {
-			isa = PBXGroup;
-			children = (
-				94182B701CC9139800194DF7 /* ChatBotTests.swift */,
-				94182B721CC9139800194DF7 /* Info.plist */,
-			);
-			path = ChatBotTests;
-			sourceTree = "<group>";
-		};
-		94182B7A1CC9139800194DF7 /* ChatBotUITests */ = {
-			isa = PBXGroup;
-			children = (
-				94182B7B1CC9139800194DF7 /* ChatBotUITests.swift */,
-				94182B7D1CC9139800194DF7 /* Info.plist */,
-			);
-			path = ChatBotUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		94182B571CC9139700194DF7 /* ChatBot */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 94182B801CC9139800194DF7 /* Build configuration list for PBXNativeTarget "ChatBot" */;
-			buildPhases = (
-				836AF5FB2A1367FF5EF4016A /* Check Pods Manifest.lock */,
-				94182B541CC9139700194DF7 /* Sources */,
-				94182B551CC9139700194DF7 /* Frameworks */,
-				94182B561CC9139700194DF7 /* Resources */,
-				BFE75C0FEE9EAB9446C9FDBA /* Embed Pods Frameworks */,
-				3E64A8932622DB24534B3B3F /* Copy Pods Resources */,
-				6D5B7CD41CD5495800D48330 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ChatBot;
-			productName = ChatBot;
-			productReference = 94182B581CC9139700194DF7 /* ChatBot.app */;
-			productType = "com.apple.product-type.application";
-		};
-		94182B6B1CC9139800194DF7 /* ChatBotTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 94182B831CC9139800194DF7 /* Build configuration list for PBXNativeTarget "ChatBotTests" */;
-			buildPhases = (
-				94182B681CC9139800194DF7 /* Sources */,
-				94182B691CC9139800194DF7 /* Frameworks */,
-				94182B6A1CC9139800194DF7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				94182B6E1CC9139800194DF7 /* PBXTargetDependency */,
-			);
-			name = ChatBotTests;
-			productName = ChatBotTests;
-			productReference = 94182B6C1CC9139800194DF7 /* ChatBotTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		94182B761CC9139800194DF7 /* ChatBotUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 94182B861CC9139800194DF7 /* Build configuration list for PBXNativeTarget "ChatBotUITests" */;
-			buildPhases = (
-				94182B731CC9139800194DF7 /* Sources */,
-				94182B741CC9139800194DF7 /* Frameworks */,
-				94182B751CC9139800194DF7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				94182B791CC9139800194DF7 /* PBXTargetDependency */,
-			);
-			name = ChatBotUITests;
-			productName = ChatBotUITests;
-			productReference = 94182B771CC9139800194DF7 /* ChatBotUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		94182B501CC9139700194DF7 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = Schibsted;
-				TargetAttributes = {
-					94182B571CC9139700194DF7 = {
-						CreatedOnToolsVersion = 7.3;
-					};
-					94182B6B1CC9139800194DF7 = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = 94182B571CC9139700194DF7;
-					};
-					94182B761CC9139800194DF7 = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = 94182B571CC9139700194DF7;
-					};
-				};
-			};
-			buildConfigurationList = 94182B531CC9139700194DF7 /* Build configuration list for PBXProject "ChatBot" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 94182B4F1CC9139700194DF7;
-			productRefGroup = 94182B591CC9139700194DF7 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				94182B571CC9139700194DF7 /* ChatBot */,
-				94182B6B1CC9139800194DF7 /* ChatBotTests */,
-				94182B761CC9139800194DF7 /* ChatBotUITests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		94182B561CC9139700194DF7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6D3D29BB1CD543C100E2AE9B /* Localizable.strings in Resources */,
-				6D587AC11CD637E40015F33B /* ChatBubble.xib in Resources */,
-				6D5B7CD31CD5462600D48330 /* Chat.storyboard in Resources */,
-				6D587AB21CD61F900015F33B /* Login.storyboard in Resources */,
-				6D5B7CD21CD5462600D48330 /* LaunchScreen.storyboard in Resources */,
-				6D3D29BA1CD543C100E2AE9B /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94182B6A1CC9139800194DF7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94182B751CC9139800194DF7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3E64A8932622DB24534B3B3F /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatBot/Pods-ChatBot-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6D5B7CD41CD5495800D48330 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
-		836AF5FB2A1367FF5EF4016A /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		BFE75C0FEE9EAB9446C9FDBA /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatBot/Pods-ChatBot-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		94182B541CC9139700194DF7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6D51DB7D1CD7677100830D80 /* CDEUser+CoreDataProperties.swift in Sources */,
-				6D3D29AA1CD5412A00E2AE9B /* PR2Dates.swift in Sources */,
-				6D51DB7B1CD7677100830D80 /* CDEMessage+CoreDataProperties.swift in Sources */,
-				6D3D29AC1CD5412A00E2AE9B /* PRExtensions.swift in Sources */,
-				6D51DB7A1CD7677100830D80 /* CDEMessage.swift in Sources */,
-				6D587AB61CD62BFA0015F33B /* RootRouter.swift in Sources */,
-				6D51DB881CD76C9000830D80 /* UsersLocalManager.swift in Sources */,
-				6D9D808C1CD780A800954A76 /* EntityUser.swift in Sources */,
-				6D9D808A1CD776FF00954A76 /* EntityMessage.swift in Sources */,
-				6D587ABD1CD6378E0015F33B /* LoginViewController.swift in Sources */,
-				6D3D29A91CD5412A00E2AE9B /* PR2CoreDataStack.swift in Sources */,
-				6D17C9C11CD53FA600544A96 /* AppDelegate.swift in Sources */,
-				6D6692E51CD811C50020B226 /* Notifications.swift in Sources */,
-				6D587AC31CD638360015F33B /* LoginInteractor.swift in Sources */,
-				6D587AC91CD638880015F33B /* ChatInteractor.swift in Sources */,
-				6D9D80861CD7728400954A76 /* CDECache+CoreDataProperties.swift in Sources */,
-				6D9D80901CD7A69600954A76 /* EntityCache.swift in Sources */,
-				6D587AC51CD638470015F33B /* LoginPresenter.swift in Sources */,
-				6D587AC01CD637E40015F33B /* ChatBubble.swift in Sources */,
-				6D587ACB1CD63F0A0015F33B /* LoginRouter.swift in Sources */,
-				6D17C9C81CD540BF00544A96 /* ChatBot.xcdatamodeld in Sources */,
-				6D17C9C21CD53FA600544A96 /* Colors.swift in Sources */,
-				6D9D80851CD7728400954A76 /* CDECache.swift in Sources */,
-				94E23D4E1CCA355800BAC252 /* Message.swift in Sources */,
-				6D17C9C31CD53FA600544A96 /* EndPoints.swift in Sources */,
-				6D4F15F41CD66D2300836450 /* Strings.swift in Sources */,
-				6D9D80921CD7A95400954A76 /* Constants.swift in Sources */,
-				6D9D80881CD772F200954A76 /* CacheLocalManager.swift in Sources */,
-				6D9D808E1CD79F4B00954A76 /* ChatNetworkManager.swift in Sources */,
-				6D587AC71CD638780015F33B /* ChatPresenter.swift in Sources */,
-				6D3D29AB1CD5412A00E2AE9B /* PR2Networking.swift in Sources */,
-				6D587ABB1CD6377F0015F33B /* ChatViewController.swift in Sources */,
-				6D51DB7C1CD7677100830D80 /* CDEUser.swift in Sources */,
-				6D3D29A81CD5412A00E2AE9B /* PR2Common.swift in Sources */,
-				6D587ACD1CD6407D0015F33B /* ChatRouter.swift in Sources */,
-				6D51DB871CD76C9000830D80 /* MessagesLocalManager.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94182B681CC9139800194DF7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				94182B711CC9139800194DF7 /* ChatBotTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94182B731CC9139800194DF7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				94182B7C1CC9139800194DF7 /* ChatBotUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		94182B6E1CC9139800194DF7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 94182B571CC9139700194DF7 /* ChatBot */;
-			targetProxy = 94182B6D1CC9139800194DF7 /* PBXContainerItemProxy */;
-		};
-		94182B791CC9139800194DF7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 94182B571CC9139700194DF7 /* ChatBot */;
-			targetProxy = 94182B781CC9139800194DF7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		94182B7E1CC9139800194DF7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		94182B7F1CC9139800194DF7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		94182B811CC9139800194DF7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87703944C2C8E8C11CA7A116 /* Pods-ChatBot.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "$(SRCROOT)/ChatBot/Application/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.schibsted.chatbot.ChatBot;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		94182B821CC9139800194DF7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A407A9E301E3973F2879541C /* Pods-ChatBot.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "$(SRCROOT)/ChatBot/Application/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.schibsted.chatbot.ChatBot;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		94182B841CC9139800194DF7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ChatBotTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.schibsted.chatbot.ChatBotTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatBot.app/ChatBot";
-			};
-			name = Debug;
-		};
-		94182B851CC9139800194DF7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ChatBotTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.schibsted.chatbot.ChatBotTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatBot.app/ChatBot";
-			};
-			name = Release;
-		};
-		94182B871CC9139800194DF7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = ChatBotUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.schibsted.chatbot.ChatBotUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ChatBot;
-			};
-			name = Debug;
-		};
-		94182B881CC9139800194DF7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = ChatBotUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.schibsted.chatbot.ChatBotUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ChatBot;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		94182B531CC9139700194DF7 /* Build configuration list for PBXProject "ChatBot" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				94182B7E1CC9139800194DF7 /* Debug */,
-				94182B7F1CC9139800194DF7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		94182B801CC9139800194DF7 /* Build configuration list for PBXNativeTarget "ChatBot" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				94182B811CC9139800194DF7 /* Debug */,
-				94182B821CC9139800194DF7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		94182B831CC9139800194DF7 /* Build configuration list for PBXNativeTarget "ChatBotTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				94182B841CC9139800194DF7 /* Debug */,
-				94182B851CC9139800194DF7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		94182B861CC9139800194DF7 /* Build configuration list for PBXNativeTarget "ChatBotUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				94182B871CC9139800194DF7 /* Debug */,
-				94182B881CC9139800194DF7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		6D17C9C61CD540BF00544A96 /* ChatBot.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				6D17C9C71CD540BF00544A96 /* ChatBot.xcdatamodel */,
-			);
-			currentVersion = 6D17C9C71CD540BF00544A96 /* ChatBot.xcdatamodel */;
-			path = ChatBot.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
-	};
-	rootObject = 94182B501CC9139700194DF7 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0149E35A417CB945A68312D2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9BE1BAE1B8294E9E9DB24E6B</string>
+				<string>73F7D4184429396130B6C2D0</string>
+				<string>84AC5FA4900238A3B1AAEF62</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>01FA953855162BBC6F15ECB1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>84AC5FA4900238A3B1AAEF62</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>064B6AFE26EEF36EC22BCF7F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>87703944C2C8E8C11CA7A116</string>
+				<string>A407A9E301E3973F2879541C</string>
+				<string>924B08B7EA4D2CF4613DAA9D</string>
+				<string>3C5D063E9085E289722D8921</string>
+				<string>6668028BD95B9B8FD5134E31</string>
+				<string>AAC3F507AD14E245C0F9962E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3C5D063E9085E289722D8921</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-ChatBotTests.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-ChatBotTests/Pods-ChatBotTests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3E64A8932622DB24534B3B3F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ChatBot/Pods-ChatBot-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>551062B08682588644E1AAEA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ChatBotUITests/Pods-ChatBotUITests-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>5FBB952AB97B96CC6D01991A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ChatBotTests/Pods-ChatBotTests-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>6668028BD95B9B8FD5134E31</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-ChatBotUITests.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-ChatBotUITests/Pods-ChatBotUITests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>67AE71C7F32FF7002CDC79CE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>6D17C9BC1CD53FA600544A96</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6D17C9BD1CD53FA600544A96</string>
+				<string>6D17C9BE1CD53FA600544A96</string>
+				<string>6D9D80911CD7A95400954A76</string>
+				<string>6D17C9BF1CD53FA600544A96</string>
+				<string>6D17C9C01CD53FA600544A96</string>
+				<string>6D6692E41CD811C50020B226</string>
+				<string>6D587AB51CD62BFA0015F33B</string>
+				<string>6D4F15F31CD66D2300836450</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Application</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D17C9BD1CD53FA600544A96</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D17C9BE1CD53FA600544A96</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>Colors.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D17C9BF1CD53FA600544A96</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>EndPoints.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D17C9C01CD53FA600544A96</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D17C9C11CD53FA600544A96</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D17C9BD1CD53FA600544A96</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D17C9C21CD53FA600544A96</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D17C9BE1CD53FA600544A96</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D17C9C31CD53FA600544A96</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D17C9BF1CD53FA600544A96</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D17C9C51CD5409F00544A96</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6D9D808F1CD7A69600954A76</string>
+				<string>6D9D80891CD776FF00954A76</string>
+				<string>6D9D808B1CD780A800954A76</string>
+				<string>6D9D80831CD7728400954A76</string>
+				<string>6D9D80841CD7728400954A76</string>
+				<string>6D51DB761CD7677100830D80</string>
+				<string>6D51DB771CD7677100830D80</string>
+				<string>6D51DB781CD7677100830D80</string>
+				<string>6D51DB791CD7677100830D80</string>
+				<string>6D17C9C61CD540BF00544A96</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Models</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D17C9C61CD540BF00544A96</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6D17C9C71CD540BF00544A96</string>
+			</array>
+			<key>currentVersion</key>
+			<string>6D17C9C71CD540BF00544A96</string>
+			<key>isa</key>
+			<string>XCVersionGroup</string>
+			<key>path</key>
+			<string>ChatBot.xcdatamodeld</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+			<key>versionGroupType</key>
+			<string>wrapper.xcdatamodel</string>
+		</dict>
+		<key>6D17C9C71CD540BF00544A96</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.xcdatamodel</string>
+			<key>path</key>
+			<string>ChatBot.xcdatamodel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D17C9C81CD540BF00544A96</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D17C9C61CD540BF00544A96</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D3D29A21CD5412A00E2AE9B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6D3D29A31CD5412A00E2AE9B</string>
+				<string>6D3D29A41CD5412A00E2AE9B</string>
+				<string>6D3D29A51CD5412A00E2AE9B</string>
+				<string>6D3D29A61CD5412A00E2AE9B</string>
+				<string>6D3D29A71CD5412A00E2AE9B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>PR2Studio</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D3D29A31CD5412A00E2AE9B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>PR2Common.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D3D29A41CD5412A00E2AE9B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>PR2CoreDataStack.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D3D29A51CD5412A00E2AE9B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>PR2Dates.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D3D29A61CD5412A00E2AE9B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>PR2Networking.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D3D29A71CD5412A00E2AE9B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>PRExtensions.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D3D29A81CD5412A00E2AE9B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D3D29A31CD5412A00E2AE9B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D3D29A91CD5412A00E2AE9B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D3D29A41CD5412A00E2AE9B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D3D29AA1CD5412A00E2AE9B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D3D29A51CD5412A00E2AE9B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D3D29AB1CD5412A00E2AE9B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D3D29A61CD5412A00E2AE9B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D3D29AC1CD5412A00E2AE9B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D3D29A71CD5412A00E2AE9B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D3D29B51CD543C100E2AE9B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6D4F15F51CD6BC1300836450</string>
+				<string>6D3D29B61CD543C100E2AE9B</string>
+				<string>6D5B7CCF1CD5462600D48330</string>
+				<string>6D3D29B81CD543C100E2AE9B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D3D29B61CD543C100E2AE9B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6D3D29B71CD543C100E2AE9B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Images</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D3D29B71CD543C100E2AE9B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D3D29B81CD543C100E2AE9B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6D3D29B91CD543C100E2AE9B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D3D29B91CD543C100E2AE9B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>path</key>
+			<string>Localizable.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D3D29BA1CD543C100E2AE9B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D3D29B71CD543C100E2AE9B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D3D29BB1CD543C100E2AE9B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D3D29B91CD543C100E2AE9B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D430A091CD6C6180037C4CB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6D51DB831CD76C9000830D80</string>
+				<string>6D51DB841CD76C9000830D80</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Managers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D4F15F31CD66D2300836450</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>Strings.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D4F15F41CD66D2300836450</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D4F15F31CD66D2300836450</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D4F15F51CD6BC1300836450</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>XcodeWarnings.xcconfig</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>6D51DB761CD7677100830D80</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>CDEMessage.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D51DB771CD7677100830D80</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>CDEMessage+CoreDataProperties.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D51DB781CD7677100830D80</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>CDEUser.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D51DB791CD7677100830D80</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>CDEUser+CoreDataProperties.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D51DB7A1CD7677100830D80</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D51DB761CD7677100830D80</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D51DB7B1CD7677100830D80</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D51DB771CD7677100830D80</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D51DB7C1CD7677100830D80</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D51DB781CD7677100830D80</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D51DB7D1CD7677100830D80</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D51DB791CD7677100830D80</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D51DB831CD76C9000830D80</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6D9D808D1CD79F4B00954A76</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Network</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D51DB841CD76C9000830D80</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6D9D80871CD772F200954A76</string>
+				<string>6D51DB851CD76C9000830D80</string>
+				<string>6D51DB861CD76C9000830D80</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Local</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D51DB851CD76C9000830D80</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MessagesLocalManager.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D51DB861CD76C9000830D80</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>UsersLocalManager.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D51DB871CD76C9000830D80</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D51DB851CD76C9000830D80</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D51DB881CD76C9000830D80</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D51DB861CD76C9000830D80</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D587AB11CD61F900015F33B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>path</key>
+			<string>Login.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D587AB21CD61F900015F33B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D587AB11CD61F900015F33B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D587AB51CD62BFA0015F33B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>RootRouter.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D587AB61CD62BFA0015F33B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D587AB51CD62BFA0015F33B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D587AB71CD637320015F33B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6D587AB81CD637320015F33B</string>
+				<string>6D587AB91CD637320015F33B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Modules</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D587AB81CD637320015F33B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6D587ABA1CD6377F0015F33B</string>
+				<string>6D587AC61CD638780015F33B</string>
+				<string>6D587AC81CD638880015F33B</string>
+				<string>6D587ACC1CD6407D0015F33B</string>
+				<string>6D587ABE1CD637E40015F33B</string>
+				<string>6D587ABF1CD637E40015F33B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Chat</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D587AB91CD637320015F33B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6D587ABC1CD6378E0015F33B</string>
+				<string>6D587AC41CD638470015F33B</string>
+				<string>6D587AC21CD638360015F33B</string>
+				<string>6D587ACA1CD63F0A0015F33B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Login</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D587ABA1CD6377F0015F33B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChatViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D587ABB1CD6377F0015F33B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D587ABA1CD6377F0015F33B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D587ABC1CD6378E0015F33B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>LoginViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D587ABD1CD6378E0015F33B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D587ABC1CD6378E0015F33B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D587ABE1CD637E40015F33B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChatBubble.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D587ABF1CD637E40015F33B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>ChatBubble.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D587AC01CD637E40015F33B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D587ABE1CD637E40015F33B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D587AC11CD637E40015F33B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D587ABF1CD637E40015F33B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D587AC21CD638360015F33B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>LoginInteractor.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D587AC31CD638360015F33B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D587AC21CD638360015F33B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D587AC41CD638470015F33B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>LoginPresenter.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D587AC51CD638470015F33B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D587AC41CD638470015F33B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D587AC61CD638780015F33B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChatPresenter.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D587AC71CD638780015F33B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D587AC61CD638780015F33B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D587AC81CD638880015F33B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChatInteractor.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D587AC91CD638880015F33B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D587AC81CD638880015F33B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D587ACA1CD63F0A0015F33B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>LoginRouter.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D587ACB1CD63F0A0015F33B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D587ACA1CD63F0A0015F33B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D587ACC1CD6407D0015F33B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChatRouter.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D587ACD1CD6407D0015F33B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D587ACC1CD6407D0015F33B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D5B7CCF1CD5462600D48330</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6D5B7CD01CD5462600D48330</string>
+				<string>6D5B7CD11CD5462600D48330</string>
+				<string>6D587AB11CD61F900015F33B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Storyboards</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D5B7CD01CD5462600D48330</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>path</key>
+			<string>LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D5B7CD11CD5462600D48330</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>path</key>
+			<string>Chat.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D5B7CD21CD5462600D48330</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D5B7CD01CD5462600D48330</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D5B7CD31CD5462600D48330</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D5B7CD11CD5462600D48330</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D5B7CD41CD5495800D48330</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>if which swiftlint &gt;/dev/null; then
+swiftlint
+else
+echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+fi</string>
+		</dict>
+		<key>6D6692E41CD811C50020B226</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>Notifications.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D6692E51CD811C50020B226</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D6692E41CD811C50020B226</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D9D80831CD7728400954A76</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>CDECache.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D9D80841CD7728400954A76</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>CDECache+CoreDataProperties.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D9D80851CD7728400954A76</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D9D80831CD7728400954A76</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D9D80861CD7728400954A76</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D9D80841CD7728400954A76</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D9D80871CD772F200954A76</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>CacheLocalManager.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D9D80881CD772F200954A76</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D9D80871CD772F200954A76</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D9D80891CD776FF00954A76</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>EntityMessage.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D9D808A1CD776FF00954A76</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D9D80891CD776FF00954A76</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D9D808B1CD780A800954A76</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>EntityUser.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D9D808C1CD780A800954A76</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D9D808B1CD780A800954A76</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D9D808D1CD79F4B00954A76</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChatNetworkManager.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D9D808E1CD79F4B00954A76</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D9D808D1CD79F4B00954A76</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D9D808F1CD7A69600954A76</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>EntityCache.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D9D80901CD7A69600954A76</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D9D808F1CD7A69600954A76</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D9D80911CD7A95400954A76</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>Constants.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D9D80921CD7A95400954A76</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D9D80911CD7A95400954A76</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>73F7D4184429396130B6C2D0</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_ChatBotTests.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>836AF5FB2A1367FF5EF4016A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>84AC5FA4900238A3B1AAEF62</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_ChatBotUITests.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>87703944C2C8E8C11CA7A116</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-ChatBot.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-ChatBot/Pods-ChatBot.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>884585F011F89E8F32D2D009</key>
+		<dict>
+			<key>fileRef</key>
+			<string>73F7D4184429396130B6C2D0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>924B08B7EA4D2CF4613DAA9D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-ChatBotTests.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-ChatBotTests/Pods-ChatBotTests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94182B4F1CC9139700194DF7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>94182B5A1CC9139800194DF7</string>
+				<string>94182B6F1CC9139800194DF7</string>
+				<string>94182B7A1CC9139800194DF7</string>
+				<string>94182B591CC9139700194DF7</string>
+				<string>064B6AFE26EEF36EC22BCF7F</string>
+				<string>0149E35A417CB945A68312D2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94182B501CC9139700194DF7</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0730</string>
+				<key>LastUpgradeCheck</key>
+				<string>0730</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Schibsted</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>94182B571CC9139700194DF7</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+					</dict>
+					<key>94182B6B1CC9139800194DF7</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+						<key>TestTargetID</key>
+						<string>94182B571CC9139700194DF7</string>
+					</dict>
+					<key>94182B761CC9139800194DF7</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+						<key>TestTargetID</key>
+						<string>94182B571CC9139700194DF7</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>94182B531CC9139700194DF7</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>94182B4F1CC9139700194DF7</string>
+			<key>productRefGroup</key>
+			<string>94182B591CC9139700194DF7</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>94182B571CC9139700194DF7</string>
+				<string>94182B6B1CC9139800194DF7</string>
+				<string>94182B761CC9139800194DF7</string>
+			</array>
+		</dict>
+		<key>94182B531CC9139700194DF7</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>94182B7E1CC9139800194DF7</string>
+				<string>94182B7F1CC9139800194DF7</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>94182B541CC9139700194DF7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6D51DB7D1CD7677100830D80</string>
+				<string>6D3D29AA1CD5412A00E2AE9B</string>
+				<string>6D51DB7B1CD7677100830D80</string>
+				<string>6D3D29AC1CD5412A00E2AE9B</string>
+				<string>6D51DB7A1CD7677100830D80</string>
+				<string>6D587AB61CD62BFA0015F33B</string>
+				<string>6D51DB881CD76C9000830D80</string>
+				<string>6D9D808C1CD780A800954A76</string>
+				<string>6D9D808A1CD776FF00954A76</string>
+				<string>6D587ABD1CD6378E0015F33B</string>
+				<string>6D3D29A91CD5412A00E2AE9B</string>
+				<string>6D17C9C11CD53FA600544A96</string>
+				<string>6D6692E51CD811C50020B226</string>
+				<string>6D587AC31CD638360015F33B</string>
+				<string>6D587AC91CD638880015F33B</string>
+				<string>6D9D80861CD7728400954A76</string>
+				<string>6D9D80901CD7A69600954A76</string>
+				<string>6D587AC51CD638470015F33B</string>
+				<string>6D587AC01CD637E40015F33B</string>
+				<string>6D587ACB1CD63F0A0015F33B</string>
+				<string>6D17C9C81CD540BF00544A96</string>
+				<string>6D17C9C21CD53FA600544A96</string>
+				<string>6D9D80851CD7728400954A76</string>
+				<string>94E23D4E1CCA355800BAC252</string>
+				<string>6D17C9C31CD53FA600544A96</string>
+				<string>6D4F15F41CD66D2300836450</string>
+				<string>6D9D80921CD7A95400954A76</string>
+				<string>6D9D80881CD772F200954A76</string>
+				<string>6D9D808E1CD79F4B00954A76</string>
+				<string>6D587AC71CD638780015F33B</string>
+				<string>6D3D29AB1CD5412A00E2AE9B</string>
+				<string>6D587ABB1CD6377F0015F33B</string>
+				<string>6D51DB7C1CD7677100830D80</string>
+				<string>6D3D29A81CD5412A00E2AE9B</string>
+				<string>6D587ACD1CD6407D0015F33B</string>
+				<string>6D51DB871CD76C9000830D80</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>94182B551CC9139700194DF7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9FECABEB476CAD5D80249E20</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>94182B561CC9139700194DF7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6D3D29BB1CD543C100E2AE9B</string>
+				<string>6D587AC11CD637E40015F33B</string>
+				<string>6D5B7CD31CD5462600D48330</string>
+				<string>6D587AB21CD61F900015F33B</string>
+				<string>6D5B7CD21CD5462600D48330</string>
+				<string>6D3D29BA1CD543C100E2AE9B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>94182B571CC9139700194DF7</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>94182B801CC9139800194DF7</string>
+			<key>buildPhases</key>
+			<array>
+				<string>836AF5FB2A1367FF5EF4016A</string>
+				<string>94182B541CC9139700194DF7</string>
+				<string>94182B551CC9139700194DF7</string>
+				<string>94182B561CC9139700194DF7</string>
+				<string>BFE75C0FEE9EAB9446C9FDBA</string>
+				<string>3E64A8932622DB24534B3B3F</string>
+				<string>6D5B7CD41CD5495800D48330</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>ChatBot</string>
+			<key>productName</key>
+			<string>ChatBot</string>
+			<key>productReference</key>
+			<string>94182B581CC9139700194DF7</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>94182B581CC9139700194DF7</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>ChatBot.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>94182B591CC9139700194DF7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>94182B581CC9139700194DF7</string>
+				<string>94182B6C1CC9139800194DF7</string>
+				<string>94182B771CC9139800194DF7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94182B5A1CC9139800194DF7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6D17C9BC1CD53FA600544A96</string>
+				<string>6D430A091CD6C6180037C4CB</string>
+				<string>6D17C9C51CD5409F00544A96</string>
+				<string>6D587AB71CD637320015F33B</string>
+				<string>6D3D29A21CD5412A00E2AE9B</string>
+				<string>6D3D29B51CD543C100E2AE9B</string>
+				<string>94E23D4D1CCA355800BAC252</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>ChatBot</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94182B681CC9139800194DF7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>94182B711CC9139800194DF7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>94182B691CC9139800194DF7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>884585F011F89E8F32D2D009</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>94182B6A1CC9139800194DF7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>94182B6B1CC9139800194DF7</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>94182B831CC9139800194DF7</string>
+			<key>buildPhases</key>
+			<array>
+				<string>F23F3D86C13239A17D2D7156</string>
+				<string>94182B681CC9139800194DF7</string>
+				<string>94182B691CC9139800194DF7</string>
+				<string>94182B6A1CC9139800194DF7</string>
+				<string>5FBB952AB97B96CC6D01991A</string>
+				<string>A2E21D1B094E08EAECAEC7DE</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>94182B6E1CC9139800194DF7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>ChatBotTests</string>
+			<key>productName</key>
+			<string>ChatBotTests</string>
+			<key>productReference</key>
+			<string>94182B6C1CC9139800194DF7</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>94182B6C1CC9139800194DF7</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>ChatBotTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>94182B6D1CC9139800194DF7</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>94182B501CC9139700194DF7</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>94182B571CC9139700194DF7</string>
+			<key>remoteInfo</key>
+			<string>ChatBot</string>
+		</dict>
+		<key>94182B6E1CC9139800194DF7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>94182B571CC9139700194DF7</string>
+			<key>targetProxy</key>
+			<string>94182B6D1CC9139800194DF7</string>
+		</dict>
+		<key>94182B6F1CC9139800194DF7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>94182B701CC9139800194DF7</string>
+				<string>94182B721CC9139800194DF7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>ChatBotTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94182B701CC9139800194DF7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChatBotTests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94182B711CC9139800194DF7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>94182B701CC9139800194DF7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>94182B721CC9139800194DF7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94182B731CC9139800194DF7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>94182B7C1CC9139800194DF7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>94182B741CC9139800194DF7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>01FA953855162BBC6F15ECB1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>94182B751CC9139800194DF7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>94182B761CC9139800194DF7</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>94182B861CC9139800194DF7</string>
+			<key>buildPhases</key>
+			<array>
+				<string>67AE71C7F32FF7002CDC79CE</string>
+				<string>94182B731CC9139800194DF7</string>
+				<string>94182B741CC9139800194DF7</string>
+				<string>94182B751CC9139800194DF7</string>
+				<string>551062B08682588644E1AAEA</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>94182B791CC9139800194DF7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>ChatBotUITests</string>
+			<key>productName</key>
+			<string>ChatBotUITests</string>
+			<key>productReference</key>
+			<string>94182B771CC9139800194DF7</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.ui-testing</string>
+		</dict>
+		<key>94182B771CC9139800194DF7</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>ChatBotUITests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>94182B781CC9139800194DF7</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>94182B501CC9139700194DF7</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>94182B571CC9139700194DF7</string>
+			<key>remoteInfo</key>
+			<string>ChatBot</string>
+		</dict>
+		<key>94182B791CC9139800194DF7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>94182B571CC9139700194DF7</string>
+			<key>targetProxy</key>
+			<string>94182B781CC9139800194DF7</string>
+		</dict>
+		<key>94182B7A1CC9139800194DF7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>94182B7B1CC9139800194DF7</string>
+				<string>94182B7D1CC9139800194DF7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>ChatBotUITests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94182B7B1CC9139800194DF7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChatBotUITests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94182B7C1CC9139800194DF7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>94182B7B1CC9139800194DF7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>94182B7D1CC9139800194DF7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94182B7E1CC9139800194DF7</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>94182B7F1CC9139800194DF7</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>94182B801CC9139800194DF7</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>94182B811CC9139800194DF7</string>
+				<string>94182B821CC9139800194DF7</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>94182B811CC9139800194DF7</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>87703944C2C8E8C11CA7A116</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>$(SRCROOT)/ChatBot/Application/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.schibsted.chatbot.ChatBot</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>94182B821CC9139800194DF7</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>A407A9E301E3973F2879541C</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>$(SRCROOT)/ChatBot/Application/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.schibsted.chatbot.ChatBot</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>94182B831CC9139800194DF7</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>94182B841CC9139800194DF7</string>
+				<string>94182B851CC9139800194DF7</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>94182B841CC9139800194DF7</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>924B08B7EA4D2CF4613DAA9D</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>INFOPLIST_FILE</key>
+				<string>ChatBotTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.schibsted.chatbot.ChatBotTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/ChatBot.app/ChatBot</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>94182B851CC9139800194DF7</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>3C5D063E9085E289722D8921</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>INFOPLIST_FILE</key>
+				<string>ChatBotTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.schibsted.chatbot.ChatBotTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/ChatBot.app/ChatBot</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>94182B861CC9139800194DF7</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>94182B871CC9139800194DF7</string>
+				<string>94182B881CC9139800194DF7</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>94182B871CC9139800194DF7</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>6668028BD95B9B8FD5134E31</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>INFOPLIST_FILE</key>
+				<string>ChatBotUITests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.schibsted.chatbot.ChatBotUITests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_TARGET_NAME</key>
+				<string>ChatBot</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>94182B881CC9139800194DF7</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>AAC3F507AD14E245C0F9962E</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>INFOPLIST_FILE</key>
+				<string>ChatBotUITests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.schibsted.chatbot.ChatBotUITests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_TARGET_NAME</key>
+				<string>ChatBot</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>94E23D4D1CCA355800BAC252</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>Message.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94E23D4E1CCA355800BAC252</key>
+		<dict>
+			<key>fileRef</key>
+			<string>94E23D4D1CCA355800BAC252</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9BE1BAE1B8294E9E9DB24E6B</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_ChatBot.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>9FECABEB476CAD5D80249E20</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9BE1BAE1B8294E9E9DB24E6B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A2E21D1B094E08EAECAEC7DE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ChatBotTests/Pods-ChatBotTests-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>A407A9E301E3973F2879541C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-ChatBot.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-ChatBot/Pods-ChatBot.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AAC3F507AD14E245C0F9962E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-ChatBotUITests.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-ChatBotUITests/Pods-ChatBotUITests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BFE75C0FEE9EAB9446C9FDBA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ChatBot/Pods-ChatBot-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>F23F3D86C13239A17D2D7156</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>94182B501CC9139700194DF7</string>
+</dict>
+</plist>
