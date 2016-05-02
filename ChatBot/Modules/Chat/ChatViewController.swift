@@ -33,7 +33,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
       super.viewDidLoad()
       self.viperPresenter = ChatPresenter().dynamicType.init(view: self)
 
-      self.navItem.title = tr(.ChatTitleMain("//ojo"))
+      //self.navItem.title = tr(.ChatTitleMain("//ojo"))
       self.viewComment.backgroundColor = Colors.defaultviewCommentColor
    }
    
@@ -46,6 +46,10 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
    override func viewWillDisappear(animated: Bool) {
       super.viewWillDisappear(animated)
       NSNotificationCenter.defaultCenter().removeObserver(self)
+   }
+   
+   func setTittle(title: String) {
+      self.navItem.title = tr(.ChatTitleMain(title))
    }
    
    // MARK: - UI Actions

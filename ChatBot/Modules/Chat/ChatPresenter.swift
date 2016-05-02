@@ -24,6 +24,15 @@ class ChatPresenter: NSObject {
       self.viperRouter     = ChatRouter().dynamicType.init(presenter:self)
       self.viperInteractor = ChatInteractor()
       self.viperView       = view
+      
+      LoginInteractor().readLogin { (success, data) in
+         if let data = data where success {
+            self.viperView.setTittle(data.username!)
+         } else {
+            self.viperView.setTittle("")
+         }
+      }
+      
    }
    
    // MARK: - UI Actions

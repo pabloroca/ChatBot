@@ -29,7 +29,7 @@ public class UsersLocalManager {
    /// - parameter completionHandler: (success: Bool).
    public func readFromLocalData(
       predicate: NSPredicate?,
-      completionHandler: (success: Bool) -> Void) {
+      completionHandler: (success: Bool, data: EntityUser?) -> Void) {
       let fetchRequest = NSFetchRequest(entityName: "CDEUser")
       fetchRequest.sortDescriptors = [sortDescriptor]
       fetchRequest.predicate = predicate
@@ -39,9 +39,16 @@ public class UsersLocalManager {
       
       do {
          try self.fetchedResultsController.performFetch()
-         completionHandler(success: true)
+         if !(self.fetchedResultsController.fetchedObjects?.isEmpty)! {
+            let item = self.fetchedResultsController.fetchedObjects![0] as! CDEUser
+            let data = EntityUser()
+            data.username = item.username
+            completionHandler(success: true, data: data)
+         } else {
+            completionHandler(success: false, data: nil)
+         }
       } catch {
-         completionHandler(success: false)
+         completionHandler(success: false, data: nil)
       }
    }
    

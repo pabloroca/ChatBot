@@ -35,13 +35,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          window = UIWindow(frame: UIScreen.mainScreen().bounds)
       }
       
-      let isUserConnected = false
-      
-      if isUserConnected == false {
-         self.rootRouter!.showLogin()
-      } else {
-         self.rootRouter!.showChat()
+      // if logged show chat, if not show login
+      LoginInteractor().readLogin { (success, data) in
+         if let _ = data where success {
+            self.rootRouter!.showChat()
+         } else {
+            self.rootRouter!.showLogin()
+         }
       }
+      
+//      let isUserConnected = false
+//      
+//      if isUserConnected == false {
+//         self.rootRouter!.showLogin()
+//      } else {
+//         self.rootRouter!.showChat()
+//      }
       
         return true
     }

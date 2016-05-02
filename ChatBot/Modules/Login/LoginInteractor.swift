@@ -33,4 +33,13 @@ class LoginInteractor: NSObject {
       }
    }
    
+   func readLogin(
+      completionHandler: (success: Bool, data: EntityUser?) -> Void) -> Void {
+      let usersLocalManager = UsersLocalManager()
+      
+      usersLocalManager.readFromLocalData(nil) { (success, data) in
+         completionHandler(success: success, data: data)
+      }
+   }
+
 }
