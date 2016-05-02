@@ -44,14 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          }
       }
       
-//      let isUserConnected = false
-//      
-//      if isUserConnected == false {
-//         self.rootRouter!.showLogin()
-//      } else {
-//         self.rootRouter!.showChat()
-//      }
-      
         return true
     }
 
