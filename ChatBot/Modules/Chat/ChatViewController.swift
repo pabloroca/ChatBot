@@ -33,7 +33,6 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
       super.viewDidLoad()
       self.viperPresenter = ChatPresenter().dynamicType.init(view: self)
 
-      //self.navItem.title = tr(.ChatTitleMain("//ojo"))
       self.viewComment.backgroundColor = Colors.defaultviewCommentColor
    }
    

@@ -13,5 +13,6 @@ public struct Constants {
    
    /// cache time for messages (in seconds)
    /// set to 10 mins
-   static let cachetime: Double = 10*60
+   //ojo fix before sending
+   static let cachetime: Double = 60*60
 }

@@ -64,6 +64,8 @@ https://medium.com/brigade-engineering/brigades-experience-using-an-mvc-alternat
 
 I cache network requests, just for showing how can this be done. In a chat is not realistic at all to cache by 10 minutes.
 
+For a chat, network layer should be done in realtime (NodeJS, SignalR, downloadTaskWithRequest of NSURLSession with background session) and also having PushNotifications as failover
+
 ## Network logger
 
 Logs into the console the network requests and responses. It's instantiated in AppDelegate.swift, here:
