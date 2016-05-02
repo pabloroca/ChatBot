@@ -42,4 +42,8 @@ class LoginInteractor: NSObject {
       }
    }
 
+   func deleteLogin() {
+      UsersLocalManager().deleteInLocalData()
+   }
+   
 }
