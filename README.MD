@@ -155,4 +155,13 @@ So we conclude with this (and it is applied in the exercise):
 
 * create secondary target for slow connectivity tests using OHHTTPStubs
 
+## To enhance
+
+* more use of protocols
+* Entities as PONSOs?
+* move more view logic to presenter? Investigate more View <> Presenter boundaries
+* Better Autolayout
+*
+
+
 

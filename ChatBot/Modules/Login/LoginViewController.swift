@@ -21,11 +21,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
    // MARK: - View livecycle
    override func viewDidLoad() {
       super.viewDidLoad()
-      
       self.viperPresenter = LoginPresenter().dynamicType.init(view: self)
       
       self.btnLogin.layer.cornerRadius = 5
-      
    }
    
    // MARK: - UI Actions

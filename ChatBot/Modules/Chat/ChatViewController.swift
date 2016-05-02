@@ -30,10 +30,10 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
    
    // MARK: - View livecycle
    override func viewDidLoad() {
-      self.navItem.title = tr(.ChatTitleMain("//ojo"))
-      
+      super.viewDidLoad()
       self.viperPresenter = ChatPresenter().dynamicType.init(view: self)
-      
+
+      self.navItem.title = tr(.ChatTitleMain("//ojo"))
       self.viewComment.backgroundColor = Colors.defaultviewCommentColor
    }
    
