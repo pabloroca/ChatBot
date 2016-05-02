@@ -25,9 +25,12 @@ class LoginInteractor: NSObject {
       return true
    }
    
-   func doLoginWithUsername(username username: String) -> Bool {
-   //ojo pte
-      return true
+   func storeLogin(
+      username username: String,
+      completionHandler: (success: Bool) -> Void) -> Void {
+      UsersLocalManager().addIntoLocalData(username) { (success) in
+         completionHandler(success: success)
+      }
    }
    
 }
