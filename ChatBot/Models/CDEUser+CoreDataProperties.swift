@@ -15,6 +15,6 @@ import CoreData
 extension CDEUser {
 
     @NSManaged var username: String?
-    @NSManaged var userMessage: CDEMessage?
+    @NSManaged var userMessage: NSSet?
 
 }

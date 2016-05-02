@@ -20,5 +20,5 @@ extension CDEMessage {
     @NSManaged var userImageUrl: String?
     @NSManaged var username: String?
    
-    @NSManaged var messageUser: NSSet?
+    @NSManaged var messageUser: CDEUser?
 }

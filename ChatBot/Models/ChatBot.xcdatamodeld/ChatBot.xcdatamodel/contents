@@ -9,15 +9,15 @@
         <attribute name="tsCreated" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="userImageUrl" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="messageUser" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDEUser" inverseName="userMessage" inverseEntity="CDEUser" syncable="YES"/>
+        <relationship name="messageUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDEUser" inverseName="userMessage" inverseEntity="CDEUser" syncable="YES"/>
     </entity>
     <entity name="CDEUser" representedClassName=".CDEUser" syncable="YES">
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="userMessage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDEMessage" inverseName="messageUser" inverseEntity="CDEMessage" syncable="YES"/>
+        <relationship name="userMessage" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDEMessage" inverseName="messageUser" inverseEntity="CDEMessage" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CDEMessage" positionX="-63" positionY="-214" width="128" height="133"/>
-        <element name="CDEUser" positionX="171" positionY="-55" width="128" height="73"/>
         <element name="CDECache" positionX="160" positionY="-216" width="128" height="58"/>
+        <element name="CDEMessage" positionX="-63" positionY="-214" width="128" height="135"/>
+        <element name="CDEUser" positionX="171" positionY="-55" width="128" height="75"/>
     </elements>
 </model>
