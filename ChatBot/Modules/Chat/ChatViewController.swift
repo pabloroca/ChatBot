@@ -51,6 +51,10 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
       self.navItem.title = tr(.ChatTitleMain(title))
    }
    
+   func settxtComment(message: String) {
+      self.txtComment.text = message
+   }
+   
    // MARK: - UI Actions
    @IBAction func btnlogOutAction(sender: AnyObject) {
       self.viperPresenter.btnlogOutAction(sender)
