@@ -39,6 +39,7 @@
 		6D587ACD1CD6407D0015F33B /* ChatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587ACC1CD6407D0015F33B /* ChatRouter.swift */; };
 		6D5B7CD21CD5462600D48330 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5B7CD01CD5462600D48330 /* LaunchScreen.storyboard */; };
 		6D5B7CD31CD5462600D48330 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5B7CD11CD5462600D48330 /* Chat.storyboard */; };
+		6D6692E51CD811C50020B226 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6692E41CD811C50020B226 /* Notifications.swift */; };
 		6D9D80851CD7728400954A76 /* CDECache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D80831CD7728400954A76 /* CDECache.swift */; };
 		6D9D80861CD7728400954A76 /* CDECache+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D80841CD7728400954A76 /* CDECache+CoreDataProperties.swift */; };
 		6D9D80881CD772F200954A76 /* CacheLocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D80871CD772F200954A76 /* CacheLocalManager.swift */; };
@@ -105,6 +106,7 @@
 		6D587ACC1CD6407D0015F33B /* ChatRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRouter.swift; sourceTree = "<group>"; };
 		6D5B7CD01CD5462600D48330 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D5B7CD11CD5462600D48330 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		6D6692E41CD811C50020B226 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		6D9D80831CD7728400954A76 /* CDECache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDECache.swift; sourceTree = "<group>"; };
 		6D9D80841CD7728400954A76 /* CDECache+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDECache+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6D9D80871CD772F200954A76 /* CacheLocalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheLocalManager.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				6D9D80911CD7A95400954A76 /* Constants.swift */,
 				6D17C9BF1CD53FA600544A96 /* EndPoints.swift */,
 				6D17C9C01CD53FA600544A96 /* Info.plist */,
+				6D6692E41CD811C50020B226 /* Notifications.swift */,
 				6D587AB51CD62BFA0015F33B /* RootRouter.swift */,
 				6D4F15F31CD66D2300836450 /* Strings.swift */,
 			);
@@ -574,6 +577,7 @@
 				6D587ABD1CD6378E0015F33B /* LoginViewController.swift in Sources */,
 				6D3D29A91CD5412A00E2AE9B /* PR2CoreDataStack.swift in Sources */,
 				6D17C9C11CD53FA600544A96 /* AppDelegate.swift in Sources */,
+				6D6692E51CD811C50020B226 /* Notifications.swift in Sources */,
 				6D587AC31CD638360015F33B /* LoginInteractor.swift in Sources */,
 				6D587AC91CD638880015F33B /* ChatInteractor.swift in Sources */,
 				6D9D80861CD7728400954A76 /* CDECache+CoreDataProperties.swift in Sources */,

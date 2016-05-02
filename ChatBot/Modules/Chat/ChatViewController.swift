@@ -48,6 +48,17 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
       super.viewWillAppear(animated)
       tableView.reloadData()
 
+      // if we don't have messages, wait for finish download notificatiom
+      // and refresh
+      if self.messages.isEmpty {
+         NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(self.reloadData),
+            name: Notifications.finishChatDownload,
+            object: nil
+         )
+      }
+
       NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ChatViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
       NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ChatViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
    }

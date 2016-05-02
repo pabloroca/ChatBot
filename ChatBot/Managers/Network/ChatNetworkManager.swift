@@ -19,6 +19,9 @@ public class  ChatNetworkManager {
       PR2Networking.sharedInstance.request(0, method:Alamofire.Method.GET, urlString: EndPoints.chat, parameters: nil, encoding: .URL, headers: nil) { (success, response, statuscode) -> Void in
          if (success) {
             MessagesLocalManager().addIntoLocalDatafromNSData(response.data, completionHandler: { (success) in
+               if success {
+                  NSNotificationCenter.defaultCenter().postNotificationName(Notifications.finishChatDownload, object: nil)
+               }
                completionHandler(success: success)
             })
          } else {
