@@ -35,6 +35,12 @@ extension NSDate {
     func PR2DateFormatterUTC() -> String {
         return NSDateFormatter.PR2DateFormatterUTC.stringFromDate(self)
     }
+   
+   // Date in HHMMh
+   func PR2DateFormatterHHMM() -> String {
+      return NSDateFormatter.PR2DateFormatterHHMM.stringFromDate(self)
+   }
+
 }
 
 extension NSDateFormatter {
@@ -65,4 +71,11 @@ extension NSDateFormatter {
         formatter.timeZone = timeZone
         return formatter
     }()
+   
+   private static let PR2DateFormatterHHMM: NSDateFormatter = {
+      let formatter = NSDateFormatter()
+      formatter.dateFormat = "HH:mm"
+      return formatter
+   }()
+
 }

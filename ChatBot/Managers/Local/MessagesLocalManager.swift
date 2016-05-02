@@ -142,11 +142,7 @@ public class MessagesLocalManager {
          item.content = ""
       }
       
-      if let time = data.time {
-         item.time = time
-      } else {
-         item.time = ""
-      }
+      item.time = NSDate().PR2DateFormatterHHMM()
       
       item.tsCreated = NSDate().timeIntervalSince1970
       item.userImageUrl = ""

@@ -20,6 +20,7 @@
 * AutoLayout
 * waiting indicators in status bar / webview
 * showing slow internet connectivity
+* using best practices for Date Formatters
 * HeaderDoc HTML based documentation. Generated using jazzy. in docs/swift_output/index.html
 * using SwiftLint to enforce Swift style and conventions
 * using SwiftGen to generate string enums
@@ -152,9 +153,13 @@ So we conclude with this (and it is applied in the exercise):
 * Analize Reachability if failures. When Reachability is restored, use the event to retry failed network requests. (Even though the network requests may still fail, this is a good moment to retry them.)
 * Don't timeout, let the system to do it. There is no good timeout value
 
-## TODO (out of time)
+## Current issues (out of time)
 
-* diverse orientations
+- Autosizing Cells not working. I guess is some autolayout issue.
+- When send a menssage, it does not scroll the tableview to the end
+- Login Screen. fix landscape orientation
+
+## TODO (out of time)
 
 * complete HeaderDoc documentation.
 
