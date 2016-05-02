@@ -9,13 +9,13 @@
 
 import UIKit
 
-
 class ChatBubble: UITableViewCell {
 
     //UI
     @IBOutlet weak var bubbleContent: UILabel!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var background: UIView!
+    @IBOutlet weak var viewCell: UIView!
     @IBOutlet weak var userImage: UIImageView!
     //UI
    
@@ -25,14 +25,21 @@ class ChatBubble: UITableViewCell {
         self.userImage.layer.borderColor = UIColor.whiteColor().CGColor
         self.userImage.layer.cornerRadius = 15
 
-        self.background.layer.cornerRadius = 8
-        self.background.layer.masksToBounds = true
+        self.viewCell.layer.cornerRadius = 8
+        self.viewCell.layer.masksToBounds = true
 
     }
     
-    func configure(message: CDEMessage) {
+   func configure(message: EntityMessage, username: String) {
       self.bubbleContent.text = message.content
-      self.userName.text = message.username
-      
+      self.userName.text = "\(message.username!) \(message.time!)"
+      self.userImage.PR2ImageFromNetwork(message.userImageUrl!)
+
+      if message.username == username {
+         self.bubbleContent.textAlignment = NSTextAlignment.Right
+         self.viewCell?.backgroundColor = Colors.myviewCellChat
+      } else {
+         self.viewCell?.backgroundColor = Colors.viewCellChat
+      }
     }
 }
