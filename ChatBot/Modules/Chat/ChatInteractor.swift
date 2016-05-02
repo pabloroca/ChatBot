@@ -11,7 +11,13 @@ import Foundation
 class ChatInteractor: NSObject {
    
    func sendComment(comment: String) {
-      //ojo pte
+      LoginInteractor().readLogin { (success, data) in
+         let dataToSend = EntityMessage()
+         dataToSend.content = comment
+         dataToSend.username = data!.username
+         MessagesLocalManager().addIntoLocalDatafromMessage(dataToSend) { (success) in
+         }
+      }
    }
    
    func readChatsFromServer(

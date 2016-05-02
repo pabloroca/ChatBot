@@ -72,3 +72,12 @@ extension UIImageView {
         }
     }
 }
+
+extension UIScrollView {
+   
+   func scrollToBottom(animated animated: Bool) {
+      let rect = CGRect(x: 0, y: contentSize.height - bounds.size.height, width: bounds.size.width, height: bounds.size.height)
+      scrollRectToVisible(rect, animated: animated)
+   }
+   
+}

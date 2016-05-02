@@ -35,7 +35,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPm-fs-6pl">
-                                <rect key="frame" x="38" y="59" width="31" height="21"/>
+                                <rect key="frame" x="38" y="59" width="301" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="hmZ-CV-loB"/>
                                 </constraints>
@@ -49,6 +49,7 @@
                             <constraint firstItem="nat-XT-9g6" firstAttribute="top" secondItem="SoN-91-nTX" secondAttribute="top" constant="55" id="CjF-7l-7N9"/>
                             <constraint firstItem="nat-XT-9g6" firstAttribute="leading" secondItem="Xm9-iz-3qn" secondAttribute="leading" id="Ffq-FP-33e"/>
                             <constraint firstAttribute="trailing" secondItem="SoN-91-nTX" secondAttribute="trailing" id="Nos-Og-34x"/>
+                            <constraint firstAttribute="trailing" secondItem="cPm-fs-6pl" secondAttribute="trailing" constant="8" id="PFA-PT-G7D"/>
                             <constraint firstItem="SoN-91-nTX" firstAttribute="top" secondItem="Xm9-iz-3qn" secondAttribute="top" id="SzW-jD-16H"/>
                             <constraint firstAttribute="bottom" secondItem="cPm-fs-6pl" secondAttribute="bottom" constant="8" id="T8G-8d-dJB"/>
                             <constraint firstItem="SoN-91-nTX" firstAttribute="leading" secondItem="Xm9-iz-3qn" secondAttribute="leading" id="TPF-Np-g8c"/>

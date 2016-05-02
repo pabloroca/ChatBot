@@ -46,6 +46,7 @@ class ChatPresenter: NSObject {
    func btnSendAction(comment: String) {
       self.viperView.settxtComment("")
       self.viperInteractor.sendComment(comment)
+      self.viperView.reloadData()
    }
    
    func readMessages(

@@ -114,6 +114,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
          if (messages?.isEmpty == false) {
             self.messages = messages!
             self.tableView.reloadData()
+            self.tableView.scrollToBottom(animated: true)
          } else {
             
          }

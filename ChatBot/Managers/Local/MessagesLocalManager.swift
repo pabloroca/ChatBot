@@ -141,6 +141,7 @@ public class MessagesLocalManager {
       } else {
          item.content = ""
       }
+      
       if let time = data.time {
          item.time = time
       } else {
@@ -148,12 +149,7 @@ public class MessagesLocalManager {
       }
       
       item.tsCreated = NSDate().timeIntervalSince1970
-      
-      if let userImageUrl = data.userImageUrl {
-         item.userImageUrl = userImageUrl
-      } else {
-         item.userImageUrl = ""
-      }
+      item.userImageUrl = ""
       
       if let username = data.username {
          item.username = username

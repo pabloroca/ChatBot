@@ -24,10 +24,18 @@ public struct Colors {
    /// default color for viewComment
    static let viewCommentColor = UIColor.lightGrayColor()
 
-   /// default color for my viewCellChat
+   // Cell
+   
+   /// default color for viewCellChat
    static let viewCellChat = UIColor(red: 220, green: 220, blue: 220)
+
+   /// default color for viewCellChat
+   static let viewCellText = UIColor.blackColor()
 
    /// default color for my viewCellChat
    static let myviewCellChat = UIColor.darkGrayColor()
+
+   /// default color for my viewCellChat
+   static let myviewCellText = UIColor.whiteColor()
 
 }

@@ -33,13 +33,25 @@ class ChatBubble: UITableViewCell {
    func configure(message: EntityMessage, username: String) {
       self.bubbleContent.text = message.content
       self.userName.text = "\(message.username!) \(message.time!)"
-      self.userImage.PR2ImageFromNetwork(message.userImageUrl!)
+      if let imageUrl = message.userImageUrl where !imageUrl.isEmpty {
+         self.userImage.PR2ImageFromNetwork(imageUrl)
+      } else {
+         self.userImage.image = nil
+      }
 
       if message.username == username {
+         self.viewCell.backgroundColor = Colors.myviewCellChat
          self.bubbleContent.textAlignment = NSTextAlignment.Right
-         self.viewCell?.backgroundColor = Colors.myviewCellChat
+         self.bubbleContent.textColor = Colors.myviewCellText
+         self.userImage.hidden = true
+         self.userName.textColor = Colors.myviewCellText
+         self.userName.textAlignment = NSTextAlignment.Right
       } else {
-         self.viewCell?.backgroundColor = Colors.viewCellChat
+         self.viewCell.backgroundColor = Colors.viewCellChat
+         self.bubbleContent.textColor = Colors.viewCellText
+         self.userImage.hidden = false
+         self.userName.textColor = Colors.viewCellText
+         self.userName.textAlignment = NSTextAlignment.Left
       }
     }
 }
