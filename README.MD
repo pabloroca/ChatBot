@@ -10,6 +10,7 @@
 * Network requests applied Apple recommendations (see "Network requests failures" below)
 * Network Log network requests/responses to console with different logs levels
 * Network using HTTPS (see below)
+* Network requests cached (for 10 minutes)
 * Image downloading in the background
 * Unit tests
 * plist with NSAppTransportSecurity
@@ -58,6 +59,10 @@ https://www.objc.io/issues/13-architecture/viper
 
 (I follow this variant) Brigade’s Experience Using an MVC Alternative
 https://medium.com/brigade-engineering/brigades-experience-using-an-mvc-alternative-36ef1601a41f#.ik6unq2bl
+
+## CACHE
+
+I cache network requests, just for showing how can this be done. In a chat is not realistic at all to cache by 10 minutes.
 
 ## Network logger
 
@@ -148,8 +153,6 @@ So we conclude with this (and it is applied in the exercise):
 ## TODO (out of time)
 
 * diverse orientations
-
-* cache. implement alternative cache system
 
 * complete HeaderDoc documentation.
 

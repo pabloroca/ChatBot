@@ -1,6 +1,6 @@
 //
 //  EndPoints.swift
-//  BaPablo
+//  ChatBot
 //
 //  Created by Pablo Roca Rozas on 23/4/16.
 //  Copyright © 2016 PR2Studio. All rights reserved.

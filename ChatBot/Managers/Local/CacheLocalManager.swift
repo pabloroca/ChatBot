@@ -29,7 +29,7 @@ public class CacheLocalManager {
    /// - parameter completionHandler: (success: Bool).
    public func readFromLocalData(
       predicate: NSPredicate?,
-      completionHandler: (success: Bool) -> Void) {
+      completionHandler: (success: Bool, data: EntityCache?) -> Void) {
       let fetchRequest = NSFetchRequest(entityName: "CDECache")
       fetchRequest.sortDescriptors = [sortDescriptor]
       fetchRequest.predicate = predicate
@@ -39,9 +39,16 @@ public class CacheLocalManager {
       
       do {
          try self.fetchedResultsController.performFetch()
-         completionHandler(success: true)
+         if !(self.fetchedResultsController.fetchedObjects?.isEmpty)! {
+            let item = self.fetchedResultsController.fetchedObjects![0] as! CDECache
+            let data = EntityCache()
+            data.tsFetchMessages = item.tsFetchMessages
+            completionHandler(success: true, data: data)
+         } else {
+            completionHandler(success: false, data: nil)
+         }
       } catch {
-         completionHandler(success: false)
+         completionHandler(success: false, data: nil)
       }
    }
    

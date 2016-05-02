@@ -15,9 +15,32 @@ class ChatInteractor: NSObject {
    }
    
    func readChatsFromServer(
+      forcedrefresh forcedrefresh: Bool = false,
       completionHandler: (success: Bool) -> Void) -> Void {
-      ChatNetworkManager().readFromServer { (success) in
-         completionHandler(success: success)
+      if forcedrefresh {
+         ChatNetworkManager().readFromServer { (success) in
+            completionHandler(success: success)
+         }
+      } else {
+         self.readCacheInfo({ (success, lastTS) in
+            if success && NSDate().timeIntervalSince1970 - lastTS > Constants.cachetime {
+               ChatNetworkManager().readFromServer { (success) in
+                  completionHandler(success: success)
+               }
+            }
+         })
+      }
+   }
+
+   func readCacheInfo(
+      completionHandler: (success: Bool, lastTS: Double) -> Void) -> Void {
+      CacheLocalManager().readFromLocalData(nil) { (success, data) in
+         if let data = data where success {
+            completionHandler(success: true, lastTS: data.tsFetchMessages)
+         } else {
+            completionHandler(success: true, lastTS: 0.0)
+         }
+
       }
    }
 
