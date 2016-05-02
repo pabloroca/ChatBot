@@ -13,4 +13,12 @@ class ChatInteractor: NSObject {
    func sendComment(comment: String) {
       //ojo pte
    }
+   
+   func readChatsFromServer(
+      completionHandler: (success: Bool) -> Void) -> Void {
+      ChatNetworkManager().readFromServer { (success) in
+         completionHandler(success: success)
+      }
+   }
+
 }

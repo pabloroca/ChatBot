@@ -159,6 +159,7 @@ So we conclude with this (and it is applied in the exercise):
 
 * more use of protocols
 * simplify CDE objects
+* Better CoreData stack
 * Entities as PONSOs? Now they are NSManaged objects
 * move more view logic to presenter? Investigate more View <> Presenter boundaries
 * Better Autolayout

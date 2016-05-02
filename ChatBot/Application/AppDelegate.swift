@@ -35,6 +35,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          window = UIWindow(frame: UIScreen.mainScreen().bounds)
       }
       
+      ChatInteractor().readChatsFromServer { (success) in
+      }
+      
       // if logged show chat, if not show login
       LoginInteractor().readLogin { (success, data) in
          if let _ = data where success {

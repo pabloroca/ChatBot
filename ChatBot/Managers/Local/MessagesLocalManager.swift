@@ -60,17 +60,17 @@ public class MessagesLocalManager {
       
       let json = JSON(data: data!)
       
-      for (_, subJson):(String, JSON) in json {
+      for (_, subJson):(String, JSON) in json["chats"] {
          
          let item = CDEMessage.init(managedObjectContext: PR2CoreDataStack.sharedInstance.managedObjectContext)
          
          // we protect agains nil objects in XML
-         if let content = subJson["chats"]["content"].string {
+         if let content = subJson["content"].string {
             item.content = content
          } else {
             item.content = ""
          }
-         if let time = subJson["chats"]["time"].string {
+         if let time = subJson["time"].string {
             // we remove the latest "h" char, it comes like "11:20h"
             item.time = String(time.characters.dropLast())
          } else {
@@ -79,28 +79,33 @@ public class MessagesLocalManager {
          
          item.tsCreated = NSDate().timeIntervalSince1970
 
-         if let userImageUrl = subJson["chats"]["userImage_url"].string {
+         if let userImageUrl = subJson["userImage_url"].string {
             item.userImageUrl = userImageUrl
          } else {
             item.userImageUrl = ""
          }
-         if let username = subJson["chats"]["username"].string {
+         if let username = subJson["username"].string {
             item.username = username
          } else {
             item.username = ""
          }
 
-         // messageUser
-         
       }
       
-      // save context
-      do {
-         try PR2CoreDataStack.sharedInstance.managedObjectContext.save()
-         completionHandler(success: true)
-      } catch {
-         completionHandler(success: false)
+      CacheLocalManager().addIntoLocalData { (success) in
+         if success {
+            // save context
+            do {
+               try PR2CoreDataStack.sharedInstance.managedObjectContext.save()
+               completionHandler(success: true)
+            } catch {
+               completionHandler(success: false)
+            }
+         } else {
+            print("error storing cache info")
+         }
       }
+      
    }
    
 
@@ -138,6 +143,8 @@ public class MessagesLocalManager {
          item.username = ""
       }
      
+      // messageUser add relationship
+      
       // save context
       do {
          try PR2CoreDataStack.sharedInstance.managedObjectContext.save()

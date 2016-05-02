@@ -51,10 +51,8 @@ public class CacheLocalManager {
    }
    
    /// addIntoLocalData: Add Items into CoreData
-   /// - parameter username: User name
    /// - parameter completionHandler: (success: Bool).
    public func addIntoLocalData(
-      username: String,
       completionHandler: (success: Bool) -> Void) {
       self.deleteInLocalData()
       
