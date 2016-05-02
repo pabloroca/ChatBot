@@ -16,10 +16,9 @@
 * plist with NSAppTransportSecurity
 * plist with UIRequiresPersistentWiFi (like Apple's mail app)
 * Unit tests for Network requests (stubbed with OHHTTPStubs and not stubbed)
-* Pull to refresh
 * AutoLayout
 * waiting indicators in status bar / webview
-* showing slow internet connectivity
+* Push Notification for implementing slow internet connectivity messaging in the UI
 * using best practices for Date Formatters (PR2Studio/PR2Dates.swift)
 * HeaderDoc HTML based documentation. Generated using jazzy. in docs/swift_output/index.html
 * using SwiftLint to enforce Swift style and conventions
@@ -61,6 +60,8 @@ Trying to apply SOLID principles and Clean Code, specially the Single Responsabi
 ## VIPER
 
 This is the first project I do with VIPER, so maybe some things does not follow at full VIPER architecture. Anyhow I understand VIPER as a guideline or concepts to understand, but not to follow at full.
+
+In project root folder there is a PDF who explains my implementation and relarionships between components (VIPER_pablo.pdf)
 
 Reference material:
 
@@ -156,7 +157,6 @@ So we conclude with this (and it is applied in the exercise):
 ## Current issues (out of time)
 
 - Autosizing Cells not working. I guess is some autolayout issue.
-- When send a menssage, it does not scroll the tableview to the end
 - Login Screen. fix landscape orientation
 
 ## TODO (out of time)
