@@ -9,8 +9,8 @@
 import Foundation
 import CoreData
 
-
-class CDEUser: NSManagedObject {
+/// CDEUser
+public class CDEUser: NSManagedObject {
 
    // MARK: - Class methods
    /// entityName

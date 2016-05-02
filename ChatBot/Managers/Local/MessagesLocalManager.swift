@@ -152,16 +152,19 @@ public class MessagesLocalManager {
       } else {
          item.username = ""
       }
-     
-      // messageUser add relationship
-      
-      // save context
-      do {
-         try PR2CoreDataStack.sharedInstance.managedObjectContext.save()
-         completionHandler(success: true)
-      } catch {
-         completionHandler(success: false)
+
+      UsersLocalManager().readFromLocalDataCDEUser(nil) { (success, data) in
+         item.messageUser = data
+         
+         // save context
+         do {
+            try PR2CoreDataStack.sharedInstance.managedObjectContext.save()
+            completionHandler(success: true)
+         } catch {
+            completionHandler(success: false)
+         }
       }
+      
    }
    
 }

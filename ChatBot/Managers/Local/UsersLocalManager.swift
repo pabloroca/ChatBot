@@ -51,7 +51,33 @@ public class UsersLocalManager {
          completionHandler(success: false, data: nil)
       }
    }
-   
+
+   /// readFromLocalDataCDEUser: Reads Items from CoreData
+   /// - parameter predicate: predicate to use in search.
+   /// - parameter completionHandler: (success: Bool, CDEUser?).
+   public func readFromLocalDataCDEUser(
+      predicate: NSPredicate?,
+      completionHandler: (success: Bool, data: CDEUser?) -> Void) {
+      let fetchRequest = NSFetchRequest(entityName: "CDEUser")
+      fetchRequest.sortDescriptors = [sortDescriptor]
+      fetchRequest.predicate = predicate
+      
+      self.fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
+                                                                 managedObjectContext: PR2CoreDataStack.sharedInstance.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+      
+      do {
+         try self.fetchedResultsController.performFetch()
+         if !(self.fetchedResultsController.fetchedObjects?.isEmpty)! {
+            let item = self.fetchedResultsController.fetchedObjects![0] as! CDEUser
+            completionHandler(success: true, data: item)
+         } else {
+            completionHandler(success: false, data: nil)
+         }
+      } catch {
+         completionHandler(success: false, data: nil)
+      }
+   }
+
    /// deleteInLocalData: deletes all Items in CoreData
    public func deleteInLocalData() {
       PR2CoreDataStack.sharedInstance.deleteAllData("CDEUser")
