@@ -22,6 +22,9 @@ public struct Colors {
    static let defaultNavBarTintColor = UIColor.lightGrayColor()
 
    /// default color for viewComment
-   static let defaultviewCommentColor = UIColor.lightGrayColor()
+   static let viewCommentColor = UIColor.lightGrayColor()
+
+   /// default color for my viewComment
+   static let myviewCommentColor = UIColor.darkGrayColor()
 
 }

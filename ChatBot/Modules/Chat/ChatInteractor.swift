@@ -44,4 +44,15 @@ class ChatInteractor: NSObject {
       }
    }
 
+   func readMessages(
+      completionHandler: (success: Bool, messages: [EntityMessage]?) -> Void) -> Void {
+      MessagesLocalManager().readFromLocalData(nil) { (success, data) in
+         if let data = data where success {
+            completionHandler(success: true, messages: data)
+         } else {
+            completionHandler(success: true, messages: nil)
+         }
+      }
+   }
+
 }

@@ -28,6 +28,7 @@ class ChatPresenter: NSObject {
       LoginInteractor().readLogin { (success, data) in
          if let data = data where success {
             self.viperView.setTittle(data.username!)
+            self.viperView.setusername(data.username!)
          } else {
             self.viperView.setTittle("")
          }
@@ -47,5 +48,11 @@ class ChatPresenter: NSObject {
       self.viperInteractor.sendComment(comment)
    }
    
+   func readMessages(
+      completionHandler: (messages: [EntityMessage]?) -> Void) -> Void {
+      self.viperInteractor.readMessages { (success, messages) in
+         completionHandler(messages: messages)
+      }
+   }
    
 }

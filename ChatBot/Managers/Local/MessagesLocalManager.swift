@@ -29,7 +29,7 @@ public class MessagesLocalManager {
    /// - parameter completionHandler: (success: Bool).
    public func readFromLocalData(
       predicate: NSPredicate?,
-      completionHandler: (success: Bool) -> Void) {
+      completionHandler: (success: Bool, data: [EntityMessage]?) -> Void) {
       let fetchRequest = NSFetchRequest(entityName: "CDEMessage")
       fetchRequest.sortDescriptors = [sortDescriptor]
       fetchRequest.predicate = predicate
@@ -39,9 +39,27 @@ public class MessagesLocalManager {
       
       do {
          try self.fetchedResultsController.performFetch()
-         completionHandler(success: true)
+         if !(self.fetchedResultsController.fetchedObjects?.isEmpty)! {
+            //aqui
+            let item = self.fetchedResultsController.fetchedObjects as! [CDEMessage]
+            
+            let data = item.map({ (message: CDEMessage) -> EntityMessage in
+               let item = EntityMessage()
+               item.content = message.content
+               item.time = message.time
+               item.tsCreated = message.tsCreated
+               item.userImageUrl = message.userImageUrl
+               item.username = message.username
+               return item
+            })
+            
+            //data.username = item.username
+            completionHandler(success: true, data: data)
+         } else {
+            completionHandler(success: false, data: nil)
+         }
       } catch {
-         completionHandler(success: false)
+         completionHandler(success: false, data: nil)
       }
    }
    
