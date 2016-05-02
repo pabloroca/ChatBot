@@ -35,14 +35,19 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
       super.viewDidLoad()
       self.viperPresenter = ChatPresenter().dynamicType.init(view: self)
 
-      self.viewComment.backgroundColor = Colors.viewCommentColor
+      //self.viewComment.backgroundColor = Colors.viewCommentColor
       // Register cell classes
       tableView.registerNib(UINib(nibName: "ChatBubble", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
+      tableView.estimatedRowHeight = 150
+      tableView.rowHeight = UITableViewAutomaticDimension
+      
       self.reloadData()
    }
    
    override func viewWillAppear(animated: Bool) {
       super.viewWillAppear(animated)
+      tableView.reloadData()
+
       NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ChatViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
       NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ChatViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
    }
@@ -116,10 +121,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
    }
    
    // MARK: - UITableViewDataSource
-   func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-      return 150
-   }
-   
+
    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       return self.messages.count
    }
