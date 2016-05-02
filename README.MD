@@ -20,7 +20,7 @@
 * AutoLayout
 * waiting indicators in status bar / webview
 * showing slow internet connectivity
-* using best practices for Date Formatters
+* using best practices for Date Formatters (PR2Studio/PR2Dates.swift)
 * HeaderDoc HTML based documentation. Generated using jazzy. in docs/swift_output/index.html
 * using SwiftLint to enforce Swift style and conventions
 * using SwiftGen to generate string enums
