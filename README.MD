@@ -158,7 +158,8 @@ So we conclude with this (and it is applied in the exercise):
 ## To enhance
 
 * more use of protocols
-* Entities as PONSOs?
+* simplify CDE objects
+* Entities as PONSOs? Now they are NSManaged objects
 * move more view logic to presenter? Investigate more View <> Presenter boundaries
 * Better Autolayout
 *

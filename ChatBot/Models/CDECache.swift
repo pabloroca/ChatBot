@@ -1,5 +1,5 @@
 //
-//  CDEUser.swift
+//  CDECache.swift
 //  
 //
 //  Created by Pablo Roca Rozas on 2/5/16.
@@ -10,13 +10,13 @@ import Foundation
 import CoreData
 
 
-class CDEUser: NSManagedObject {
+class CDECache: NSManagedObject {
 
    // MARK: - Class methods
    /// entityName
    /// - returns: String
    class func entityName () -> String {
-      return "CDEUser"
+      return "CDECache"
    }
    
    /// entity: Entity description
@@ -38,7 +38,7 @@ class CDEUser: NSManagedObject {
    /// init: Convenience initializer
    /// - parameter managedObjectContext: Managed Object Context.
    convenience init(managedObjectContext: NSManagedObjectContext!) {
-      let entity = CDEUser.entity(managedObjectContext)
+      let entity = CDECache.entity(managedObjectContext)
       self.init(entity: entity, insertIntoManagedObjectContext: managedObjectContext)
    }
 
