@@ -13,7 +13,7 @@
     <a title="ChatBot  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">ChatBot Docs</a> (35% documented)</p>
+        <p><a href="index.html">ChatBot Docs</a> (43% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -33,16 +33,25 @@
                 <a href="Classes/AppDelegate.html">AppDelegate</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/CDECache.html">CDECache</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/CDEMessage.html">CDEMessage</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/CDEUser.html">CDEUser</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/CacheLocalManager.html">CacheLocalManager</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/ChatBubble.html">ChatBubble</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ChatInteractor.html">ChatInteractor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ChatNetworkManager.html">ChatNetworkManager</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ChatPresenter.html">ChatPresenter</a>
@@ -52,6 +61,15 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ChatViewController.html">ChatViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/EntityCache.html">EntityCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/EntityMessage.html">EntityMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/EntityUser.html">EntityUser</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/LoginInteractor.html">LoginInteractor</a>
@@ -69,6 +87,9 @@
                 <a href="Classes/Message.html">Message</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/MessagesLocalManager.html">MessagesLocalManager</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/PR2Common.html">PR2Common</a>
               </li>
               <li class="nav-group-task">
@@ -79,6 +100,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/RootRouter.html">RootRouter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/UsersLocalManager.html">UsersLocalManager</a>
               </li>
             </ul>
           </li>
@@ -111,6 +135,9 @@
               <li class="nav-group-task">
                 <a href="Extensions/UIImageView.html">UIImageView</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIScrollView.html">UIScrollView</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -128,7 +155,13 @@
                 <a href="Structs/Colors.html">Colors</a>
               </li>
               <li class="nav-group-task">
+                <a href="Structs/Constants.html">Constants</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/EndPoints.html">EndPoints</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Notifications.html">Notifications</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/PR2HTTPCode.html">PR2HTTPCode</a>
@@ -156,15 +189,16 @@
 <li>Network requests applied Apple recommendations (see <q>Network requests failures</q> below)</li>
 <li>Network Log network requests/responses to console with different logs levels</li>
 <li>Network using HTTPS (see below)</li>
+<li>Network requests cached (for 10 minutes)</li>
 <li>Image downloading in the background</li>
 <li>Unit tests</li>
 <li>plist with NSAppTransportSecurity</li>
 <li>plist with UIRequiresPersistentWiFi (like Apple&rsquo;s mail app)</li>
 <li>Unit tests for Network requests (stubbed with OHHTTPStubs and not stubbed)</li>
-<li>Pull to refresh</li>
 <li>AutoLayout</li>
 <li>waiting indicators in status bar / webview</li>
-<li>showing slow internet connectivity</li>
+<li>Push Notification for implementing slow internet connectivity messaging in the UI</li>
+<li>using best practices for Date Formatters (PR2Studio/PR2Dates.swift)</li>
 <li>HeaderDoc HTML based documentation. Generated using jazzy. in docs/swift_output/index.html</li>
 <li>using SwiftLint to enforce Swift style and conventions</li>
 <li>using SwiftGen to generate string enums</li>
@@ -192,6 +226,8 @@ development (because git conflicts) and with NIBs you have more flexibility to e
 
 <p>This is the first project I do with VIPER, so maybe some things does not follow at full VIPER architecture. Anyhow I understand VIPER as a guideline or concepts to understand, but not to follow at full.</p>
 
+<p>In project root folder there is a PDF who explains my implementation and relarionships between components (VIPER_pablo.pdf)</p>
+
 <p>Reference material:</p>
 
 <p>(Base doc) Architecting iOS Apps with VIPER
@@ -199,6 +235,11 @@ development (because git conflicts) and with NIBs you have more flexibility to e
 
 <p>(I follow this variant) Brigade’s Experience Using an MVC Alternative
 <a href="https://medium.com/brigade-engineering/brigades-experience-using-an-mvc-alternative-36ef1601a41f#.ik6unq2bl">https://medium.com/brigade-engineering/brigades-experience-using-an-mvc-alternative-36ef1601a41f#.ik6unq2bl</a></p>
+<a href='#cache' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='cache'>CACHE</h2>
+
+<p>I cache network requests, just for showing how can this be done. In a chat is not realistic at all to cache by 10 minutes.</p>
+
+<p>For a chat, network layer should be done in realtime (NodeJS, SignalR, downloadTaskWithRequest of NSURLSession with background session) and also having PushNotifications as failover</p>
 <a href='#network_logger' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='network_logger'>Network logger</h2>
 
 <p>Logs into the console the network requests and responses. It&rsquo;s instantiated in AppDelegate.swift, here:</p>
@@ -213,15 +254,6 @@ development (because git conflicts) and with NIBs you have more flexibility to e
 <li>PR2NetworkingLogLevelInfo - log with short info</li>
 <li>PR2NetworkingLogLevelError - logs only when errors</li>
 </ul>
-<a href='#swiftlint' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='swiftlint'>SwiftLint</h2>
-
-<p><a href="https://github.com/realm/SwiftLint">https://github.com/realm/SwiftLint</a></p>
-
-<p>A tool for enforcing good code style.</p>
-
-<p>Install: brew install swiftlint</p>
-
-<p>If you don&rsquo;t want to use or install it, just remove Run Script Phase we have in the ChatBot target</p>
 <a href='#swiftgen' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='swiftgen'>SwiftGen</h2>
 
 <p><a href="https://github.com/AliSoftware/SwiftGen">https://github.com/AliSoftware/SwiftGen</a></p>
@@ -231,6 +263,15 @@ development (because git conflicts) and with NIBs you have more flexibility to e
 <p>Its generated doing this in the console and in the project root folder</p>
 <pre class="highlight plaintext"><code>swiftgen strings ./ChatBot/Resources/Strings/Localizable.strings --output ./ChatBot/Application/Strings.swift
 </code></pre>
+<a href='#swiftlint' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='swiftlint'>SwiftLint</h2>
+
+<p><a href="https://github.com/realm/SwiftLint">https://github.com/realm/SwiftLint</a></p>
+
+<p>A tool for enforcing good code style.</p>
+
+<p>Install: brew install swiftlint</p>
+
+<p>The run script if deactivated, just in case you don&rsquo;t have it installed. To reenable, uncomment lines in Run Script Phase we have in the ChatBot target</p>
 <a href='#jazzy_doc_generation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='jazzy_doc_generation'>jazzy (Doc generation)</h2>
 
 <p><a href="https://github.com/realm/jazzy">https://github.com/realm/jazzy</a></p>
@@ -284,19 +325,32 @@ development (because git conflicts) and with NIBs you have more flexibility to e
 <li>Analize Reachability if failures. When Reachability is restored, use the event to retry failed network requests. (Even though the network requests may still fail, this is a good moment to retry them.)</li>
 <li>Don&rsquo;t timeout, let the system to do it. There is no good timeout value</li>
 </ul>
+<a href='#current_issues_out_of_time' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='current_issues_out_of_time'>Current issues (out of time)</h2>
+
+<ul>
+<li>Autosizing Cells not working. I guess is some autolayout issue.</li>
+<li>Login Screen. fix landscape orientation</li>
+</ul>
 <a href='#todo_out_of_time' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='todo_out_of_time'>TODO (out of time)</h2>
 
 <ul>
-<li><p>diverse orientations</p></li>
-<li><p>cache. implement alternative cache system</p></li>
-<li><p>complete HeaderDoc documentation.</p></li>
-<li><p>create secondary target for slow connectivity tests using OHHTTPStubs</p></li>
+<li>complete HeaderDoc documentation.</li>
+<li>Unit tests for all VIPER elements</li>
+<li>create secondary target for slow connectivity tests using OHHTTPStubs</li>
+</ul>
+<a href='#to_enhance' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='to_enhance'>To enhance</h2>
+
+<ul>
+<li>more use of protocols</li>
+<li>Better CoreData stack</li>
+<li>move more view logic to presenter? Investigate more View &lt;&gt; Presenter boundaries</li>
+<li>Better Autolayout</li>
 </ul>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://pr2studio.com" target="_blank" rel="external">PabloRoca</a>. All rights reserved. (Last updated: 2016-05-02)</p>
+          <p>&copy; 2016 <a class="link" href="https://pr2studio.com" target="_blank" rel="external">PabloRoca</a>. All rights reserved. (Last updated: 2016-05-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

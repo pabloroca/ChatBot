@@ -32,15 +32,6 @@
 * SCLAlertView
 * OHHTTPStubs
 
-## SwiftLint
-https://github.com/realm/SwiftLint
-
-A tool for enforcing good code style.
-
-Install: brew install swiftlint
-
-The run script if deactivated, just in case you don't have it installed. To reenable, uncomment lines in Run Script Phase we have in the ChatBot target
-
 ## PR2Studio classes
 
 I applied some of my own classes I use to develop in Swift.
@@ -98,6 +89,15 @@ It is used for generating strings enums, so we can avoid the risk of using an no
 Its generated doing this in the console and in the project root folder
 
     swiftgen strings ./ChatBot/Resources/Strings/Localizable.strings --output ./ChatBot/Application/Strings.swift
+
+## SwiftLint
+https://github.com/realm/SwiftLint
+
+A tool for enforcing good code style.
+
+Install: brew install swiftlint
+
+The run script if deactivated, just in case you don't have it installed. To reenable, uncomment lines in Run Script Phase we have in the ChatBot target
 
 ## jazzy (Doc generation)
 https://github.com/realm/jazzy
@@ -168,12 +168,7 @@ So we conclude with this (and it is applied in the exercise):
 ## To enhance
 
 * more use of protocols
-* simplify CDE objects
 * Better CoreData stack
-* Entities as PONSOs? Now they are NSManaged objects
 * move more view logic to presenter? Investigate more View <> Presenter boundaries
 * Better Autolayout
-*
-
-
 
