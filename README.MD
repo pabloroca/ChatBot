@@ -39,7 +39,7 @@ A tool for enforcing good code style.
 
 Install: brew install swiftlint
 
-If you don't want to use or install it, just remove Run Script Phase we have in the ChatBot target
+The run script if deactivated, just in case you don't have it installed. To reenable, uncomment lines in Run Script Phase we have in the ChatBot target
 
 ## PR2Studio classes
 
