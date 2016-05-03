@@ -44,4 +44,29 @@ class ChatNetworkManagerTests: XCTestCase {
       self.waitForExpectationsWithTimeout(30.0, handler: nil)
    }
 
+   func testreadFromServerStubbed() {
+      
+      let expectation = self.expectationWithDescription("check if network connection can be made")
+      
+      // return value for stubs
+      var dataresponse: NSData?
+      if let info = NSBundle(forClass: self.dynamicType).infoDictionary {
+         dataresponse = info["ChatData"] as? NSData
+      }
+
+      stub(isHost("s3-eu-west-1.amazonaws.com") && isPath("/rocket-interview")) { _ in
+         return OHHTTPStubsResponse(
+            data: dataresponse!,
+            statusCode: 200,
+            headers: .None
+         )
+      }
+      
+      if let _ = dataresponse {
+         expectation.fulfill()
+      }
+      
+      self.waitForExpectationsWithTimeout(30.0, handler: nil)
+   }
+
 }
