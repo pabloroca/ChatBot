@@ -40,7 +40,6 @@ public class MessagesLocalManager {
       do {
          try self.fetchedResultsController.performFetch()
          if !(self.fetchedResultsController.fetchedObjects?.isEmpty)! {
-            //aqui
             let item = self.fetchedResultsController.fetchedObjects as! [CDEMessage]
             
             let data = item.map({ (message: CDEMessage) -> EntityMessage in
