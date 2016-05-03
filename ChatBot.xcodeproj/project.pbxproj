@@ -53,7 +53,6 @@
 		6D9D80921CD7A95400954A76 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D80911CD7A95400954A76 /* Constants.swift */; };
 		884585F011F89E8F32D2D009 /* Pods_ChatBotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F7D4184429396130B6C2D0 /* Pods_ChatBotTests.framework */; };
 		94182B7C1CC9139800194DF7 /* ChatBotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94182B7B1CC9139800194DF7 /* ChatBotUITests.swift */; };
-		94E23D4E1CCA355800BAC252 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E23D4D1CCA355800BAC252 /* Message.swift */; };
 		9FECABEB476CAD5D80249E20 /* Pods_ChatBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE1BAE1B8294E9E9DB24E6B /* Pods_ChatBot.framework */; };
 /* End PBXBuildFile section */
 
@@ -132,7 +131,6 @@
 		94182B771CC9139800194DF7 /* ChatBotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatBotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94182B7B1CC9139800194DF7 /* ChatBotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotUITests.swift; sourceTree = "<group>"; };
 		94182B7D1CC9139800194DF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94E23D4D1CCA355800BAC252 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		9BE1BAE1B8294E9E9DB24E6B /* Pods_ChatBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A407A9E301E3973F2879541C /* Pods-ChatBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatBot/Pods-ChatBot.release.xcconfig"; sourceTree = "<group>"; };
 		AAC3F507AD14E245C0F9962E /* Pods-ChatBotUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatBotUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatBotUITests/Pods-ChatBotUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -361,7 +359,6 @@
 				6D587AB71CD637320015F33B /* Modules */,
 				6D3D29A21CD5412A00E2AE9B /* PR2Studio */,
 				6D3D29B51CD543C100E2AE9B /* Resources */,
-				94E23D4D1CCA355800BAC252 /* Message.swift */,
 			);
 			path = ChatBot;
 			sourceTree = "<group>";
@@ -687,7 +684,6 @@
 				6D17C9C81CD540BF00544A96 /* ChatBot.xcdatamodeld in Sources */,
 				6D17C9C21CD53FA600544A96 /* Colors.swift in Sources */,
 				6D9D80851CD7728400954A76 /* CDECache.swift in Sources */,
-				94E23D4E1CCA355800BAC252 /* Message.swift in Sources */,
 				6D17C9C31CD53FA600544A96 /* EndPoints.swift in Sources */,
 				6D4F15F41CD66D2300836450 /* Strings.swift in Sources */,
 				6D9D80921CD7A95400954A76 /* Constants.swift in Sources */,
