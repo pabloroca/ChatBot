@@ -31,6 +31,7 @@ class ChatBubble: UITableViewCell {
     }
     
    func configure(message: EntityMessage, username: String) {
+      self.userImage.image = nil
       self.bubbleContent.text = message.content
       self.userName.text = "\(message.username!) \(message.time!)"
       if let imageUrl = message.userImageUrl where !imageUrl.isEmpty {
