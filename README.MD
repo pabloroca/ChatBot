@@ -162,7 +162,7 @@ So we conclude with this (and it is applied in the exercise):
 ## TODO (out of time)
 
 * complete HeaderDoc documentation.
-
+* Unit tests for all VIPER elements
 * create secondary target for slow connectivity tests using OHHTTPStubs
 
 ## To enhance
