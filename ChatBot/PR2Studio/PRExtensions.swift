@@ -51,7 +51,7 @@ extension UIColor {
 
 // requires Alamofire / AlamofireImage / PR2Common
 extension UIImageView {
-    func PR2ImageFromNetwork(imageURL: String, indicatorStyle: UIActivityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray) {
+    func PR2ImageFromNetwork(imageURL: String, indicatorStyle: UIActivityIndicatorViewStyle = UIActivityIndicatorViewStyle.White) {
         PR2Common().showNetworkActivityinStatusBar()
         
         let indicator = UIActivityIndicatorView(activityIndicatorStyle: indicatorStyle)
