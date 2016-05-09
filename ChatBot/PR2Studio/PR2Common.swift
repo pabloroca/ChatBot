@@ -13,36 +13,47 @@ import CoreTelephony
 
 /// Commom functions for any project
 public class PR2Common {
+   
+   /**
+    Displays network activity indicator in status bar
+    */
+   func showNetworkActivityinStatusBar() {
+      UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+   }
+   /**
+    Hides network activity indicator in status bar
+    */
+   func hideNetworkActivityinStatusBar() {
+      UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+   }
+   
+   var topMostVC: UIViewController? {
+      var presentedVC = UIApplication.sharedApplication().keyWindow?.rootViewController
+      while let pVC = presentedVC?.presentedViewController {
+         presentedVC = pVC
+      }
+      
+      if presentedVC == nil {
+         print("Error: You don't have any views set. You may be calling them in viewDidLoad. Try viewDidAppear instead.")
+      }
+      return presentedVC
+   }
+   
+   /**
+    Simple alert view
     
-    /**
-     Displays network activity indicator in status bar
-     */
-    func showNetworkActivityinStatusBar() {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-    }
-    /**
-     Hides network activity indicator in status bar
-     */
-    func hideNetworkActivityinStatusBar() {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-    }
-    
-    /**
-     Simple alert view
-     
-     - parameter title: title of the alert.
-     - parameter message: message to show in the alert.
-     */
-    func simpleAlert(title: String, message: String) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let mainWindow = appDelegate.window!
-        
-        let alertController = UIAlertController(title: title, message:
-            message, preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-        
-        mainWindow.rootViewController!.presentViewController(alertController, animated: true, completion: nil)
-    }
+    - parameter title: title of the alert.
+    - parameter message: message to show in the alert.
+    */
+   func simpleAlert(title title: String, message: String) {
+      let alertController = UIAlertController(title: title, message:
+         message, preferredStyle: UIAlertControllerStyle.Alert)
+      alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+      
+      if let rootViewController = self.topMostVC {
+         rootViewController.presentViewController(alertController, animated: true, completion: nil)
+      }
+   }
    
    func canDevicePlaceAPhoneCall() -> Bool {
       if UIApplication.sharedApplication().canOpenURL(NSURL(string: "tel://")!) {
