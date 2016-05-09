@@ -11,9 +11,6 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-   /// datamodel name (and also is the sqlite table created)
-   let dataModel: String = "ChatBot"
-
     var window: UIWindow?
    
     /// VIPER root Router/Wireframe
@@ -22,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
       
       // initialize CoreData stack
-      PR2CoreDataStack.sharedInstance
+      PR2CoreDataStack.sharedInstance.setdataModel("ChatBot")
 
       // network logger
       PR2Networking.sharedInstance.logLevel = PR2NetworkingLogLevel.PR2NetworkingLogLevelInfo

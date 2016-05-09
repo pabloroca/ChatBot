@@ -7,7 +7,6 @@
 
 import Foundation
 import Alamofire
-import SwiftyJSON
 
 /// Networking log levels
 enum PR2NetworkingLogLevel {
